@@ -222,6 +222,26 @@ visibility:hidden;
   margin: -7px;
   padding-right: 4px;
 }
+#clear-filter {
+  color:#777;
+  font-size:.75em;
+  font-family: 'Lato', sans-serif;
+  display:none;
+  padding:10px;
+}
+#clear-filter:hover {
+  cursor:pointer;
+}
+.x-icon {
+  max-width: 24px;
+  margin-top: -4px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:2px;
+}
+.x-icon path {
+  fill: #64B5CD;
+}
 
 /* Group 0 */
 #interactive-wrapper[data-filter="0"] .cir-map-state[data-color="0"]{

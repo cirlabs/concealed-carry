@@ -239,22 +239,31 @@
     <div id="filters-container">
       <p class="instructional">Select an option below to filter the map and learn more about each law:</p>
       <div class="filters">
-        <div id="filter-0" class="filter">
+        <div id="filter-0" class="filter" tabindex="0" role="button">
           <div class="filter-title">Shall Issue (No Discretion)<span class="arrow"></span></div>
           <div class="filter-description">Permits are granted to anyone who meets the state's minimum legal requirements, generally that they are a) not a convicted felon and b) have not been found to be mentally unstable. <span class="small caveat">Mississippi passed a new law this year that allows people to carry a gun in a purse or bag -- known as 'off-body carrying' -- without a permit. The law goes into effect July 1.</span></div>
         </div>
-        <div id="filter-1" class="filter">
+        <div id="filter-1" class="filter" tabindex="0" role="button">
           <div class="filter-title">Shall Issue (Limited Discretion)<span class="arrow"></span></div>
-          <div class="filter-description">Issuing agencies may deny a permit to an eligible applicant under certain circumstances, for example, if the applicant is believed to pose a danger to themselves or others.</div>
+          <div class="filter-description">Permits are granted to anyone who meets the state's minimum legal requirements, with the state reserving the right to deny a permit under certain limited circumstances. For example, if the issuing agency believes the applicant poses a danger to themselves or others.</div>
         </div>
-        <div id="filter-2" class="filter">
+        <div id="filter-2" class="filter" tabindex="0" role="button">
           <div class="filter-title">May Issue (Complete Discretion)<span class="arrow"></span></div>
-          <div class="filter-description">The issuing agency has complete discretion to decide whether to issue a permit to eligible applicants. In California, for example, an applicant must be of "good moral character" and demonstrate "good cause" to carry a gun. <span class="small caveat">The District of Columbia began processing concealed carry permits in 2014 after a federal judge struck down the city's longstanding ban on carrying guns in public.</span></div>
+          <div class="filter-description">The issuing agency has complete discretion to decide whether to grant a permit to eligible applicants. In California, for example, an applicant must be of "good moral character" and demonstrate "good cause" to carry a gun. <span class="small caveat">The District of Columbia began processing concealed carry permits in 2014 after a federal judge struck down the city's longstanding ban on carrying guns in public.</span></div>
         </div>
-        <div id="filter-3" class="filter">
+        <div id="filter-3" class="filter" tabindex="0" role="button">
           <div class="filter-title">No Permit Required<span class="arrow"></span></div>
           <div class="filter-description">Anyone legally allowed to possess a gun may carry one in public.</div>
         </div>
+      </div>
+      <div id="clear-filter" tabindex="0" role="button">
+        <svg version="1.1" class="x-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 268 960 946" enable-background="new 0 268 960 946" xml:space="preserve">
+        <path fill="#FF0000" stroke="#FFFFFF" stroke-miterlimit="10" d="M486.1,282.5c-253.6,0-459.2,205.6-459.2,459.2
+          S232.5,1201,486.1,1201s459.2-205.6,459.2-459.2S739.7,282.5,486.1,282.5z M589.4,984.5L485.7,839.1L379.1,984.5H201.2l191.5-243.1
+          L204.2,499h181.6l102,142.5L590.4,499h178.5L579.9,738.1L771,984.5H589.4z"/>
+        </svg>
+        Return to overview map
       </div>
     </div>
 
@@ -611,7 +620,7 @@
 
     </div> <!--wrapper-inner-->
     <p class="credit">
-      <span class="media-credit">Credit: Julia Smith/Reveal</span><br /><span class="media-credit">Source: Reveal Research</span>
+      <span class="media-credit">Credit: Julia Smith/Reveal</span><br /><span class="media-credit">Source: Law Center to Prevent Gun Violence</span>
     </p>
     </div> <!--interactive-wrapper-->
 
@@ -656,11 +665,32 @@
 
           var id = parseInt( $parent.attr("id").replace('filter-', '') );
           var map = $('#interactive-wrapper');
+          var clear = $('#clear-filter');
           if ($parent.hasClass('filtered')){
             map.attr('data-filter', id);
+            clear.show();
           } else {
             map.attr('data-filter', '');
+            clear.hide();
           }     
+        });
+
+        $('#clear-filter').click(function(){
+          $(".filtered").find(".filter-title").trigger("click");
+        }).keydown(function(e){
+          var code = e.which;
+          // 13 = Return, 32 = Space
+          if ((code === 13) || (code === 32)) {
+            $(this).trigger("click");
+          }
+        });
+
+        $(".filter").keydown(function(e){ // Trigger the click event from the keyboard
+          var code = e.which;
+          // 13 = Return, 32 = Space
+          if ((code === 13) || (code === 32)) {
+            $(this).find(".filter-title").trigger("click");
+          }
         });
       }
 
