@@ -17,10 +17,10 @@ function initAccordion(){
 		var clear = $('#clear-filter');
 		if ($parent.hasClass('filtered')){
 			map.attr('data-filter', id);
-			clear.show();
+			clear.css("visibility", "visible");
 		} else {
 			map.attr('data-filter', '');
-			clear.hide();
+			clear.css("visibility", "hidden");
 		}     
 	});
 
@@ -53,4 +53,26 @@ function initAccordion(){
 			}
 		});
 	}
+
+	$("#us-map circle").hover(function(){
+		$this = $(this);
+		var lawsuit = $this.data("lawsuit");
+		var court = $this.data("court");
+		var location = $this.data("location");
+		var decision = $this.data("decision");
+
+		console.log("in");
+
+		var tooltip = $(".map-tooltip");
+		//var html = "<span class='label'>Lawsuit</span><span class='case'>" + lawsuit + "</span><span class='court'>" + court + "</span><span class='location'>" + location + "</span><span class='decision'>" + decision + "</span>";
+		html = "<span class='label'>Lawsuit</span><table><tr><td>Case</td><td>" + lawsuit + "</td></tr><tr><td>Court</td><td>" + court + "</td></tr><tr><td>Decided</td><td>" + decision + "</td></tr></table>";
+
+		tooltip.addClass("lawsuit").css("display", "block");
+		tooltip.find(".tooltip-inner").each(function(){
+			$(this).html(html);
+		});
+	}, function() {
+		console.log("out");
+		$(".map-tooltip").removeClass("lawsuit").css("display", "none");
+	});
 }

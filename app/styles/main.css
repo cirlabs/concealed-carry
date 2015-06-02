@@ -212,6 +212,14 @@ visibility:hidden;
   display: inline-block;
   margin-top: 6px;
 }
+.filter:active, 
+.filter:focus {
+  outline:none;
+}
+.filter:active .filter-title, 
+.filter:focus .filter-title {
+  background-color:#cccccc;
+}
 .filter:hover .filter-title {
   background-color:#cccccc;
 }
@@ -219,7 +227,10 @@ visibility:hidden;
   display:none;
   padding:10px;
 }
-.filtered .filter-title, .filtered:hover .filter-title {
+.filtered .filter-title, 
+.filtered:hover .filter-title, 
+.filtered:active .filter-title, 
+.filtered:focus .filter-title {
   /*background-color:#f38c21;*/
   background-color:#444444;
   color:#ffffff;
@@ -231,7 +242,7 @@ visibility:hidden;
   border-top:none;
 }
 .filtered .legend-square {
-  border:2px solid #ffffff;
+  border:1px solid #ffffff;
 }
 .instructional {
   color:#777;
@@ -257,11 +268,15 @@ visibility:hidden;
   color:#777;
   font-size:.75em;
   font-family: 'Lato', sans-serif;
-  display:none;
-  padding:10px;
+  visibility:hidden;
+  padding:0 10px 10px 10px;
+  margin-bottom:.5em;
 }
-#clear-filter:hover {
+#clear-filter:hover, 
+#clear-filter:focus {
   cursor:pointer;
+  color:#f38c21;
+  outline:none;
 }
 .x-icon {
   max-width: 24px;
@@ -272,6 +287,9 @@ visibility:hidden;
 }
 .x-icon path {
   fill: #64B5CD;
+}
+#clear-filter:hover .x-icon path, #clear-filter:focus .x-icon path {
+  fill: #f38c21;
 }
 
 /* Group 0 */
@@ -350,6 +368,55 @@ visibility:hidden;
   margin-bottom:6px;
 }
 
+.map-tooltip.lawsuit {
+  max-width:300px;
+  text-align:left;
+}
+.map-tooltip.lawsuit .label {
+  display:block;
+  padding:10px;
+  background-color:#64B5CD;
+  color:#ffffff;
+  font-weight:bold;
+  font-family:Lato, sans-serif;
+  font-size:.8em;
+  text-transform:uppercase;
+  margin-bottom:.5em;
+  text-align:left;
+  display:none;
+}
+.map-tooltip.lawsuit table {
+  margin-bottom:0;
+  border:0;
+}
+.map-tooltip.lawsuit tbody {
+  vertical-align: top;
+}
+.map-tooltip.lawsuit td:first-child {
+  font-family:Lato, sans-serif;
+  color:#777;
+  font-size:.8em;
+  text-transform:uppercase;
+}
+.map-tooltip.lawsuit tr:first-child td:last-child {
+  font-style:italic;
+}
+.circle-legend {
+  margin-bottom:1em;
+  float:left;
+  width:100%;
+  padding:10px;
+  font-size:.9em;
+}
+.circle-legend .circle {
+  background-color: #FFF;
+  border: 3px solid #222;
+  border-radius: 18px;
+  height: 11px;
+  width: 11px;
+  float: left;
+  margin: .375em 6px 0 5px;
+}
 .tooltip-inner {
   font-size:.9em;
 }
@@ -368,6 +435,11 @@ visibility:hidden;
   padding:10px;
   font-size:.8em;
   margin-bottom:1em;
+}
+
+circle:hover {
+  fill: #64B5CD;
+  stroke: #64B5CD;
 }
 
 @media all and (max-width: 1000px) {
