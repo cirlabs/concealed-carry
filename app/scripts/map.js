@@ -71,7 +71,7 @@
     }
 })("docReady", window);
 
-var combo = [];
+var touch;
 
 docReady(function() {
     initInteraction();
@@ -80,7 +80,6 @@ docReady(function() {
 
 function initInteraction(){
   /* Check if viewing on a mobile browser */
-  var touch;
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     touch = true;
     var wrapper = document.getElementById("interactive-wrapper");

@@ -40,7 +40,6 @@ max-width:20px;
 height:20px;
 float:left;
 }
-
 .legend-row.color-0 .legend-square{
 background-color:#fc4e2a;
 }
@@ -79,7 +78,18 @@ font-size:.8em;
 
 .tooltip-inner span, #cir-map-info span{
 display:block;
+text-align:center;
 }
+
+#cir-map-info .info-inner {
+  border:none;
+  box-shadow:none;
+  padding:0;
+}
+#cir-map-info .info-inner .state-name{
+  display:none;
+}
+
 
 span.state-name {
 font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif;
@@ -140,9 +150,7 @@ visibility:hidden;
 }
 
 
-</style>
-
-<style> /* For concealed carry map only */
+/* For concealed carry map only */
 .viz-container {
   float:left; 
   margin-bottom:1.5em;
@@ -178,6 +186,22 @@ visibility:hidden;
 .filter-title:hover {
   cursor:pointer;
 }
+.filter .legend-square {
+  margin-right:.5em;
+  border:1px solid #222222;
+}
+.filter:nth-child(1) .legend-square {
+  background-color:#fc4e2a;
+}
+.filter:nth-child(2) .legend-square {
+  background-color:#feb24c;
+}
+.filter:nth-child(3) .legend-square {
+  background-color:#ffeda0;
+}
+.filter:nth-child(4) .legend-square {
+  background-color:#999999;
+}
 .filter-title span.arrow {
   float: right;
   width: 0;
@@ -196,7 +220,8 @@ visibility:hidden;
   padding:10px;
 }
 .filtered .filter-title, .filtered:hover .filter-title {
-  background-color:#f38c21;
+  /*background-color:#f38c21;*/
+  background-color:#444444;
   color:#ffffff;
 }
 .filtered .filter-title span.arrow {
@@ -204,6 +229,9 @@ visibility:hidden;
   border-right: 6px solid transparent;
   border-bottom: 8px solid #fff;
   border-top:none;
+}
+.filtered .legend-square {
+  border:2px solid #ffffff;
 }
 .instructional {
   color:#777;
@@ -350,6 +378,7 @@ visibility:hidden;
     width:100%;
     padding-right:0;
     clear:right;
+    margin-bottom:.5em;
   }
   .cir-map-legend {
     font-size:.75em;
