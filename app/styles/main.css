@@ -62,7 +62,8 @@ padding:2px 0 0 6px;
 }
 
 .map-tooltip {
-width:160px;
+/*width:160px;*/
+max-width:160px;
 position:absolute;
 display:none;
 border-radius:4px;
@@ -84,11 +85,12 @@ span.state-name {
 font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif;
 font-weight:bold;
 font-size:1.2em;
-margin-bottom:.2em;
+/*margin-bottom:.2em;*/
 }
 span.state-group {
 font-family:"lato",sans-serif;
 font-size:.9em;
+display:none;
 }
 
 .cir-map-state {
@@ -120,6 +122,7 @@ fill:#999999;
 .cir-map-state:hover {
 /*fill:#999999;*/
 fill-opacity:.75;
+cursor:pointer;
 }
 
 .cir-map-state[data-selected="true"],.cir-map-state#AK[data-selected="true"], .cir-map-state#HI[data-selected="true"]{
@@ -310,6 +313,7 @@ visibility:hidden;
   font-size:.9em;
   min-height:60px;
   float:right;
+  display:none;
 }
 
 .legend-row {
