@@ -44,7 +44,7 @@ float:left;
 background-color:#073763;
 }
 .legend-row.color-1 .legend-square{
-background-color:#4eb3d3;
+background-color:#64B5CD;
 }
 .legend-row.color-2 .legend-square{
 background-color:#a8ddb5;
@@ -121,7 +121,7 @@ transition: fill-opacity 300ms ease 0ms;
 fill:#073763;
 }
 .cir-map-state[data-color="1"]{
-fill:#4eb3d3;
+fill:#64B5CD;
 }
 .cir-map-state[data-color="2"]{
 fill:#a8ddb5;
@@ -195,7 +195,7 @@ visibility:hidden;
   background-color:#073763;
 }
 .filter:nth-child(2) .legend-square {
-  background-color:#4eb3d3;
+  background-color:#64B5CD;
 }
 .filter:nth-child(3) .legend-square {
   background-color:#a8ddb5;
@@ -305,7 +305,7 @@ visibility:hidden;
 
 /* Group 1 */
 #interactive-wrapper[data-filter="1"] .cir-map-state[data-color="1"]{
-  fill:#4eb3d3;
+  fill:#64B5CD;
 }
 #interactive-wrapper[data-filter="1"] .cir-map-state[data-color="0"],
 #interactive-wrapper[data-filter="1"] .cir-map-state[data-color="2"],
