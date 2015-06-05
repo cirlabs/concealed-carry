@@ -41,13 +41,13 @@ height:20px;
 float:left;
 }
 .legend-row.color-0 .legend-square{
-background-color:#fc4e2a;
+background-color:#2b8cbe;
 }
 .legend-row.color-1 .legend-square{
-background-color:#feb24c;
+background-color:#7bccc4;
 }
 .legend-row.color-2 .legend-square{
-background-color:#ffeda0;
+background-color:#a8ddb5;
 }
 .legend-row.color-3 .legend-square{
 background-color:#999999;
@@ -105,7 +105,8 @@ display:none;
 
 .cir-map-state {
 fill-opacity:1;
-stroke-width:2;
+stroke-width:1;
+stroke:#666666;
 -webkit-transition: fill-opacity 300ms ease 0ms;
 -moz-transition: fill-opacity 300ms ease 0ms;
 -o-transition: fill-opacity 300ms ease 0ms;
@@ -113,17 +114,17 @@ transition: fill-opacity 300ms ease 0ms;
 }
 
 .cir-map-state#AK, .cir-map-state#HI {
-stroke-width:1;
+/*stroke-width:1;*/
 }
 
 .cir-map-state[data-color="0"]{
-fill:#fc4e2a;
+fill:#2b8cbe;
 }
 .cir-map-state[data-color="1"]{
-fill:#feb24c;
+fill:#7bccc4;
 }
 .cir-map-state[data-color="2"]{
-fill:#ffeda0;
+fill:#a8ddb5;
 }
 .cir-map-state[data-color="3"] {
 fill:#999999;
@@ -191,13 +192,13 @@ visibility:hidden;
   border:1px solid #222222;
 }
 .filter:nth-child(1) .legend-square {
-  background-color:#fc4e2a;
+  background-color:#2b8cbe;
 }
 .filter:nth-child(2) .legend-square {
-  background-color:#feb24c;
+  background-color:#7bccc4;
 }
 .filter:nth-child(3) .legend-square {
-  background-color:#ffeda0;
+  background-color:#a8ddb5;
 }
 .filter:nth-child(4) .legend-square {
   background-color:#999999;
@@ -294,7 +295,7 @@ visibility:hidden;
 
 /* Group 0 */
 #interactive-wrapper[data-filter="0"] .cir-map-state[data-color="0"]{
-  fill:#fc4e2a;
+  fill:#2b8cbe;
 }
 #interactive-wrapper[data-filter="0"] .cir-map-state[data-color="1"], 
 #interactive-wrapper[data-filter="0"] .cir-map-state[data-color="2"],
@@ -304,7 +305,7 @@ visibility:hidden;
 
 /* Group 1 */
 #interactive-wrapper[data-filter="1"] .cir-map-state[data-color="1"]{
-  fill:#feb24c;
+  fill:#7bccc4;
 }
 #interactive-wrapper[data-filter="1"] .cir-map-state[data-color="0"],
 #interactive-wrapper[data-filter="1"] .cir-map-state[data-color="2"],
@@ -314,7 +315,7 @@ visibility:hidden;
 
 /* Group 2 */
 #interactive-wrapper[data-filter="2"] .cir-map-state[data-color="2"]{
-  fill:#ffeda0;
+  fill:#a8ddb5;
 }
 #interactive-wrapper[data-filter="2"] .cir-map-state[data-color="0"],
 #interactive-wrapper[data-filter="2"] .cir-map-state[data-color="1"],
