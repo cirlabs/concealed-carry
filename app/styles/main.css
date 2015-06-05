@@ -439,8 +439,8 @@ visibility:hidden;
 }
 
 circle:hover {
-  fill: #64B5CD;
-  stroke: #64B5CD;
+  fill: #f38c21;
+  stroke: #f38c21;
 }
 
 @media all and (max-width: 1000px) {
