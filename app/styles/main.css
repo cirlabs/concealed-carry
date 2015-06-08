@@ -408,7 +408,7 @@ clip: rect(1px, 1px, 1px, 1px);
   text-transform:uppercase;
 }
 .map-tooltip.lawsuit tr:first-child td:last-child {
-  font-style:italic;
+  font-style:normal;
 }
 .circle-legend {
   margin-bottom:1em;
