@@ -61,8 +61,6 @@ function initAccordion(){
 		var location = $this.data("location");
 		var decision = $this.data("decision");
 
-		console.log("in");
-
 		var tooltip = $(".map-tooltip");
 		//var html = "<span class='label'>Lawsuit</span><span class='case'>" + lawsuit + "</span><span class='court'>" + court + "</span><span class='location'>" + location + "</span><span class='decision'>" + decision + "</span>";
 		html = "<span class='label'>Lawsuit</span><table><tr><td>Case</td><td>" + lawsuit + "</td></tr><tr><td>Court</td><td>" + court + "</td></tr><tr><td>Decided</td><td>" + decision + "</td></tr></table>";
@@ -72,7 +70,6 @@ function initAccordion(){
 			$(this).html(html);
 		});
 	}, function() {
-		console.log("out");
 		$(".map-tooltip").removeClass("lawsuit").css("display", "none");
 	});
 }
