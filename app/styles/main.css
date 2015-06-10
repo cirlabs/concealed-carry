@@ -469,3 +469,9 @@ circle:hover {
     margin-bottom:0;
   }
 }
+
+@media all and (min-width: 840px) and (max-width: 1000px) { 
+  #filters-container {
+    font-size:.9em;
+  }
+}
