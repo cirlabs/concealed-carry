@@ -141,7 +141,6 @@ stroke-width:3;
 stroke:#222222;
 }
 
-.touch-device #cir-map-select, 
 .touch-device .info-inner {
 display:block;
 }
@@ -151,11 +150,23 @@ visibility:hidden;
 }
 
 .wcag-hide {
-position: absolute !important;
+position: absolute;
 height: 1px; width: 1px; 
 overflow: hidden;
 clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 clip: rect(1px, 1px, 1px, 1px);
+}
+
+.touch-device #cir-map-select.wcag-hide {
+position:static;
+height:auto;
+overflow:visible;
+clip:auto;
+width: 100%;
+}
+
+.compatibility-error {
+  display:none;
 }
 
 
@@ -163,6 +174,7 @@ clip: rect(1px, 1px, 1px, 1px);
 .viz-container {
   float:left; 
   margin-bottom:1.5em;
+  width:100%;
 }
 #interactive-wrapper {
   width:60%;
@@ -430,9 +442,6 @@ clip: rect(1px, 1px, 1px, 1px);
   font-size:.9em;
 }
 
-#cir-map-select {
-  display:none;
-}
 .info-inner {
   display:none;
   border:1px solid #bbbbbb;

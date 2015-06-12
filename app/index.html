@@ -17,9 +17,20 @@
     <!-- endbuild -->
 
 
-    <div class="viz-container">
+    
 
-
+    <!--[if lt IE 9]>
+      <style>
+            .county-selection-wrapper, #interactive-wrapper, .cir-map-legend, .credit {display:none;}
+            .compatibility-error {display:block;}
+      </style>
+    <![endif]-->
+    <noscript>
+      <style>
+            .viz-container {display:none;}
+            .compatibility-error {display:block;}
+      </style>
+    </noscript>
 
 
 
@@ -31,9 +42,12 @@
     <![endif]-->
 
 
+
     <article id="article-841" class="main post-841 article type-article status-publish has-post-thumbnail hentry tag-day-care tag-preschools topic-day-care topic-u-s">
 
     <h2>Where can you carry a concealed gun in public?</h2>
+
+    <div class="viz-container">
     <p>Every state plus the District of Columbia allows gun owners to carry concealed handguns. Here's how the laws differ.</p>
 
     <div id="filters-container">
@@ -87,8 +101,9 @@
 
     <!--?xml version="1.0" encoding="utf-8"?-->
     <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-    <svg version="1.1" id="us-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewBox="0 0 960 596" enable-background="new 0 0 960 596" xml:space="preserve">
-    <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc>
+    <svg version="1.1" id="us-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewBox="0 0 960 596" enable-background="new 0 0 960 596" xml:space="preserve" aria-labelledby="title" aria-describedby="desc" role="img">
+    <title>Concealed carry laws by state</title>
+    <desc>A choropleth map of the United State's concealed weapons laws, colored by the level of discretion required in each state.</desc>
     <path id="DC-ID" fill="none" stroke="#E4E4E4" stroke-width="0.5" d="M823.2,220.6l44.2,27.1"></path>
 
 
@@ -429,7 +444,7 @@
     </div> <!--map-container-->
 
 
-    <label for="cir-map-select" class="wcag-hide">Select a state: </label><select id="cir-map-select" name="cir-map-select"><option>Select a state</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option><option value="DC">District of Columbia</option></select><div id="cir-map-info"></div>
+    <label for="cir-map-select" class="wcag-hide">Select a state: </label><select id="cir-map-select" name="cir-map-select" class="wcag-hide"><option>Select a state</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option><option value="DC">District of Columbia</option></select><div id="cir-map-info"></div>
 
 
 
@@ -466,8 +481,8 @@
     <script type="text/javascript">
       var _gaq = _gaq || [];
       var WebFontConfig = {
-        google: { families: ['Lato',] },
-        typekit: { id: 'quu2bck' }
+        google: { families: ['Lato',] }//,
+        //typekit: { id: 'quu2bck' }
       };
 
       _gaq.push(['_setAccount', 'UA-2147301-15']);
@@ -516,6 +531,8 @@
       });
 
     </script>
+
+    <div class="compatibility-error">This interactive feature requires a modern browser with JavaScript enabled.</div>
 
 </body>
 </html>
