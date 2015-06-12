@@ -148,6 +148,17 @@ display:block;
 display:none;
 visibility:hidden;
 }
+.touch-device .map-tooltip.lawsuit {
+  max-width: 100%;
+  margin-top: .5em;
+  display:block;
+  visibility:visible;
+  background-color:rgba(255,255,255,.9);
+}
+
+.touch-device .map-tooltip.lawsuit table,.touch-device .map-tooltip.lawsuit table tr {
+  background:none;
+}
 
 .wcag-hide {
 position: absolute;
@@ -173,7 +184,6 @@ width: 100%;
 /* For concealed carry map only */
 .viz-container {
   float:left; 
-  margin-bottom:1.5em;
   width:100%;
 }
 #interactive-wrapper {
@@ -460,6 +470,39 @@ circle:hover {
   stroke: #f38c21;
 }
 
+.touch-device circle {  
+  r: 23;
+  stroke-width: 8;
+}
+
+.map-tooltip .close {
+  display:none;
+}
+
+.touch-device .map-tooltip .close {
+  display:block;
+  position: absolute;
+  right: .5em;
+  top: -2em;
+  font-family:Lato, sans-serif;
+  font-size: 12px;
+  line-height: 1.75;
+}
+.touch-device .map-tooltip .close::before {
+  content:"x";
+  display:inline-block;
+  font-family: tahoma, sans-serif;
+  font-size:14px;
+  line-height:0;
+  padding-top:7px;
+  font-weight: bold;
+  background-color: #ccc;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right:4px;
+}
+
 @media all and (max-width: 840px) {
   #interactive-wrapper {
     width:100%;
@@ -468,7 +511,6 @@ circle:hover {
     width:100%;
     padding-right:0;
     clear:right;
-    margin-bottom:.5em;
   }
   .cir-map-legend {
     font-size:.75em;

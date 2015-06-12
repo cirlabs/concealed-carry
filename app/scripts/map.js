@@ -1,3 +1,6 @@
+// jshint devel:true
+'use strict';
+
 /* no jquery - for sharing with all CIR maps */
 
 //from: https://github.com/jfriend00/docReady
@@ -5,7 +8,7 @@
     // The public function name defaults to window.docReady
     // but you can pass in your own object and own function name and those will be used
     // if you want to put them in a different namespace
-    funcName = funcName || "docReady";
+    funcName = funcName || 'docReady';
     baseObj = baseObj || window;
     var readyList = [];
     var readyFired = false;
@@ -32,7 +35,7 @@
     }
 
     function readyStateChange() {
-        if ( document.readyState === "complete" ) {
+        if ( document.readyState === 'complete' ) {
             ready();
         }
     }
@@ -52,57 +55,108 @@
             readyList.push({fn: callback, ctx: context});
         }
         // if document already ready to go, schedule the ready function to run
-        if (document.readyState === "complete") {
+        if (document.readyState === 'complete') {
             setTimeout(ready, 1);
         } else if (!readyEventHandlersInstalled) {
             // otherwise if we don't have event handlers installed, install them
             if (document.addEventListener) {
                 // first choice is DOMContentLoaded event
-                document.addEventListener("DOMContentLoaded", ready, false);
+                document.addEventListener('DOMContentLoaded', ready, false);
                 // backup is window load event
-                window.addEventListener("load", ready, false);
+                window.addEventListener('load', ready, false);
             } else {
                 // must be IE
-                document.attachEvent("onreadystatechange", readyStateChange);
-                window.attachEvent("onload", ready);
+                document.attachEvent('onreadystatechange', readyStateChange);
+                window.attachEvent('onload', ready);
             }
             readyEventHandlersInstalled = true;
         }
+    };
+})('docReady', window);
+
+function tooltipInfo(elem){
+  var state = elem.getAttribute('data-state');
+  var group = elem.getAttribute('data-group');
+  var htmlName = '<span class="state-name">' + state + '</span>';
+  var htmlGroup = '<span class="state-group">' + group + '</span>';
+
+  var innerTip = document.getElementsByClassName('tooltip-inner')[0];
+
+  innerTip.innerHTML = htmlName + htmlGroup;
+}
+
+function deselectPath(){
+  var states = document.getElementsByClassName('cir-map-state');
+  for (var j in states) {
+    var state = states[j];
+    if (typeof state === 'object'){
+      state.setAttribute('data-selected', 'false');
     }
-})("docReady", window);
+  }
+}
+
+function updateSelectedPath(path){
+  deselectPath();   
+  if (path.getAttribute('data-selected') === 'true'){
+    path.setAttribute('data-selected', 'false');
+  } else {
+    path.setAttribute('data-selected', 'true');
+  } 
+  path.setAttribute('data-selected', 'true');
+  var parent = path.parentNode;
+  parent.appendChild(path);
+}
+
+function updateSelectionInfo(value){
+  var info = document.getElementById('cir-map-info');
+  if (value !== 'Select a state'){
+    var svgState = document.getElementById(value);
+    var dataState = svgState.getAttribute('data-state');
+    var dataGroup = svgState.getAttribute('data-group');
+    var html = '<div class="info-inner"><span class="state-name">' + dataState + '</span><span class="state-group">' + dataGroup + '</span></div>';
+    info.innerHTML = html;
+    updateSelectedPath(svgState);     
+  } else {
+    info.innerHTML = '';
+    deselectPath();
+  }
+}
+
+function stateSelect(){
+  var select = document.getElementById('cir-map-select');
+  select.onchange = function(){
+    var value = select.value;
+    updateSelectionInfo(value);
+  };
+}
 
 var touch;
-
-docReady(function() {
-    initInteraction();
-    stateSelect();
-});
 
 function initInteraction(){
   /* Check if viewing on a mobile browser */
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     touch = true;
-    var wrapper = document.getElementById("interactive-wrapper");
+    var wrapper = document.getElementById('interactive-wrapper');
     wrapper.className += ' touch-device';
   }
 
-  var tooltip = document.getElementsByClassName("map-tooltip")[0];
-  var map = document.getElementById("us-map");
+  var tooltip = document.getElementsByClassName('map-tooltip')[0];
+  var map = document.getElementById('us-map');
 
   if (!touch) {
     map.addEventListener( 'mousemove', function(e) {
-      var left = e.offsetX==undefined?e.layerX+10:e.offsetX+10;
-      var top = e.offsetY==undefined?e.layerY+10:e.offsetY+10;
+      var left = e.offsetX===undefined?e.layerX+10:e.offsetX+10;
+      var top = e.offsetY===undefined?e.layerY+10:e.offsetY+10;
       if (e.pageX > (window.innerWidth - 300)){
         //left = e.offsetX==undefined?e.layerX-160:e.offsetX-160;
-        left = e.offsetX==undefined?e.layerX-tooltip.clientWidth:e.offsetX-tooltip.clientWidth;
+        left = e.offsetX===undefined?e.layerX-tooltip.clientWidth:e.offsetX-tooltip.clientWidth;
       }
       tooltip.style.left = left + 'px';
       tooltip.style.top = top + 'px';
     });
   }
 
-  var elements = document.getElementsByClassName("cir-map-state");
+  var elements = document.getElementsByClassName('cir-map-state');
   for (var i in elements) {
     if (!elements.hasOwnProperty(i)) {
       continue;
@@ -112,7 +166,7 @@ function initInteraction(){
 
       if (!touch){
         elem.addEventListener( 'mouseover', function(e) {
-          tooltipInfo(e.target, tooltip);
+          tooltipInfo(e.target);
           tooltip.style.display = 'block';
         });
 
@@ -123,11 +177,11 @@ function initInteraction(){
         elem.addEventListener( 'click', function(e) {
           if(e.handled !== true) {
             var stateID = e.target.id;
-            var select = document.getElementById("cir-map-select");           
-            if (e.target.getAttribute('data-selected') == 'true'){
-              select.value = "Select a state";
-              e.target = "";
-              stateID = "Select a state";
+            var select = document.getElementById('cir-map-select');           
+            if (e.target.getAttribute('data-selected') === 'true'){
+              select.value = 'Select a state';
+              e.target = '';
+              stateID = 'Select a state';
             } else {
               select.value = stateID;
             }
@@ -141,58 +195,7 @@ function initInteraction(){
   }
 }
 
-function tooltipInfo(elem, tooltip){
-  var state = elem.getAttribute("data-state");
-  var group = elem.getAttribute("data-group");
-  var htmlName = "<span class='state-name'>" + state + "</span>";
-  var htmlGroup = "<span class='state-group'>" + group + "</span>";
-
-  var innerTip = document.getElementsByClassName("tooltip-inner")[0];
-
-  innerTip.innerHTML = htmlName + htmlGroup;
-}
-
-function stateSelect(){
-  var select = document.getElementById("cir-map-select");
-  select.onchange = function(){
-    var value = select.value;
-    updateSelectionInfo(value);
-  }
-}
-
-function updateSelectionInfo(value){
-  var info = document.getElementById("cir-map-info");
-  if (value != "Select a state"){
-    var svgState = document.getElementById(value);
-    var dataState = svgState.getAttribute("data-state");
-    var dataGroup = svgState.getAttribute("data-group")
-    var html = "<div class='info-inner'><span class='state-name'>" + dataState + "</span><span class='state-group'>" + dataGroup + "</span></div>";
-    info.innerHTML = html;
-    updateSelectedPath(svgState);     
-  } else {
-    info.innerHTML = "";
-    deselectPath();
-  }
-}
-
-function updateSelectedPath(path){
-  deselectPath();   
-  if (path.getAttribute('data-selected') == 'true'){
-    path.setAttribute('data-selected', 'false');
-  } else {
-    path.setAttribute('data-selected', 'true');
-  } 
-  path.setAttribute('data-selected', 'true');
-  var parent = path.parentNode;
-  parent.appendChild(path);
-}
-
-function deselectPath(){
-  var states = document.getElementsByClassName("cir-map-state");
-  for (var j in states) {
-    var state = states[j];
-    if (typeof state === 'object'){
-      state.setAttribute('data-selected', 'false');
-    }
-  }
-}
+docReady(function() {
+    initInteraction();
+    stateSelect();
+});
