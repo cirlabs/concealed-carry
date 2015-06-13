@@ -1,10 +1,14 @@
 body {
   background: #ffffff;
-  padding:0 1em;
+  padding:0;
 }
 
 .article h2 {
   margin-top: .5em;
+}
+
+h2, p, .filter-description {
+  font-family: "ff-meta-serif-web-pro",Georgia,Times,"Times New Roman",serif;
 }
 
 p.credit {
@@ -92,7 +96,7 @@ text-align:center;
 
 
 span.state-name {
-font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif;
+font-family: "ff-meta-serif-web-pro",Georgia,Times,"Times New Roman",serif;
 font-weight:bold;
 font-size:1.2em;
 /*margin-bottom:.2em;*/
@@ -518,6 +522,9 @@ circle:hover {
   }
   .circle-legend {
     margin-bottom:0;
+  }
+  .map-tooltip.lawsuit {
+    max-width:200px;
   }
 }
 
