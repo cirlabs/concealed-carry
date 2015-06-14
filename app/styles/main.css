@@ -1,3 +1,36 @@
+/* Start styles borrowed from http://www.revealnews.org/wp-content/themes/reveal2015/static/stylesheets/app.min.css?ver=0.5.2 */
+svg:not(:root) { overflow: hidden; }
+select { font-family: inherit; font-size: 100%; margin: 0px; }
+select { text-transform: none; }
+html { font-family: sans-serif; }
+body,html { height: 100%; }
+*,*::after,*::before { box-sizing: border-box; }
+body, html{ font-size: 22px; }
+body { color: #222; padding: 0px; margin: 0px; font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif; font-weight: 400; font-style: normal; line-height: 1.4; position: relative; cursor: auto; }
+div,h2,h1,h2,h3,h4,h5,h6,p { margin: 0px; padding: 0px; }
+p { font-family: inherit; font-weight: 400; font-size: inherit; line-height: 1.4; margin-bottom: 1.25em; text-rendering: optimizelegibility; }
+h1,h2,h3,h4,h5,h6 { font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif; font-weight: 700; font-style: normal; color: #222; text-rendering: optimizelegibility; margin-top: 0.2rem; margin-bottom: 0.5rem; line-height: 1.3; }
+h2 { font-size: 0.90909rem; }
+h1,h2,h3,h4,h5,h6 { line-height: 1.3; }
+h1 { font-size: 2.45455rem; }
+h2 { font-size: 1.36364rem; }
+h3 { font-size: 1rem; }
+h4 { font-size: 0.81818rem; }
+h5 { font-size: 0.72727rem; }
+h6 { font-size: 1rem; }
+label { font-size: 0.81818rem; color: #666; cursor: pointer; display: block; font-weight: 400; line-height: 1.5; margin-bottom: 0px; }
+select { background-color: #fafafa; background-position: 100% center; background-repeat: no-repeat; border-style: solid; border-width: 1px; border-color: #ccc; padding: 0.36364rem; font-size: 0.63636rem; font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif; color: rgba(0, 0, 0, 0.75); line-height: normal; border-radius: 0px; height: 1.68182rem; }
+input[type="checkbox"],input[type="file"],input[type="radio"],select { margin: 0px 0px 0.72727rem; }
+body { background: rgb(233, 233, 233) none repeat scroll 0% 0%; z-index: 1; }
+@media only screen and (max-width: 40em) {
+  body,html { font-size: 20px; }
+}
+h2,h3,h4,h5,h6 { font-family: lato,Helvetica,sans-serif; font-weight: 900; }
+.article { font-size: 21px; }
+.article h2 { margin-top: 1.5em; text-transform: none; font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif; }
+
+/* End styles from http://www.revealnews.org/wp-content/themes/reveal2015/static/stylesheets/app.min.css?ver=0.5.2 */
+
 body {
   background: #ffffff;
   padding:0;
