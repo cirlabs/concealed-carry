@@ -52,7 +52,7 @@ p.credit {
   text-align: right;
   font-family: Lato,sans-serif;
   margin-top:1em;
-  max-width: 340px;
+  max-width: 300px;
   float: right;
 }
 
@@ -639,5 +639,21 @@ circle:hover {
 @media all and (min-width: 768px) and (max-width: 1000px) { 
   #filters-container {
     font-size:.9em;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .touch-device .state-selection-wrapper {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .touch-device #cf-1 {
+    display:none;
+  }
+  .touch-device #cf-2-wrap, .touch-device #cf-2 {
+    display:block;
   }
 }
