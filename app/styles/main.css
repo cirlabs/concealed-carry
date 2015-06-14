@@ -28,7 +28,9 @@ body { background: rgb(233, 233, 233) none repeat scroll 0% 0%; z-index: 1; }
 h2,h3,h4,h5,h6 { font-family: lato,Helvetica,sans-serif; font-weight: 900; }
 .article { font-size: 21px; }
 .article h2 { margin-top: 1.5em; text-transform: none; font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif; }
-
+table { border-collapse: collapse }
+table tr td,table tr th { padding:.40909rem .45455rem;font-size:.63636rem;color:#222;text-align:left }
+table tr.alt,table tr.even,table tr:nth-of-type(even){ background:#F9F9F9 }
 /* End styles from http://www.revealnews.org/wp-content/themes/reveal2015/static/stylesheets/app.min.css?ver=0.5.2 */
 
 body {
@@ -580,7 +582,7 @@ circle:hover {
 }
 
 .map-tooltip.hide {
-  display:none;
+  display:none!important;
 }
 
 
