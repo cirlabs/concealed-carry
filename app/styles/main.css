@@ -560,7 +560,7 @@ circle:hover {
     padding-right:0;
     clear:right;
   }
-  #filter-3 {
+  #filter-3.filtered {
     border-bottom: 1px solid #ccc;
   }
   .cir-map-legend {
@@ -595,6 +595,9 @@ circle:hover {
   }
   p.credit {
     margin-top:0;
+    text-align: left;
+    max-width: 100%; 
+    float: none; 
   }
 }
 
