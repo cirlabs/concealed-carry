@@ -17,6 +17,8 @@ p.credit {
   text-align: right;
   font-family: Lato,sans-serif;
   margin-top:1em;
+  max-width: 340px;
+  float: right;
 }
 
 #interactive-wrapper {
