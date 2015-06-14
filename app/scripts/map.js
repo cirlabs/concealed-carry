@@ -105,6 +105,13 @@ function updateSelectedPath(path){
   path.setAttribute('data-selected', 'true');
   var parent = path.parentNode;
   parent.appendChild(path);
+
+  var lawsuits = document.querySelectorAll('circle');
+  for (var i=0; i < lawsuits.length; i++) {
+    var lawsuit = lawsuits[i];
+    parent.appendChild(lawsuit);
+  }
+
 }
 
 function updateSelectionInfo(value){
@@ -130,10 +137,10 @@ function stateSelect(){
   };
 }
 
-var touch;
 
 function initInteraction(){
   /* Check if viewing on a mobile browser */
+  var touch;
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
     touch = true;
     var wrapper = document.getElementById('interactive-wrapper');
@@ -173,19 +180,30 @@ function initInteraction(){
         elem.addEventListener( 'mouseout', function() {
           tooltip.style.display = 'none';
         });
+
+        elem.addEventListener( 'focus', function(e){ 
+          tooltipInfo(e.target);
+          tooltip.style.display = 'block';
+          tooltip.style.top = '-50px';
+          //tooltip.style.right = '10px';
+          tooltip.style.left = '40%';
+        });
       } else {
         elem.addEventListener( 'click', function(e) {
           if(e.handled !== true) {
             var stateID = e.target.id;
-            var select = document.getElementById('cir-map-select');           
+            var select = document.getElementById('cir-map-select');  
+            var selected = true;         
             if (e.target.getAttribute('data-selected') === 'true'){
               select.value = 'Select a state';
-              e.target = '';
               stateID = 'Select a state';
+              selected = false;
             } else {
               select.value = stateID;
             }
-            updateSelectedPath(e.target);
+            if (selected){
+              updateSelectedPath(e.target);
+            }
             updateSelectionInfo(stateID);
             e.handled = true;
           }

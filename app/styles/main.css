@@ -16,6 +16,7 @@ p.credit {
   font-size: .6em;
   text-align: right;
   font-family: Lato,sans-serif;
+  margin-top:1em;
 }
 
 #interactive-wrapper {
@@ -80,9 +81,18 @@ padding:10px;
 font-size:.8em;
 }
 
-.tooltip-inner span, #cir-map-info span{
+.tooltip-inner span {
 display:block;
 text-align:center;
+}
+
+#cir-map-info {
+  display:inline-block;
+  width:50%;
+  margin-left:2%;
+}
+#cir-map-info span{
+  display:block;
 }
 
 #cir-map-info .info-inner {
@@ -105,6 +115,10 @@ span.state-group {
 font-family:"lato",sans-serif;
 font-size:.9em;
 display:none;
+}
+#cir-map-info span.state-group {
+  font-family: "ff-meta-serif-web-pro",Georgia,Times,"Times New Roman",serif;
+  font-weight:bold;
 }
 
 .cir-map-state {
@@ -139,6 +153,12 @@ fill:#999999;
 fill-opacity:.75;
 cursor:pointer;
 }
+.cir-map-state:focus {
+/*fill:#999999;*/
+fill-opacity:.75;
+cursor:pointer;
+outline:none;
+}
 
 .cir-map-state[data-selected="true"],.cir-map-state#AK[data-selected="true"], .cir-map-state#HI[data-selected="true"]{
 stroke-width:3;
@@ -153,8 +173,10 @@ display:none;
 visibility:hidden;
 }
 .touch-device .map-tooltip.lawsuit {
-  max-width: 100%;
-  margin-top: .5em;
+  width:96%;
+  min-width:96%;
+  margin:0 2%;
+  margin-top: 1em;
   display:block;
   visibility:visible;
   background-color:rgba(255,255,255,.9);
@@ -172,12 +194,20 @@ clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 clip: rect(1px, 1px, 1px, 1px);
 }
 
-.touch-device #cir-map-select.wcag-hide {
-position:static;
-height:auto;
-overflow:visible;
-clip:auto;
-width: 100%;
+.state-selection-wrapper {
+  width: 100%;
+  display:none;
+  padding: 1em 0;
+  margin-top:.5em;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.touch-device .state-selection-wrapper {
+  display:block;
+}
+#cir-map-select {
+  width: 40%;
+  margin: 0;
 }
 
 .compatibility-error {
@@ -197,7 +227,6 @@ width: 100%;
 }
 .interactive-wrapper-inner {
   width:100%;
-  float:left;
   display:relative;
 }
 #filters-container {
@@ -260,7 +289,12 @@ width: 100%;
 }
 .filter-description{
   display:none;
-  padding:10px;
+  padding:9px;
+  border:1px solid transparent;
+}
+.filter-description:focus{
+  outline:none;
+  border:1px solid #cccccc;
 }
 .filtered .filter-title, 
 .filtered:hover .filter-title, 
@@ -299,7 +333,7 @@ width: 100%;
   margin: -7px;
   padding-right: 4px;
 }
-#clear-filter {
+.clear-filter {
   color:#777;
   font-size:.75em;
   font-family: 'Lato', sans-serif;
@@ -307,11 +341,14 @@ width: 100%;
   padding:0 10px 10px 10px;
   margin-bottom:.5em;
 }
-#clear-filter:hover, 
-#clear-filter:focus {
+.clear-filter:hover, 
+.clear-filter:focus {
   cursor:pointer;
   color:#f38c21;
   outline:none;
+}
+#cf-2-wrap {
+  display:none;
 }
 .x-icon {
   max-width: 24px;
@@ -323,7 +360,7 @@ width: 100%;
 .x-icon path {
   fill: #64B5CD;
 }
-#clear-filter:hover .x-icon path, #clear-filter:focus .x-icon path {
+.clear-filter:hover .x-icon path, .clear-filter:focus .x-icon path {
   fill: #f38c21;
 }
 
@@ -440,7 +477,7 @@ width: 100%;
   margin-bottom:1em;
   float:left;
   width:100%;
-  padding:10px;
+  padding:10px 10px 16px 10px;
   font-size:.9em;
 }
 .circle-legend .circle {
@@ -466,7 +503,7 @@ width: 100%;
   color:#222222;
   padding:10px;
   font-size:.8em;
-  margin-bottom:1em;
+  margin-bottom:0;
 }
 
 circle:hover {
@@ -507,7 +544,12 @@ circle:hover {
   margin-right:4px;
 }
 
-@media all and (max-width: 840px) {
+.map-tooltip.hide {
+  display:none;
+}
+
+
+@media all and (max-width: 768px) {
   #interactive-wrapper {
     width:100%;
   }
@@ -515,6 +557,9 @@ circle:hover {
     width:100%;
     padding-right:0;
     clear:right;
+  }
+  #filter-3 {
+    border-bottom: 1px solid #ccc;
   }
   .cir-map-legend {
     font-size:.75em;
@@ -525,10 +570,33 @@ circle:hover {
   }
   .map-tooltip.lawsuit {
     max-width:200px;
+  }  
+  #cir-map-info span.state-group {
+    font-size:.7em;
+  }
+  .interactive-wrapper-inner { 
+    padding-top: 1em;
+  }
+  #map-container {
+    margin-bottom: 0;
+    border-bottom: 1px solid #ccc;
+  }
+  #cf-1 {
+    display:none;
+  }
+  #cf-2.clear-filter {
+    padding:1em .5em;
+  }
+  #cf-2-wrap {
+    display:block;
+    background-color:rgba(200,200,200,.25);
+  }
+  p.credit {
+    margin-top:0;
   }
 }
 
-@media all and (min-width: 840px) and (max-width: 1000px) { 
+@media all and (min-width: 768px) and (max-width: 1000px) { 
   #filters-container {
     font-size:.9em;
   }

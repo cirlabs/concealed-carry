@@ -1,6 +1,12 @@
 // jshint devel:true
 'use strict';
 
+var touch;
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+	touch = true;
+	var wrapper = document.getElementById('interactive-wrapper');
+	wrapper.className += ' touch-device';
+}
 
 function circleTooltip(circle) {
 	var $this = circle;
@@ -33,7 +39,7 @@ function initAccordion(){
 
 		var id = parseInt( $parent.attr('id').replace('filter-', '') );
 		var map = $('#interactive-wrapper');
-		var clear = $('#clear-filter');
+		var clear = $('.clear-filter');
 		if ($parent.hasClass('filtered')){
 			map.attr('data-filter', id);
 			clear.css('visibility', 'visible');
@@ -43,7 +49,7 @@ function initAccordion(){
 		}     
 	});
 
-	$('#clear-filter').click(function(){
+	$('.clear-filter').click(function(){
 		$('.filtered').find('.filter-title').trigger('click');
 	}).keydown(function(e){
 		var code = e.which;
@@ -71,6 +77,13 @@ function initAccordion(){
 				filter.find('.filter-title').trigger('click');
 			}
 		});
+		$('.cir-map-state').keydown(function(e){ // Trigger the click event from the keyboard
+			var code = e.which;
+			// 13 = Return, 32 = Space
+			if ((code === 13) || (code === 32)) {
+				$(this).trigger('click');
+			}
+		});
 	}
 
 	if (!touch){
@@ -80,6 +93,17 @@ function initAccordion(){
 		}, function() {
 			$('.map-tooltip').removeClass('lawsuit').css('display', 'none');
 		});
+		$('#us-map circle').focus(function(){ 
+        	var $this = $(this);
+			circleTooltip($this);
+			$('.map-tooltip').css({
+				'left':'30%',
+				'top':'-50px'
+			});
+        });
+        $('#us-map circle').blur(function(){ 
+        	$('.map-tooltip').css('display', 'none');
+        });
 	} else {
 		$('#us-map circle').click(function(){
 			var $this = $(this);
@@ -106,3 +130,35 @@ function initAccordion(){
 	}
 
 }
+
+var lastFocusedElement = null;
+var isClick = false;
+if (!touch){
+	$('#us-map *').mousedown(function() {     
+	     isClick= true;
+	}).focus(function(e){
+		var tooltip = $('.map-tooltip');
+
+	    // To prevent focus firing when element already had focus
+	    if (lastFocusedElement !== e.target) {
+	        if (isClick) {
+	          tooltip.addClass('hide');
+	        } else { 
+			  tooltip.removeClass('hide'); 
+	        }
+	        lastFocusedElement = e.target;
+	        isClick = false;
+	    }
+	}).mousemove(function(){
+		var tooltip = $('.map-tooltip');
+		tooltip.removeClass('hide');
+	});
+}
+
+$(document.body).focus(function(){
+  lastFocusedElement = document.body;
+});
+
+$(document).ready(function(){
+	initAccordion();
+});

@@ -59,19 +59,19 @@
       <div class="filters">
         <div id="filter-0" class="filter" tabindex="0" role="button">
           <div class="filter-title"><div class="legend-square"></div>Shall issue (no discretion)<span class="arrow"></span></div>
-          <div class="filter-description">Permits are granted to anyone who meets the state's minimum legal requirements, generally that the applicant a) is not a convicted felon and b) has not been found to be mentally unstable. <span class="small caveat">Mississippi passed a new law this year that allows people to carry a gun in a purse or bag &mdash; known as "off-body carrying" &mdash; without a permit. The law goes into effect July 1.</span></div>
+          <div class="filter-description" tabindex="0">Permits are granted to anyone who meets the state's minimum legal requirements, generally that the applicant a) is not a convicted felon and b) has not been found to be mentally unstable. <span class="small caveat">Mississippi passed a new law this year that allows people to carry a gun in a purse or bag &mdash; known as "off-body carrying" &mdash; without a permit. The law goes into effect July 1.</span></div>
         </div>
         <div id="filter-1" class="filter" tabindex="0" role="button">
           <div class="filter-title"><div class="legend-square"></div>Shall issue (limited discretion)<span class="arrow"></span></div>
-          <div class="filter-description">Permits are granted to anyone who meets the state's minimum legal requirements, with the issuing agency reserving the right to deny a permit under certain limited circumstances &mdash; for example, if the issuing agency determines that the applicant is believed to pose a danger to himself/herself or others.</div>
+          <div class="filter-description" tabindex="0">Permits are granted to anyone who meets the state's minimum legal requirements, with the issuing agency reserving the right to deny a permit under certain limited circumstances &mdash; for example, if the issuing agency determines that the applicant is believed to pose a danger to himself/herself or others.</div>
         </div>
         <div id="filter-2" class="filter" tabindex="0" role="button">
           <div class="filter-title"><div class="legend-square"></div> May issue (complete discretion)<span class="arrow"></span></div>
-          <div class="filter-description">The issuing agency has complete discretion to decide whether to grant a permit to eligible gun owners. In California, for example, an applicant must be of "good moral character" and demonstrate "good cause" to carry a gun. <span class="small caveat">The District of Columbia began processing concealed carry permits in 2014 after a federal judge struck down the city's long-standing ban on carrying guns in public.</span></div>
+          <div class="filter-description" tabindex="0">The issuing agency has complete discretion to decide whether to grant a permit to eligible gun owners. In California, for example, an applicant must be of "good moral character" and demonstrate "good cause" to carry a gun. <span class="small caveat">The District of Columbia began processing concealed carry permits in 2014 after a federal judge struck down the city's long-standing ban on carrying guns in public.</span></div>
         </div>
         <div id="filter-3" class="filter" tabindex="0" role="button">
           <div class="filter-title"><div class="legend-square"></div>No permit required<span class="arrow"></span></div>
-          <div class="filter-description">Anyone legally allowed to possess a gun may carry one in public.</div>
+          <div class="filter-description" tabindex="0">Anyone legally allowed to possess a gun may carry one in public.</div>
         </div>
       </div>
       <div class="circle-legend">
@@ -86,7 +86,7 @@
 
     <div class="cir-map-legend"><div class="legend-row color-0"><div class="legend-square"></div><div class="legend-text">Shall Issue (No Discretion)</div></div><div class="legend-row color-1"><div class="legend-square"></div><div class="legend-text">Shall Issue (Limited Discretion)</div></div><div class="legend-row color-2"><div class="legend-square"></div><div class="legend-text">May Issue (Complete Discretion)</div></div><div class="legend-row color-3"><div class="legend-square"></div><div class="legend-text">No Permit Required</div></div></div>
 
-    <div id="clear-filter" tabindex="0" role="button">
+    <div class="clear-filter" id="cf-1" tabindex="0" role="button">
       <svg version="1.1" class="x-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 268 960 946" enable-background="new 0 268 960 946" xml:space="preserve">
       <path fill="#FF0000" stroke="#FFFFFF" stroke-miterlimit="10" d="M486.1,282.5c-253.6,0-459.2,205.6-459.2,459.2
@@ -96,6 +96,9 @@
       Return to overview map
     </div>
 
+    <div class="state-selection-wrapper">
+      <label for="cir-map-select" class="wcag-hide">Select a state: </label><select id="cir-map-select" name="cir-map-select"><option>Select a state</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option><option value="DC">District of Columbia</option></select><div id="cir-map-info"></div>
+    </div>
 
     <div class="interactive-wrapper-inner">
     <div id="map-container">
@@ -106,350 +109,307 @@
     <!--?xml version="1.0" encoding="utf-8"?-->
     <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <svg version="1.1" id="us-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewBox="0 0 960 596" enable-background="new 0 0 960 596" xml:space="preserve" aria-labelledby="title" aria-describedby="desc" role="img">
-    <title>Concealed carry laws by state</title>
-    <desc>A choropleth map of the United State's concealed weapons laws, colored by the level of discretion required in each state.</desc>
-    <path id="DC-ID" fill="none" stroke="#E4E4E4" stroke-width="0.5" d="M823.2,220.6l44.2,27.1"></path>
+      <title>Concealed carry laws by state</title>
+      <desc>A choropleth map of the United State's concealed weapons laws, colored by the level of discretion required in each state.</desc>
+      <path id="DC-ID" fill="none" stroke="#E4E4E4" stroke-width="0.5" d="M823.2,220.6l44.2,27.1"></path>
+      <path class="cir-map-state" id="AL" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M648.4,437.6L648.4,437.6L648.4,437.6
+        l-4.4,1.5l2.9-1.5H648.4z M661.4,329.9L661.4,329.9l20.4-2.9l14.5,46.6l4.4,7.3v4.4l2.9,1.5l-2.9,2.9v5.8l1.5,7.3v7.3l2.9,4.4
+        l-49.6,5.8v2.9l5.8,4.4l-1.5,7.3l-5.8,2.9l-4.4,1.5l4.4-2.9l-2.9-2.9l-1.5-4.4h-1.5l-1.5,7.3h-4.4l-5.8-33.5v-67L635,333
+        L661.4,329.9z" title="Alabama, Shall Issue (Limited Discretion)" data-state="Alabama" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="AK" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.9985" stroke-linejoin="bevel" d="M109.4,567.3L109.4,567.3
+        L109.4,567.3l-1.5,1.5v-1.5H109.4z M121,568.7L121,568.7L121,568.7L121,568.7L121,568.7L121,568.7z M118.1,567.3L118.1,567.3v-1.5
+        V567.3l-1.5,1.5L118.1,567.3h-1.5H118.1z M121,567.3L121,567.3v1.5l0,0h-1.5L121,567.3z M119.5,567.3L119.5,567.3L119.5,567.3v1.5
+        v-2.9V567.3z M110.8,565.8L110.8,565.8l1.5,1.5l0,0h-1.5V565.8L110.8,565.8z M116.6,565.8L116.6,565.8h-1.5l1.5,1.5l-1.5-1.5v1.5
+        v-2.9L116.6,565.8L116.6,565.8L116.6,565.8z M118.1,564.4L118.1,564.4v1.5h-1.5v-1.5H118.1z M93.3,570.2L93.3,570.2v1.5h-1.5v-1.5
+        l0,0H93.3z M94.8,571.7L94.8,571.7L94.8,571.7L94.8,571.7L94.8,571.7L94.8,571.7z M96.2,571.7L96.2,571.7L96.2,571.7h-1.5H96.2
+        L96.2,571.7z M94.8,570.2L94.8,570.2L94.8,570.2v1.5h-1.5L94.8,570.2h-1.5H94.8z M106.4,570.2L106.4,570.2L106.4,570.2v1.5l0,0
+        V570.2z M75.8,519.2L75.8,519.2L75.8,519.2l1.5,1.5l1.5,1.5h-1.5L75.8,519.2z M100.7,527.9L100.7,527.9l1.5,1.5l-2.9,1.5l0,0
+        l-2.9-2.9l-1.5-1.5h2.9l0,0h1.5h1.5l0,0L100.7,527.9L100.7,527.9z M215.7,535.3L215.7,535.3L215.7,535.3h1.5l2.9,2.9l-2.9-1.5
+        l2.9,4.4h-1.5l1.5,1.5l-1.5,1.5l-1.5-1.5V541l0,0l0,0l-1.5-1.5l-1.5-5.8L215.7,535.3z M236.1,552.7L236.1,552.7v1.5h-1.5l0,0
+        L236.1,552.7z M233.1,551.3L233.1,551.3L233.1,551.3v1.5l-1.5-1.5H233.1z M131.2,557.1L131.2,557.1v1.5h-1.5v-1.5H131.2z
+         M93.3,503.2L93.3,503.2h2.9l-1.5,1.5h-1.5l-1.5,1.5l0,0v-1.5l-1.5-1.5v-1.5h-1.5h-1.5h-1.5v-1.5l1.5-1.5l0,0l1.5,1.5h2.9v1.5
+        L93.3,503.2z M115.2,504.7L115.2,504.7h1.5v1.5h-1.5V504.7z M99.2,491.5L99.2,491.5h1.5v1.5l0,0L99.2,491.5z M99.2,485.7L99.2,485.7
+        L99.2,485.7v1.5l0,0V485.7z M107.9,484.2L107.9,484.2L107.9,484.2L107.9,484.2L107.9,484.2L107.9,484.2z M221.6,551.3L221.6,551.3
+        h1.5H221.6L221.6,551.3L221.6,551.3z M221.6,549.8L221.6,549.8L221.6,549.8l-1.5-1.5v-1.5h1.5l-1.5-1.5l-1.5-1.5h1.5l0,0l0,0l0,0
+        l1.5,1.5v-1.5l0,0l1.5,1.5l-1.5,1.5h1.5v2.9l-1.5-1.5V549.8L221.6,549.8z M227.3,544L227.3,544l-1.5,1.5h-1.5V544h-1.5l0,0l1.5,1.5
+        l0,0l0,0l-1.5,1.5l-1.5-2.9l0,0l-1.5-1.5h4.4L227.3,544z M233.1,551.3L233.1,551.3l1.5,1.5l0,0v1.5L233.1,551.3z M225.9,552.7
+        L225.9,552.7L225.9,552.7L225.9,552.7v1.5l0,0l-1.5-1.5l0,0H225.9L225.9,552.7z M222.9,546.9L222.9,546.9h1.5l1.5,1.5h1.5l1.5,1.5
+        l1.5,1.5l0,0l0,0v1.5h1.5l0,0l0,0l0,0v1.5l0,0h1.5v2.9h-1.5v-1.5h-1.5v-1.5h-1.5l1.5,1.5h-1.5v-1.5h-1.5l1.5,1.5h1.5v1.5l0,0l0,0
+        l0,0l-1.5-1.5l-1.5-1.5h-1.5l0,0h1.5l0,0v-1.5v-1.5h-1.5l0,0h-1.5l0,0l1.5-1.5h-1.5l0,0h-1.5l1.5-1.5L222.9,546.9z M222.9,549.8
+        L222.9,549.8v1.5l0,0V549.8L222.9,549.8z M212.7,538.1L212.7,538.1l1.5,1.5l1.5-1.5v2.9l0,0l-2.9-1.5v1.5l0,0h1.5l-1.5,1.5l0,0
+        l-4.4-2.9v-2.9l1.5,1.5l1.5-1.5l0,0h1.3V538.1v-1.5h1.5v1.5l0,0h1.5h-1.5H212.7z M220.1,549.8L220.1,549.8l-2.9-2.9l0,0l0,0h-1.5
+        l-1.5-4.4l0,0h-1.5h1.5v-1.5l0,0h2.9l-1.5,1.5l2.9,2.9L220.1,549.8z M212.7,542.5L212.7,542.5l1.5,1.5v1.5V544L212.7,542.5
+        L212.7,542.5z M166.1,527.9L166.1,527.9v1.5l-1.5,1.5l0,0V528v1.5L166.1,527.9z M166.1,526.5L166.1,526.5L166.1,526.5v1.5l0,0V526.5
+        z M164.7,526.5L164.7,526.5L164.7,526.5v1.5l-1.5-1.5H164.7z M167.6,525.1L167.6,525.1L167.6,525.1h-1.5l0,0H167.6z M167.6,529.4
+        L167.6,529.4L167.6,529.4L167.6,529.4L167.6,529.4L167.6,529.4l-1.5,2.9l0,0l-1.5,1.5L167.6,529.4z M30.7,574.5L30.7,574.5
+        L30.7,574.5L30.7,574.5L30.7,574.5L30.7,574.5z M32.1,574.5L32.1,574.5L32.1,574.5L32.1,574.5L32.1,574.5L32.1,574.5z M23.4,568.7
+        L23.4,568.7l1.5,2.9l0,0l0,0L23.4,568.7L23.4,568.7z M42.4,574.5L42.4,574.5L42.4,574.5h1.5l0,0h1.5l-1.5,1.5l0,0h-1.5l0,0h-1.5
+        L42.4,574.5L42.4,574.5z M37.9,573.2L37.9,573.2l-1.5,1.5v-1.5H37.9l-1.5-1.5h1.5V573.2h1.5H37.9z M39.4,574.5L39.4,574.5h-1.5l0,0
+        h2.9v-1.5l0,0v1.5H39.4z M33.6,571.7L33.6,571.7L33.6,571.7L33.6,571.7L33.6,571.7L33.6,571.7z M21.9,567.3L21.9,567.3L21.9,567.3
+        v-1.5V567.3L21.9,567.3z M46.7,576L46.7,576h-1.5l0,0v-1.5L46.7,576z M19,564.4L19,564.4L19,564.4L19,564.4h-1.5l0,0H19l1.5-1.5v1.5
+        H19z M27.7,568.7L27.7,568.7L27.7,568.7v-1.5l0,0V568.7z M23.4,565.8L23.4,565.8L23.4,565.8L23.4,565.8L23.4,565.8L23.4,565.8z
+         M48.1,576L48.1,576h-1.5l0,0v-1.5L48.1,576z M46.7,574.5L46.7,574.5h-1.5l0,0H46.7L46.7,574.5z M21.9,564.4L21.9,564.4L21.9,564.4
+        v1.5V564.4L21.9,564.4z M54,574.5L54,574.5L54,574.5h1.5l0,0v1.5H54l0,0l0,0h-2.9h-1.5h2.9H54h-1.5H54V574.5z M56.9,577.5
+        L56.9,577.5L56.9,577.5h2.9H56.9h-1.5V576L56.9,577.5z M19,563L19,563L19,563L19,563L19,563L19,563z M61.3,577.5L61.3,577.5h1.5l0,0
+        l0,0H61.3z M13.2,558.5L13.2,558.5L13.2,558.5L13.2,558.5h1.5H13.2z M4.5,552.7L4.5,552.7H6v1.5L4.5,552.7L4.5,552.7z M67.1,577.5
+        L67.1,577.5L67.1,577.5L67.1,577.5L67.1,577.5L67.1,577.5z M70,577.5L70,577.5L70,577.5L70,577.5L70,577.5L70,577.5z M7.4,552.7
+        L7.4,552.7L7.4,552.7L7.4,552.7L7.4,552.7L7.4,552.7z M72.9,576L72.9,576v1.5l0,0l0,0V576z M7.4,552.7L7.4,552.7L7.4,552.7
+        L7.4,552.7L7.4,552.7L7.4,552.7z M7.4,552.7L7.4,552.7L7.4,552.7v-1.5l0,0V552.7z M3,549.8L3,549.8v-1.5l0,0l0,0h1.5l1.5,2.9
+        l-1.5-1.5L3,549.8L3,549.8z M74.3,576L74.3,576L74.3,576L74.3,576v1.5h-1.5L74.3,576z M81.7,574.5L81.7,574.5l-1.5,1.5l-2.9,1.5
+        l1.5-1.5v-1.5h1.5H81.7v-1.5h1.5h1.5l-1.5,1.5H81.7z M72.9,576L72.9,576L72.9,576L72.9,576L72.9,576L72.9,576z M74.3,576L74.3,576
+        L74.3,576L74.3,576L74.3,576L74.3,576z M89,571.7L89,571.7L89,571.7L89,571.7h1.5l0,0l-1.5,1.5h2.9l0,0l-2.9,1.5l0,0h-2.9l-1.5,1.5
+        l-1.5-1.5H86l1.5-1.5l0,0H89h-1.5v-1.5H89z M81.7,549.8L81.7,549.8v1.5l0,0l-1.5-1.5H81.7z M80.2,545.5L80.2,545.5h-1.5H80.2
+        L80.2,545.5L80.2,545.5z M137.1,563L137.1,563L137.1,563v1.5l-1.5-1.5H137.1z M141.4,558.5L141.4,558.5h-1.5l0,0l1.5-1.5V558.5z
+         M142.8,558.5L142.8,558.5L142.8,558.5h-1.5V557L142.8,558.5z M148.6,548.3L148.6,548.3L148.6,548.3v1.5l0,0l0,0h1.5l-1.5,1.5h-1.5
+        h1.5v1.5h-1.5l0,0h-1.5h1.5h-1.5l1.5,1.5h-1.5l0,0v-1.5l-1.5,1.5l0,0l0,0v1.5l-1.5,1.5v-1.5v-1.5h1.5l-2.9,1.5v-1.5l-1.5-1.5l0,0
+        v-1.5l1.5-1.5h1.5v1.5l1.5,1.5l-1.5-2.9h1.5h-1.5v-1.5h1.5v1.5v-1.5h1.5h-1.5l0,0h1.5v-1.5l1.5,1.5v-1.5v1.5v1.5v-1.5L148.6,548.3
+        L148.6,548.3L148.6,548.3L148.6,548.3z M150.1,545.5L150.1,545.5v1.5h-1.5v-1.5l-1.5,1.5l0,0h-1.5l1.5,1.5l-1.5-1.5l0,0l0,0v-1.5
+        h1.5l0,0l0,0l0,0l0,0V544h1.5v-1.5l0,0v2.9v-1.5L150.1,545.5V544V545.5L150.1,545.5v1.5V545.5z M225.9,545.5L225.9,545.5h1.5v1.5
+        h-1.5l0,0V545.5z M212.7,535.3L212.7,535.3h-2.9v-1.5l-1.5-1.5v1.5l-1.5-1.5l0,0l0,0h-1.5l2.9,1.5l0,0l0,0l0,0l1.5,1.5v1.5h-1.5l0,0
+        l0,0l0,0l-4.4-1.5l-2.9-1.5l-7.3-2.9l1.5-1.5l-1.5-1.5l1.5-1.5l-1.5,2.9h-1.5l-1.5,1.5l-2.9-1.5l0,0h-1.5h-2.9l-4.4,1.5l-1.5-1.5
+        h-1.5h-1.5v-1.5l0,0v1.5l-2.9-1.5l0,0v-1.5l-1.5,1.5l0,0l-1.5,1.5l0,0l0,0v-1.5l2.9-1.5l0,0h-1.5h1.5h-1.5l0,0v-1.5l-1.5,1.5l0,0
+        l1.5-1.5l0,0h-1.5l0,0l-1.5,1.5l1.5-2.9l-1.5,1.5l0,0h-1.5l0,0l0,0l0,0l0,0l-1.5-1.5v2.9v-1.5v1.5h-1.1l1.5-1.5h-1.5l0,0l-1.5,1.5
+        l1.5,1.5v-1.5l0,0v2.9v-1.5l1.5,1.5l0,0h-1.5v1.5l0,0l0,0h1.5v1.5v-1.5v1.5v-1.5v1.5h-1.5h1.5h-1.5v-1.5v1.5h-3l0,0v1.5l-1.5-1.5
+        v1.5l0,0l0,0v1.5l-1.5-1.5v1.5l0,0l-1.5,1.5v-1.5v1.5v-1.5v1.5h-1.4v1.5H153l0,0l0,0l0,0l-1.5,1.5l-1.5-1.5v-1.5h1.5l1.5-1.5v1.5
+        v-1.5l1.5-1.5l-2.9,1.5h-1.5l2.9-5.8l-1.5-1.5l4.4-2.9l1.5,1.5V525l-1.5-1.5h1.5h-2.9L153,525l-1.5,1.5v1.5H150l0,0l-1.5,1.5l0,0
+        v1.5h-1.5l1.5,1.5l-1.5,1.5h-1.5l0,0v1.5l0,0h-1.5v1.5l0,0l0,0l-1.5,1.5l0,0l-1.5,1.5h1.5l0,0h1.5l1.5,1.5l-1.5,1.5h-1.5v1.5l0,0
+        v1.5l0,0l-1.5,1.5l0,0l0,0l0,0h-1.5h-1.5v1.5h-1.5l1.5,1.5l-1.5-1.5l-1.5,2.9l0,0l0,0h-1.5l-1.5,1.5h1.5l-1.5,1.5l0,0l-1.5,1.5v-1.5
+        l-1.5,1.5l0,0l0,0l-1.5,1.5h1.5h-1.5l0,0h-1.5h1.5l-1.5,1.5v-1.5v1.5h-1.5l0,0v1.5l0,0h1.5l-1.5,1.5v-1.5v1.5h-1.5v-1.5v1.5l0,0
+        h-1.5h-1.5v1.5V562l-1.5,2.9l0,0l0,0v-1.5v-1.5l-1.5,1.5h-1.5v1.5h-1.5l0,0l0,0l0,0h-1.5h-1.5v-1.5l0,0l-1.5,2.9h-1.5h1.5l-1.5,1.5
+        v-1.5v1.5h-0.6v-1.5l0,0v-1.5l-1.5,1.5h1.5v1.5h-1.5v-1.5h-1.5l0,0v1.5l-1.5,1.5h1.5l0,0h-1.5l0,0h-2.9l-1.5,1.5h-1.5v-1.5l0,0
+        l1.5-2.9l1.5,1.5l1.5-1.5h1.5v1.5l0,0l0,0h1.5v-1.5h1.5v-1.5l4.4-2.9l4.4-1.5v1.5l0,0v1.5l0,0V562h1.5l1.5,1.5V562h-1.5l1.5-2.9
+        l5.8-2.9l0,0v-1.5l1.5-1.5l2.9-2.9v1.5v-1.5l1.5-2.9v-1.5l0,0v-1.5l1.5-1.5v-1.5l0,0l0,0l-4.4,1.5l-1.5-1.5l0,0v2.9H124l0,0
+        l-1.5-2.9l0,0v-1.5l-1.5,1.5v-1.5h-1.5v-1.5l-1.5,1.5l0,0h-1.5l-2.9,2.9v-1.5h-1.5h1.5V540v-1.5v-1.5l1.5-1.5l-1.5-4.4v-1.5v1.5
+        l-1.5-1.5v1.5l-2.9,1.5h-2.9v-1.5l0,0l-1.5-2.9l-1.5-1.5l0,0l-1.5-1.5h2.9v-1.5l0,0h-1.5l0,0l1.5-1.5l0,0l-1.5-1.5v1.5h-1.5l1.5-1.5
+        l-1.5-1.5l0,0V518l0,0v-1.5v1.5l0,0v-1.5h1.5V515v-1.5l2.9-1.5h1.5l-1.5-1.5l0,0h1.5v-2.9h2.9l1.5,1.5h1.5l1.5-1.5l1.5-1.5l0,0h2.9
+        l1.5-1.5v-2.9l-1.5-1.5l0,0v-1.5h1.5h1.5v-1.5l-1.5-1.5l-1.5,1.5l0,0H118l-2.9,2.9v-1.5h-1.5l0,0l-1.5-1.5h-2.9l-4.4-1.5v-1.5
+        l-1.5-2.9h1.5l0,0L102,490l-1.5-1.5V487l5.8-2.9l1.5,1.5h1.5l-1.5-1.5l4.4-1.5l2.9,1.5l-1.5,1.5l0,0l0,0v1.5h2.9h1.5h1.5v1.5
+        l1.5-1.5h1.5v-1.5h-1.5h-1.5v-1.5l-1.5-2.9h1.5v1.5v1.5l1.5,1.5l1.5-1.5h-1.5v-1.5v-1.5l0,0h-2.9l-2.9-1.5v-4.4l-2.9-2.9l-4.4-2.9
+        h1.5l1.5-4.4l2.9,1.5h2.9l1.5-1.5l1.5-1.5V461l4.4-2.9l0,0h1.5l4.4-2.9v-1.5v1.5h4.4l2.9-4.4l1.5,1.5l0,0v1.5l0,0v1.5h1.5v-2.9
+        l1.5,1.5v1.5h1.5l0,0l1.5-1.5l2.9,1.5v1.5h1.5v1.5h1.5l1.5-1.5l1.5,1.5l1.5-1.5l1.5,1.5h1.5l0,0h1.5h4.1l2.9,1.5l2.9-1.5l0,0h1.5
+        l4.4,2.9l1.5-1.5l13.2,67h1.5l0,0h1.5l1.5-1.5h1.5v1.5l2.9,1.5l0,0l4.4,2.9l1.5,2.9l1.5-2.9h1.5v-1.5v-1.5v-1.5l2.9-1.5l0,0l1.5,1.5
+        l1.5,1.5l1.5,1.5l1.5,1.5h1.5l1.5,1.5l10.2,10.2l5.8,1.5h1.5l0,0h1.5l0,0v2.9l2.9,2.9l-1.5,4.4h-1.5l0,0l0,0l-1.5-2.9l0,0v-2.9h-1.5
+        l-1.5-1.5l1.5,1.5l1.5,2.9V550v1.5h-1.5l0,0V550v1.5h-2.9l1.5-1.5l-1.5-1.5l0,0l0,0v2.9l-1.5-1.5l0,0v-1.5v-2.9l-1.5,2.9l0,0h-1.5
+        v-1.5v-1.5h1.5l-1.5-1.5l1.5,1.5l-1.5-1.5l0,0H226l1.5-1.5H226h-1.5V541l0,0h-2.9l0,0l1.5-1.5h-1.5V538h-1.5l0,0h1.5l-1.5-1.5l0,0
+        l0,0h-1.5l-1.5-1.5h-1.5l-2.9-1.5l-1.5-4.4l-1.5-1.5l4.4,8.7L212.7,535.3L212.7,535.3z" title="Alaska, No Permit Required" data-state="Alaska" data-group="No Permit Required" data-color="3"></path><path class="cir-map-state" id="AZ" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M195.3,287.6L195.3,287.6l62.6,5.8
+        l-10.2,125.3l-39.4-2.9l-67-33.5v-2.9l7.3-5.8v-2.9l-2.9-1.5v-7.3l4.4-2.9l2.9-11.7l5.8-2.9l-7.3-14.5l2.9-7.3l-1.5-20.4h7.3
+        l1.5,2.9h1.5l2.9-2.9l2.9-17.5L195.3,287.6z" title="Arizona, No Permit Required" data-state="Arizona" data-group="No Permit Required" data-color="3"></path><path class="cir-map-state" id="AR" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M530.3,385.2L530.3,385.2v-11.7h-5.8
+        l-2.9-1.5l-1.5-39.4l-4.4-24.7l80.1-4.4l2.9,4.4l-5.8,7.3l11.7-1.5l1.5,1.5l-1.5,1.5h1.5l-4.4,2.9l1.5,4.4h-2.9v1.5l-1.5,1.5h1.5
+        l-1.5,2.9l1.5,2.9l-2.9,2.9v2.9v1.5h-2.9v1.5h-1.5v8.7l-2.9,1.5l-2.9,2.9v4.4l-2.9,1.5l1.5,1.5l-2.9,5.8l1.5,1.5l-1.5,1.5l1.5,1.5
+        l-1.5,1.5l2.9,4.4v2.9L530.3,385.2z" title="Arkansas, No Permit Required" data-state="Arkansas" data-group="No Permit Required" data-color="3"></path><path class="cir-map-state" id="CA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M46.7,332.7L46.7,332.7h4.4v1.5
+        l-2.9,1.5L46.7,332.7z M55.4,332.7L55.4,332.7l2.9,1.5h1.5l-4.4,1.5l-2.9-2.9L55.4,332.7L55.4,332.7z M42.4,331.3L42.4,331.3
+        l2.9-1.5v1.5l0,0H42.4z M56.9,350.3L56.9,350.3l1.5,1.5l0,0h-1.5V350.3z M61.3,335.7L61.3,335.7v-1.5l1.5,1.5l0,0H61.3z M74.3,361.9
+        L74.3,361.9l-1.5-2.9l4.4,5.8h-1.5L74.3,361.9z M75.8,350.3L75.8,350.3l2.9,1.5l1.5,1.5h-2.9l-2.9-4.4L75.8,350.3z M24.9,241
+        L24.9,241h-1.5l0,0H24.9L24.9,241z M13.2,242.4L13.2,242.4L13.2,242.4L13.2,242.4L13.2,242.4L13.2,242.4z M24.9,241L24.9,241
+        L24.9,241v1.5l0,0V241z M13.2,156.5L13.2,156.5v-5.8l-1.5-1.5l1.5-4.4l69.9,14.5l-11.7,64.1l80.1,103.4v2.9l7.3,14.5l-5.8,2.9
+        l-2.9,11.7l-4.4,2.9v7.3l2.9,2.9v2.9l-2.9,1.5l-46.6-1.5l-1.5-4.4h-1.5l1.5-8.7l-2.9-5.8l-10.2-11.7h-5.8v-7.3H73l-5.8-2.9l-5.8-8.7
+        l-17.5-2.9l-1.5-4.4l1.5-11.7l-2.9-2.9v-4.4l-5.8-7.3l-2.9-7.3l-5.8-8.7V270l2.9-1.5l1.5-5.8l-4.4-1.5l-4.4-5.8v-13.2H25l-1.5,4.4
+        l4.4,2.9v-4.4l-1.5-2.9v-1.5l-1.5-2.9l2.9-1.5l-1.5-1.5h-1.5v4.4l-1.5,1.5l-5.8-5.8h-2.9l1.5-5.8l-8.7-16l1.5-20.4L3,181v-2.9
+        l5.8-10.2L13.2,156.5z" title="California, May Issue (Complete Discretion)" data-state="California" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="CO" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M294.4,207.5L294.4,207.5l90.3,4.4
+        l-1.5,87.4l-53.9-1.5l-71.3-4.4l7.3-88.8L294.4,207.5z" title="Colorado, Shall Issue (Limited Discretion)" data-state="Colorado" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="CT" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M881.5,131.7L881.5,131.7l10.2-2.9
+        l2.9,14.5l-11.7,4.4l-5.8,1.5l-2.9,2.9l-8.7,5.8l-1.5-1.5l4.4-2.9l-1.5-1.5l-2.9-17.5L881.5,131.7z" title="Connecticut, May Issue (Complete Discretion)" data-state="Connecticut" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="DE" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M840.6,195.8L840.6,195.8L840.6,195.8
+        L840.6,195.8L840.6,195.8L840.6,195.8z M840.6,195.8L840.6,195.8L840.6,195.8v-1.5V195.8z M839.2,190L839.2,190l2.9,1.5l-1.5,4.4
+        v2.9l4.4,4.4l4.4,5.8l2.9,2.9l2.9,7.3l-11.7,1.5l-7.3-26.2L839.2,190z" title="Delaware, May Issue (Complete Discretion)" data-state="Delaware" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="DC" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M818.7,217.7L818.7,217.7l-1.5-1.5
+        l1.5-1.5l2.9,1.5l-1.5,2.9L818.7,217.7z M877,263.6L877,263.6L877,263.6v-1.5l0,0v-1.5l0,0l-1.5-1.5l0,0l0,0l0,0l0,0l0,0l0,0l0,0
+        l0,0h1.5v-1.5l-1.5-1.5h1.5v-1.5h-1.4l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0v-1.5h-1.5l0,0v-1.5l0,0l0,0h-1.5h-1.5v-1.5l0,0l0,0
+        l-1.5-1.5l0,0l0,0v-1.5l0,0l0,0v-1.5h1.5v-1.5l4.4-2.9v-1.5l1.5,1.5l1.5,1.5l0,0l0,0l1.5,1.5l0,0l5.8,4.4v1.5l2.9,1.5l-1.5,1.5l0,0
+        l0,0l-2.9,2.9l0,0l-2.9,2.9l-1.5,1.5l0,0l0,0L877,263.6L877,263.6z" title="District of Columbia, May Issue (Complete Discretion)" data-state="District of Columbia" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="FL" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M817.4,523.6L817.4,523.6l-1.5,5.8
+        l-2.9,4.4l-1.5,1.5l2.9-7.3l4.4-8.7L817.4,523.6z M792.5,544L792.5,544l2.9-2.9l2.9,1.5h-2.8l-2.9,2.9l-2.9,1.5L792.5,544z
+         M782.3,546.9L782.3,546.9L782.3,546.9h1.5H782.3L782.3,546.9z M799.8,542.5L799.8,542.5L799.8,542.5L799.8,542.5L799.8,542.5
+        L799.8,542.5z M805.7,538.1L805.7,538.1l-2.9,2.9l0,0l1.5-1.5L805.7,538.1z M798.4,539.6L798.4,539.6L798.4,539.6v1.5h-1.5
+        L798.4,539.6z M807.2,538.1L807.2,538.1L807.2,538.1h-1.5H807.2z M808.5,536.7L808.5,536.7L808.5,536.7l-1.5,1.5L808.5,536.7
+        L808.5,536.7z M810,535.3L810,535.3L810,535.3l-1.5,1.5l0,0L810,535.3z M772.1,500.2L772.1,500.2l2.9,4.4l2.9,1.5H775L772.1,500.2z
+         M713.9,442L713.9,442l1.5-1.5L713.9,442l-4.4,2.9H708l0,0h1.5L713.9,442z M706.6,443.5L706.6,443.5h1.5v1.5l-2.9-1.5H706.6z
+         M757.6,475.5L757.6,475.5h-1.5v-2.9l0,0L757.6,475.5z M738.7,417.2L738.7,417.2l20.4-1.5l1.5,4.4h2.9l-1.5-10.2l2.9-1.5l8.7,1.5
+        v4.4l7.3,16l7.3,13.2l10.2,10.2l1.5,11.7l16,26.2l1.5,24.7v-1.5h-1.5l-1.5,5.8l1.5,2.9l-2.9,4.4l-1.5-1.5l-2.9,2.9l-7.3,1.5
+        l-1.5-1.5v-2.9l-5.8-8.7l-4.4-1.5l-2.9,1.5l-1.5-1.5l-4.4-10.2l-2.9-1.5h-1.5l-2.9-2.9h1.5v-7.3l-1.5,1.5v2.9l-1.5,1.5l-11.7-16h1.5
+        l2.9-8.7h-1.5v1.5l-1.5-2.9h-2.9l2.9,2.9l-1.5,5.8l-4.4-5.8l1.5-14.5v-8.7l-4.4-4.4h-4.4l0,0l-1.5-1.5l-7.3-5.8v-2.9l-5.8-4.4
+        l-7.3-2.9h-4.4l-2.9,1.5l1.5,2.9h-2.9l-7.3,5.8v-1.5l-8.7,4.4l-1.5-1.5v-2.9l0,0l1.5,2.9l1.5-2.9l-2.9-1.5l-17.5-7.3h-10.2
+        l-13.2,4.4v-1.5l1.5-7.3l-5.8-4.4v-2.9l49.6-5.8l2.9,5.8L738.7,417.2z" title="Florida, Shall Issue (No Discretion)" data-state="Florida" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="GA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M696.4,325.5L696.4,325.5l30.6-4.4
+        l-2.9,7.3l5.8,2.9h2.9l8.7,11.7l10.2,5.8l4.4,7.3l7.3,4.4l2.9,7.3l5.8,2.9l2.9,7.3l4.4,1.5l-1.5,4.4h-1.5v1.5l-2.9,1.5l2.9,2.9
+        l-2.9,1.5h1.5v7.3l-2.9,5.8h1.5v5.8l-8.7-1.5l-2.9,1.5l1.5,10.2h-2.9l-1.5-4.4l-51,2.9l-5.8-8.7v-7.3l-1.5-5.8v-7.3l2.9-2.9
+        l-2.9-1.5V381l-4.4-7.3L682,327.1L696.4,325.5z" title="Georgia, Shall Issue (Limited Discretion)" data-state="Georgia" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="HI" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.998" stroke-linejoin="bevel" d="M361.4,555L361.4,555l13.2,7.3
+        l4.4,2.9v2.9h1.5v1.5l4.4,4.4l-4.4,4.4l-13.2,5.8l-2.9,4.4l-5.8-2.9v-7.3l-4.4-10.2l5.8-7.3l-1.5-5.8L361.4,555L361.4,555z
+         M243.3,517.1L243.3,517.1L243.3,517.1L243.3,517.1L243.3,517.1L243.3,517.1z M253.6,509.7L253.6,509.7l1.5-1.5l-4.4,5.8v-2.9
+        L253.6,509.7z M271,502.4L271,502.4l2.9,2.9l-1.5,4.4l-2.9,1.5l-7.3-2.9l1.5-4.4L271,502.4z M330.8,530.1L330.8,530.1h7.3l-4.4,2.9
+        l-11.7-1.5l1.5-2.9L330.8,530.1z M342.5,547.6L342.5,547.6h-4.4l0,0l2.9-2.9L342.5,547.6z M339.5,534.5L339.5,534.5l4.4,2.9l5.8-1.5
+        l5.8,4.4v1.5l-10.2,4.4l-1.5-5.8l-5.8-2.9L339.5,534.5z M330.8,536L330.8,536l4.4,2.9v1.5l-4.4,1.5l-1.5-4.4L330.8,536z
+         M304.6,527.3L304.6,527.3h-1.5l-4.4-7.3h4.4l2.9-4.4l4.4,7.3h1.5l2.9,4.4l-4.4,1.5l-2.9-2.9L304.6,527.3z" title="Hawaii, May Issue (Complete Discretion)" data-state="Hawaii" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="ID" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M237.6,127.4L237.6,127.4l-4.4,52.4
+        l-100.6-11.7l5.8-39.4l2.9-7.3l-4.4-2.9v-4.4l7.3-8.7l8.7-14.5v-2.9l-4.4-4.4l-2.9-10.2L156,18.1l14.5,2.9l-2.9,21.9l4.4,5.8
+        l-1.5,5.8l5.8,4.4l5.8,10.2l4.4,4.4l4.4,1.5l-4.4,11.7l1.5,2.9l-2.9,2.9v1.5l-1.5,2.9l4.4,2.9l5.8-4.4l2.9,1.5v7.3l4.4,5.8l-1.5,4.4
+        l5.8,2.9v7.3l2.9,1.5l2.9-2.9l4.4,1.5l2.9-1.5l10.2,1.5l4.4-4.4L237.6,127.4z" title="Idaho, Shall Issue (No Discretion)" data-state="Idaho" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="IL" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M597.3,169.6L597.3,169.6l26.2-1.5
+        v4.4l7.3,11.7l5.8,51l-1.5,5.8l2.9,2.9v5.8l-7.3,16v4.4l-1.5,4.4l2.9,2.9l-7.3,2.9v7.3l-8.7-2.9l-2.9,4.4v1.5h-4.4l-2.9-5.8l1.5-2.9
+        l-1.5-5.8l-7.3-4.4l-1.5,1.5l-7.3-7.3l-1.5-2.9l4.4-11.7l-5.8-1.5l-2.9,1.5l-2.9-7.3l-11.7-10.2l-4.4-8.7l2.9-5.8l-1.5-2.9l4.4-2.9
+        l2.9-7.3v-2.9l-2.9-2.9v-4.4l10.2-2.9l4.4-5.8v-7.3l-4.4-1.5l-4.4-5.8L597.3,169.6z" title="Illinois, Shall Issue (Limited Discretion)" data-state="Illinois" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="IN" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M680.4,207.5L680.4,207.5l2.9,27.7
+        v1.5l1.5,5.8l-5.8,2.9h-4.4v4.4l-2.9,1.5v4.4h-2.9l-1.5,5.8l-4.4,1.5l-1.5-2.9l-4.4,2.9l-1.5,4.4l-2.9-2.9l-4.4,1.5v2.9l-10.2-2.9
+        v2.9v-1.5h-4.4v2.9h-2.9v-1.5l0,0v-4.4l1.5-1.5v-1.5l5.8-13.2v-4.4l-2.9-2.9l1.5-5.8l-5.8-51l4.4,1.5l7.3-4.4l33.5-4.4L680.4,207.5z
+        " title="Indiana, Shall Issue (Limited Discretion)" data-state="Indiana" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="IA" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M566.7,162.3L566.7,162.3l2.9,5.8l5.8,1.5l1.5,2.9
+        l8.7,7.3v2.9v4.4l-4.4,5.8l-10.2,2.9v4.4l2.9,2.9v2.9l-2.9,7.3l-4.4,2.9l1.5,2.9h-2.9l-4.4-4.4l-64.1,4.4h-4.4l-2.9-2.9v-10.2l0,0
+        l-1.5-5.8l-2.9-1.5v-10.2l-2.9-1.5l-2.9-5.8l1.5-2.9l-5.8-5.8l4.4-8.7l-2.9-2.9l1.5-2.9l-1.5-1.5l88.8-5.8v2.9l2.9,2.9l-1.5,2.9v3.2
+        H566.7z" title="Iowa, Shall Issue (Limited Discretion)" data-state="Iowa" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="KS" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M426.9,299.2L426.9,299.2h-43.7v-65.6
+        l118-1.5l2.9,2.9l2.9-1.5l1.5,2.9l-4.4,5.8l5.8,5.8l4.4,1.5l1.5,48.1L426.9,299.2z" title="Kansas, No Permit Required" data-state="Kansas" data-group="No Permit Required" data-color="3"></path><path class="cir-map-state" id="KY" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M607.5,302.2L607.5,302.2v-1.5h1.5v1.5H607.5z
+         M725.5,248.3L725.5,248.3v2.9l7.3,8.7l5.8,1.5L727,273l-5.8,10.2l-8.7,4.4l-78.7,7.3v4.4l-24.7,2.9l1.5-2.9l2.9,1.5v-2.9l1.5-5.8
+        l-1.5-2.9l1.5-2.9l1.5-1.5l8.7,2.9v-7.3l7.3-2.9l-2.9-2.9l1.5-4.4h2.9v-2.9h4.4v2.9v-4.4l10.2,2.9v-2.9l4.4-1.5l2.9,2.9l1.5-4.4
+        l4.4-2.9l1.5,2.9l4.4-1.5l1.5-5.8h2.9v-4.4l2.9-1.5v-4.4h4.4l5.8-2.9l-1.5-5.8l1.5-2.9l2.9,1.5h2.9l4.4,4.4l7.3,1.5l2.9,1.5l2.9-1.5
+        h5.8l4.4-2.9l1.5,2.9l5.8,2.9L725.5,248.3L725.5,248.3z" title="Kentucky, Shall Issue (No Discretion)" data-state="Kentucky" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="LA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M635.2,450.8L635.2,450.8l-1.5,1.5
+        l1.5-4.4l-1.5-4.4l1.5,2.9v1.5V450.8z M531.8,392.5L531.8,392.5l-1.5-7.3l53.9-2.9v2.9l1.5-2.9l1.5,1.5l-2.9,2.9l2.9,1.5l-1.5,1.5
+        v4.4l4.4,2.9l-1.5,2.9h-2.9v1.5h2.9l-5.8,7.3v4.4h-1.5l1.5,1.5l-2.9,1.5V426l-1.5,1.5l36.4-2.9l-1.5,7.3l7.3,10.2l-2.9,4.4h-1.5
+        l-1.5,1.5l5.8,1.5l1.5-4.4h1.5v1.5l1.5,1.5l2.9-1.5l-2.9,1.5h2.9l-2.9,1.5l1.5,1.5h-1.5l-1.5,1.5h-4.4l4.4,2.9l-4.4-1.5v2.9l4.4,2.9
+        l5.8,1.5l4.4,2.9l-1.5,1.5l-1.5,2.9l-2.9-1.5l-1.5,2.9v-2.9l-2.9-2.9l-7.3-1.5v-4.4l-2.9,1.5v2.9L612,464h2.9l-4.4,2.9l-2.9,1.5
+        l1.5-1.5v-1.5l-1.5-1.5l-2.9,1.5l-1.5-1.5l-4.4,5.8l2.9-1.5l-4.4,1.5l-1.5-2.9l-7.3-1.5l1.5-4.4l-5.8-1.5l-1.5-1.5h-1.5v-2.9
+        l-4.4,1.5l-1.5-2.9l-4.4,2.9l1.5,2.9l4.4-1.5l2.9,1.5l-1.5,1.5l-4.4-1.5l-5.8,1.5h-5.8l-11.7-4.4l-11.7,2.9l-1.5-2.9l2.9-5.8
+        l-1.5-10.2l2.9-7.3V426l0,0l-1.5-4.4l-4.4-4.4V413l-4.4-4.4v-16.1H531.8z" title="Louisiana, Shall Issue (No Discretion)" data-state="Louisiana" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="ME" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M920.7,80.8L920.7,80.8L920.7,80.8
+        L920.7,80.8L920.7,80.8L920.7,80.8z M917.9,77.8L917.9,77.8h1.5l-1.5,1.5V77.8L917.9,77.8z M944.1,57.4L944.1,57.4L944.1,57.4v1.5
+        l0,0V57.4z M909.1,85.1L909.1,85.1L909.1,85.1v1.5l-1.5-1.5H909.1z M907.7,86.6L907.7,86.6v1.5l0,0V86.6L907.7,86.6z M907.7,86.6
+        L907.7,86.6L907.7,86.6L907.7,86.6L907.7,86.6L907.7,86.6z M907.7,86.6L907.7,86.6L907.7,86.6h1.5H907.7L907.7,86.6z M909.1,86.6
+        L909.1,86.6L909.1,86.6L909.1,86.6v-1.5V86.6z M928.1,76.4L928.1,76.4v1.5l0,0l-1.5-1.5H928.1z M923.7,74.9L923.7,74.9v1.5V74.9
+        L923.7,74.9L923.7,74.9z M930.9,73.4L930.9,73.4l-1.5-1.5l1.5-1.5v1.5V73.4z M928.1,72L928.1,72l-1.5,1.5l-1.5-1.5l1.5-1.5L928.1,72
+        z M923.7,69.1L923.7,69.1v-2.9h1.5l0,0l-1.5,4.4V69.1z M932.4,70.6L932.4,70.6L932.4,70.6L932.4,70.6L932.4,70.6L932.4,70.6z
+         M933.9,69.1L933.9,69.1h1.5l0,0H933.9L933.9,69.1z M932.4,67.6L932.4,67.6l1.5,1.5h-1.5l0,0V67.6z M928.1,67.6L928.1,67.6h1.5v2.9
+        l-1.5-1.5V67.6z M933.9,67.6L933.9,67.6L933.9,67.6L933.9,67.6L933.9,67.6L933.9,67.6z M932.4,67.6L932.4,67.6L932.4,67.6
+        L932.4,67.6L932.4,67.6L932.4,67.6z M926.6,69.1L926.6,69.1L926.6,69.1L926.6,69.1L926.6,69.1L926.6,69.1z M935.3,66.2L935.3,66.2
+        L935.3,66.2L935.3,66.2L935.3,66.2L935.3,66.2z M930.9,64.7L930.9,64.7v1.5l0,0l0,0V64.7z M922.2,69.1L922.2,69.1v4.4h1.5l-1.5,2.9
+        l-4.4,1.5l0,0v2.9l-1.5-1.5l-1.5,2.9l-1.5,2.9l-1.5-1.5l-2.9,1.5V82l-1.5,2.9l-1.5,1.5l1.5,2.9l-1.5,1.5v1.5l-2.9,2.9v5.8h-2.9v-2.9
+        l-4.4-1.5l-11.7-40.8h1.5l2.9,1.5V53h2.9l-2.9-2.9l5.8-8.7l-2.9-5.8l2.9-5.8l-1.5-5.8l7.3-20.4h2.9l1.5,4.4h2.9l8.7-5.8l8.7,4.4
+        l7.3,27.7h7.3l1.5,7.3l2.9,2.9v-2.9h2.9l5.8,7.3l-4.4,5.8l-1.5-2.9v2.9H944v2.9l-2.9,1.5l-1.5-1.5v2.9l-1.5,1.5v1.5l-2.9-2.9
+        l-1.5,1.5l1.5,2.9l-1.5,1.5v1.5l-1.5-1.5v-2.9h-1.5v1.5v-1.5l-1.5,1.5l1.5,2.9l-4.4-1.5l-1.5,1.5v-4.4l-2.9,2.9L922.2,69.1
+        L922.2,69.1z" title="Maine, Shall Issue (Limited Discretion)" data-state="Maine" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="MD" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M839.2,229.4L839.2,229.4L839.2,229.4
+        v-1.5l1.5,2.9L839.2,229.4z M842.1,232.2L842.1,232.2l-1.5,1.5v-2.9h1.5V232.2z M828.9,210.4L828.9,210.4v1.5l-1.5,5.8l7.3,14.5
+        l-4.4-2.9h-7.2l-1.5-2.9l-4.4,1.5v-2.9l4.4-8.7l-2.9-1.5l-1.5,1.5l-5.8-2.9H810v-2.9l-5.8-1.5l-2.9-4.4l-5.8-1.5l-5.8,4.4l-4.4-1.5
+        l-1.5,5.8l-2.9-1.5l-5.8,7.3l-1.5-10.2l62.6-13.2l7.3,26.2l11.7-1.5l-1.5,8.7l-10.2,5.8v-4.4h-1.5l1.5-1.5l-2.9,1.5l1.5-2.9h-1.5
+        l-1.5-2.9v4.4l-4.4-1.5l-1.5-4.4h1.5l-1.5-2.9h2.9l-2.9-2.9l-1.5,2.9V215h1.5v-2.9l-2.9,2.9v-1.5v-2.9l1.5,1.5l1.5-1.5v-1.5
+        l-1.5,1.5l-1.5-2.9l1.5-4.4l2.9-1.5v-2.9H832l1.5,1.5l-2.9,4.4h-1.5l-1.5,2.9h-1.5L828.9,210.4z" title="Maryland, May Issue (Complete Discretion)" data-state="Maryland" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="MA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M909.1,133.2L909.1,133.2L909.1,133.2
+        L909.1,133.2L909.1,133.2L909.1,133.2z M913.4,134.7L913.4,134.7l2.9,1.5l0,0v1.5l-4.4,1.5h-1.5L913.4,134.7z M923.7,136.1
+        L923.7,136.1v-1.5l1.5,2.9h-1.5h-2.9l0,0L923.7,136.1z M884.3,130.3L884.3,130.3l-21.9,4.4l1.5-14.5l32.1-7.3l1.5-2.9l4.4-2.9
+        l1.5,2.9h4.4l-4.4,4.4v5.8l1.5-1.5l2.9,1.5l1.5,2.9v1.5l5.8,4.4h2.9l4.4-2.9l-2.9-4.4h-2.9l2.9-1.5l4.4,7.3v2.9l-1.5-1.5l-5.8,1.5
+        l-1.5,2.9l-5.8,4.4l2.9-4.4v-2.9h-1.5l-2.9,4.4l-2.9,2.9v-4.4l-4.4-1.5l-2.9-4.4L884.3,130.3z" title="Massachusetts, May Issue (Complete Discretion)" data-state="Massachusetts" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="MI" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M652.7,92.4L652.7,92.4l1.5,2.9l-1.5,1.5h-1.5L652.7,92.4
+        z M597.3,48.7L597.3,48.7l2.9-1.5l-2.9,2.9L593,53h1.5l-4.4,2.9l-1.5-1.5L597.3,48.7z M667.3,89.5L667.3,89.5V88l4.4,1.5l-1.5,1.5
+        L667.3,89.5z M645.4,109.8L645.4,109.8L645.4,109.8L645.4,109.8L645.4,109.8L645.4,109.8z M646.9,107L646.9,107L646.9,107v1.5h-1.5
+        L646.9,107z M699.3,171.1L699.3,171.1v2.9l-16,2.9l-40.8,4.4l2.9-2.9l2.9-8.7l1.5-7.3l-1.5-8.7l-5.8-13.2l1.5-4.4l-2.9-4.4l4.4-7.3
+        l-1.5-7.3l2.9-1.5v-2.9l4.4-1.5l2.9-7.3l-1.5,8.7l1.5,1.5l1.5-5.8v5.8l1.5-4.4v-7.3l7.3-2.9l-4.4-2.9l2.9-4.4l-1.5-1.5h4.4l4.4,1.5
+        h4.4l1.5,2.9l10.2,1.5l4.4,4.4l1.5,1.5l-4.4,1.5l4.4,5.8v8.7L689,120v4.4l-4.4,2.9v5.8l4.4,1.5l5.8-8.7l4.4-2.9l4.4,1.5l1.5,2.9
+        l7.3,17.5v8.7l-2.9,1.5v-2.9l-2.9,1.5v5.8l-2.9,1.5l-1.5,7.3L699.3,171.1z M597.3,92.4L597.3,92.4l-18.9-4.4l-1.5-2.9l-4.4-1.5
+        l10.2-5.8l5.8-1.5l5.8-4.4l8.7-8.7l5.8-2.9l4.4,1.5l-2.9,1.5l-4.4,4.4l-2.9,4.4v4.4l4.4-4.4v1.5h8.7l5.8,7.3l4.4-1.5l2.9,1.5h2.9
+        v-2.9l1.5,1.5l5.8-4.4l11.7-1.5l7.3-2.9v5.8l5.8-1.5l1.5,1.5l7.3-2.9l1.5,5.8l-2.9,1.5l4.4,1.5h-1.5l2.9,1.5h2.9l-1.5-1.5l2.9-1.5
+        l2.9,2.9l-1.5,1.5h-8.7l-4.4,1.5l-4.4-1.5v4.4l-5.8-2.9l-7.3-1.5l-2.9,4.4l-10.2,1.5l-4.4,7.3l-1.5-1.5l2.9-4.4h-4.4v4.4h-2.9
+        l-1.5-2.9l-7.3,17.5l-1.5-2.9v-2.9h-2.9v-7.3l-4.4-1.5l-1.5-2.9L597.3,92.4z" title="Michigan, Shall Issue (Limited Discretion)" data-state="Michigan" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="MN" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M544.9,83.6L544.9,83.6H542l1.5,13.2l-5.8,4.4l-2.9,4.4
+        v2.9h2.9l1.5,2.9l-1.5,2.9v11.7l4.4,2.9l2.9,1.5l5.8,2.9l2.9,2.9l7.3,4.4l2.9,2.9l1.5,7.3l-87.4,5.8l-1.5-39.4l-5.8-7.3l4.4-4.4
+        v-5.8l-4.4-11.7l-1.5-20.4l-4.4-11.7V45.4l-2.9-7.3l33.5-1.5l-1.5-7.3h2.9l2.9,1.5l2.9,10.2l1.5,1.5l11.7,1.5v1.5l8.7-2.9h4.4
+        l5.8,1.5l-1.5,2.9h4.4l1.5,4.4l1.5-2.9h2.9l1.5,1.5l8.7,2.9h2.9l5.8-4.4l2.9,2.9l8.7-1.5l4.4,2.9l5.8-1.5l-18.9,10.2l-18.9,18.9v2.9
+        l-1.5-1.5v2H544.9z" title="Minnesota, Shall Issue (Limited Discretion)" data-state="Minnesota" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="MS" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M629.4,440.6L629.4,440.6L629.4,440.6
+        h-1.5H629.4z M632.3,440.6L632.3,440.6L632.3,440.6h-1.5l2.9-1.5L632.3,440.6z M641,439.1L641,439.1L641,439.1h1.5H641L641,439.1z
+         M636.7,439.1L636.7,439.1h1.5h1.5l0,0h-4.5H636.7z M616.3,334.2L616.3,334.2l18.9-1.5l1.5,2.9v65.6l5.8,34.9l-5.8,1.5l-2.9-1.5
+        l-8.7,2.9l-1.5-1.5l-1.5,4.4h-2.9l-5.8-10.2l1.5-7.3l-36.4,2.9l1.5-1.5v-10.2l2.9-1.5l-1.5-1.5h1.5v-4.4l5.8-7.3h-3v-1.5h2.9
+        l1.5-2.9l-4.4-2.9v-4.4l1.5-1.5l-2.9-1.5l1.5-4.4l-1.5,2.9v-1.5l1.5-4.4l-2.9-5.8l1.5-1.5l-1.5-1.5l1.5-1.5l-1.5-1.5l2.9-5.8
+        l-1.5-1.5l2.9-1.5v-4.4l2.9-2.9l2.9-1.5v-7.3l1.5-2.9h2.9v-1.5l-1.5-1.5L616.3,334.2z" title="Mississippi, Shall Issue (No Discretion)" data-state="Mississippi" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="MO" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M607.5,305L607.5,305l-1.5,1.5
+        l1.5,1.5h-2.9l2.9,1.5l-1.5,4.4l-13.2,1.5l5.8-7.3l-2.9-4.4l-80.1,4.4l-1.5-58.3l-4.4-1.5l-5.8-5.8l4.4-5.8l-1.5-2.9l-2.9,1.5
+        l-2.9-2.9l-8.7-13.2l68.5-4.4l2.9,1.5l2.9,2.9l-1.5,5.8l4.4,8.7l11.7,10.2l1.5,7.3h1.5l2.9-1.5l5.8,1.5l-4.4,11.7l1.5,2.9l7.3,7.3
+        l1.5-1.5l7.3,4.4l1.5,5.8l-1.5,2.9l2.9,5.8l5.8,1.5l-1.5,7.3h-2.9l-1.5,4.4v-2.9h-1.5V305z" title="Missouri, Shall Issue (Limited Discretion)" data-state="Missouri" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="MT" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M239,115.7L239,115.7l-1.5,11.7l-4.4-7.3l-4.4,4.4
+        l-10.2-1.5l-2.9,1.6l-4.4-1.5l-2.9,2.9l-2.9-1.5v-7.3l-5.8-2.9l1.5-4.4l-4.4-5.8v-7.3l-2.9-1.5l-5.8,4.4l-4.4-2.9l1.5-2.9v-1.5
+        l2.9-2.9l-1.5-2.9l4.4-11.7l-4.4-1.5l-4.4-4.4l-5.8-10.2l-5.8-4.4l1.5-5.8l-4.4-5.8l2.9-21.9L261,31.2l96.2,7.3l-2.9,84.5L239,115.7
+        z" title="Montana, Shall Issue (Limited Discretion)" data-state="Montana" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="NE" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M351.2,194.3L351.2,194.3v-27.7
+        l93.2,1.5l8.7,4.4l2.9-2.9l8.7,1.5l10.2,2.9l1.5,4.4h4.4v5.8l5.8,8.7l-1.5,5.8l2.9,1.5l1.5,5.8l0,0v10.2l11.7,16l-118,1.5l1.5-21.9
+        l-34.9-1.5L351.2,194.3z" title="Nebraska, Shall Issue (No Discretion)" data-state="Nebraska" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="NV" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M177.8,216.2L177.8,216.2l-11.7,86
+        l-2.9,2.9h-1.5l-1.5-2.9H153l1.5,20.4l-2.9,4.4L71.5,223.5l11.7-64.1l99,16L177.8,216.2z" title="Nevada, Shall Issue (No Discretion)" data-state="Nevada" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="NH" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M900.4,101.1L900.4,101.1l2.9,1.5
+        l-1.5,4.4l-4.4,2.9l-1.5,2.9l-18.9,4.4l-2.9-1.5l-1.5-16l2.9-10.2L874,82l7.3-7.3l-2.9-4.4L880,66l-1.5-1.5h1.5l-1.5-4.4l2.9-2.9
+        l2.9,1.5v-2.9l11.7,40.8l4.4,1.5L900.4,101.1L900.4,101.1z" title="New Hampshire, Shall Issue (Limited Discretion)" data-state="New Hampshire" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="NJ" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M849.4,182.8L849.4,182.8l2.9-2.9
+        L845,177l-2.9-7.3l1.5-2.9l-1.5-2.9l4.4-8.7l16,4.4l-1.5,5.8l-1.5,2.9l-1.5,2.9h5.8l1.5,16l-2.9,7.3l-7.3,13.2v-4.4h-4.4l-8.7-4.4
+        l-1.5-4.4l1.5-2.9L849.4,182.8z" title="New Jersey, May Issue (Complete Discretion)" data-state="New Jersey" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="NM" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M306,408.5L306,408.5l-11.7-1.5v2.9l1.5,2.9l-32.1-2.9
+        v10.2l-16-1.5L258,293.4l107.8,5.8l-4.4,110.7L306,408.5z" title="New Mexico, Shall Issue (No Discretion)" data-state="New Mexico" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="NY" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M865.4,162.3L865.4,162.3L865.4,162.3
+        L865.4,162.3L865.4,162.3L865.4,162.3z M861,166.7L861,166.7L861,166.7L861,166.7L861,166.7L861,166.7z M859.6,169.6L859.6,169.6
+        l-1.5,1.5l1.5-2.9l1.5-1.5L859.6,169.6z M890.2,149.2L890.2,149.2h1.5v1.5L890.2,149.2L890.2,149.2z M893,144.9L893,144.9L893,144.9
+        l-1.5,1.5v-1.5H893z M865.4,160.9L865.4,160.9L865.4,160.9H864l0,0H865.4z M853.8,90.9L853.8,90.9l2.9,7.3v4.4l1.5-1.5l1.5,1.5
+        l4.4,17.5l-1.5,14.5l4.4,17.5l1.5,1.5l-4.4,2.9l1.5,1.5l-1.5,4.4h1.5l4.4-4.4h4.4l1.5-1.5l8.7-2.9l2.9-4.4v1.5l4.4,1.5l4.4-2.9
+        l-10.2,7.3l-11.7,7.3l-11.7,4.4v-8.7l-21.9-7.3l-2.9-5.8l-4.4-2.9l-72.8,14.5l-1.5-5.8l8.7-7.3l4.4-5.8l-5.8-5.8V129l10.2-4.4
+        l10.2-1.5l4.4,1.5l8.7-2.9l8.7-7.3h2.9l-2.9-7.3l2.9-1.5l-4.4-2.9v-2.9l5.8-4.4l7.3-11.7l4.4-4.4l26.2-7.3V81l2.9,2.9v7.1H853.8z" title="New York, May Issue (Complete Discretion)" data-state="New York" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="NC" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M859.6,292L859.6,292l2.9-2.9
+        l-2.9-10.2l2.9,2.9v8.7l-7.3,5.8L859.6,292z M856.6,276L856.6,276h1.5v1.5l-2.9-1.5H856.6z M839.2,265.8L839.2,265.8l11.7-2.9
+        l8.7,16l-4.4-4.4l-4.4-8.7l-2.9-1.5l5.8,8.7l-4.4-1.5l-7.3,5.8h-2.9l-1.5,1.5l11.7-2.9l1.5,1.5l1.5-1.5h2.9l1.5,5.8l-1.5,2.9
+        l-2.9,4.4l-10.2,2.9l4.4,1.5l-2.9,5.8l2.9-1.5l1.5,1.5h1.5v-1.5h1.5l-1.5,4.4l5.8-5.8l-7.3,11.7l-2.9-1.5l-5.8,1.5l-8.7,7.3
+        l-4.4,7.3l-1.5,7.3l-2.9-1.5l-7.3,2.9l-24.7-16l-18.9,2.9l-1.5-2.9l-2.9-2.9l-1.5,1.5v-2.9l-24.7,2.9l-13.2,7.3l-21.9,2.9v-4.4
+        l4.4-1.5l2.9-7.3l5.8-1.5l5.8-5.8h2.9l1.5-4.4l4.4-2.9l1.5,1.5l2.9-2.9l5.8-1.5l1.5-4.4l2.9-1.5v-5.8l39.4-5.8L839.2,265.8z" title="North Carolina, Shall Issue (No Discretion)" data-state="North Carolina" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="ND" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M410.9,104L410.9,104l-56.8-1.5l2.9-64.1h104.9l2.9,7.3
+        v10.2l4.4,11.7l1.5,20.4l2.9,7.3l1.5,8.7L410.9,104L410.9,104z" title="North Dakota, Shall Issue (Limited Discretion)" data-state="North Dakota" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="OH" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M712.5,175.4L712.5,175.4L712.5,175.4
+        H711H712.5L712.5,175.4z M709.5,174L709.5,174h1.5l-1.5,1.5l0,0V174z M709.5,174L709.5,174h1.5H709.5L709.5,174L709.5,174z
+         M709.5,172.6L709.5,172.6v1.5l0,0V172.6L709.5,172.6z M737.2,225L737.2,225l-1.5,2.9l1.5,2.9l-1.5,1.5l-2.9-2.9l-2.9,5.8l1.5,4.4
+        H730v2.9l-4.4,2.9l-5.8-4.4l-1.5-2.9l-4.4,2.9h-5.8l-2.9,1.5l-2.9-1.5l-7.3-1.5l-4.4-4.4h-7.3l-7.3-56.8l23.3-4.4l8.7,4.4l1.5-2.9
+        l7.3,4.4l7.3-4.4h4.4l7.3-7.3l11.7-7.3l4.4,29.1l-1.5,1.5l1.5,5.8l-1.5,14.5l-4.4,7.3l-2.9,1.5l-1.5-1.5L737.2,225z" title="Ohio, Shall Issue (No Discretion)" data-state="Ohio" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="OK" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M419.6,350.3L419.6,350.3v-39.4h-53.9
+        v-11.7h83l67-1.5v10.2l4.4,24.7l1.5,39.4l-7.3-1.5l-5.8-4.4l-1.5,1.5l-5.8-1.5l-2.9,2.9h-7.3l-1.5,1.5l-2.9,1.5l-5.8-4.4v1.5h-2.8
+        l-1.5-2.9l-2.9,5.8l-2.9-4.4l-2.9,2.9l-1.5-2.9h-1.5l-2.9-1.5l-2.9,2.9h-1.5v-2.9h-2.9l-1.5-2.9h-3.1l-2.9,1.5l-1.5-1.5l-11.7-1.5
+        v-2.9l-2.9-2.9l-1.5,2.9l-4.4-1.5l-4.4-4.4l-1.5,1.5L419.6,350.3L419.6,350.3z" title="Oklahoma, Shall Issue (No Discretion)" data-state="Oklahoma" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="OR" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M67.1,74.9L67.1,74.9h5.8l5.8,2.9h8.7
+        l2.9,1.5l24.7-2.9l32.1,5.8l1.5,2.9L153,88v2.9l-8.7,14.5l-7.3,8.7v4.4l4.4,2.9l-2.9,7.3l-5.8,39.4l-67-11.7l-51-11.7l-2.9-1.5v-5.8
+        l1.5-7.3l-1.5-4.4l8.7-14.5l5.8-17.5l10.2-33.5v-4.4l1.5,2.9l7.3-1.5V60h4.4l2.9,2.9l1.5,8.7V73l7.3,2.9L67.1,74.9z" title="Oregon, Shall Issue (Limited Discretion)" data-state="Oregon" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="PA" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M773.6,207.5L773.6,207.5l-17.5,2.9l-8.7-49.6l5.8-4.4
+        l5.8-4.4l1.5,5.8l72.8-14.5l4.4,2.9l2.9,5.8l5.8,2.9l-4.4,8.7l1.5,2.9l-1.5,4.4l2.9,5.8l7.3,2.9l-7.3,8.7l-5.8,2.9l-2.9,2.9
+        L773.6,207.5z" title="Pennsylvania, Shall Issue (Limited Discretion)" data-state="Pennsylvania" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="RI" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M900.4,139L900.4,139L900.4,139v-2.9
+        l1.5,1.5L900.4,139z M901.8,137.5L901.8,137.5L901.8,137.5L901.8,137.5L901.8,137.5L901.8,137.5z M901.8,136.1L901.8,136.1l-1.5-1.5
+        l0,0l0,0L901.8,136.1z M901.8,134.7L901.8,134.7L901.8,134.7L901.8,134.7L901.8,134.7L901.8,134.7z M898.9,144.9L898.9,144.9
+        L898.9,144.9l1.5,1.5h-1.5V144.9z M898.9,134.7L898.9,134.7l1.5,5.8l-5.8,4.4l-2.9-16l5.8-1.5l2.9,4.4l1.5,1.5v1.5l-1.5-1.5
+        L898.9,134.7z M904.7,137.5L904.7,137.5L904.7,137.5l-1.5-2.9v2.9l-1.5,1.5v-4.4l1.5-1.5L904.7,137.5z" title="Rhode Island, May Issue (Complete Discretion)" data-state="Rhode Island" data-group="May Issue (Complete Discretion)" data-color="2"></path><path class="cir-map-state" id="SC" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M743,313.8L743,313.8l21.9-2.9v2.9
+        l1.5-1.5l2.9,2.9l1.5,2.9l18.9-2.9l24.7,16l-5.8,5.8l-5.8,16h-2.9v2.9l-7.3,7.3l-4.4,4.4h-2.9v4.4l-2.9,1.5l-2.9,5.8l-4.4-1.5
+        l-2.9-7.3l-5.8-2.9l-2.9-7.3l-7.3-4.4l-4.4-7.3l-10.2-5.8l-8.7-11.7h-2.9l-5.8-2.9l2.9-7.3l13.2-7.3h2.7V313.8z" title="South Carolina, Shall Issue (No Discretion)" data-state="South Carolina" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="SD" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M352.6,147.7L352.6,147.7l1.5-45.1l120.9,1.5v1.5
+        l-4.4,4.4l5.8,7.3l1.5,39.4h-1.5l1.5,1.5l-1.5,2.9l2.9,2.9l-4.4,8.7l4.4,5.8l-2.9-1.5l-1.5-2.9l-10.2-2.9l-8.7-1.5l-4.4,2.9
+        l-7.3-4.4l-93.2-1.5L352.6,147.7z" title="South Dakota, Shall Issue (Limited Discretion)" data-state="South Dakota" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="TN" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M715.3,286.1L715.3,286.1l32.1-4.4
+        v5.8l-2.9,1.5l-1.5,4.4l-5.8,1.5l-2.9,2.9l-1.5-1.5l-4.4,2.9l-1.5,4.4h-2.9l-5.8,5.8l-5.8,1.5l-2.9,7.3l-4.4,1.5v4.4L596,337.2
+        l4.4-4.4l-1.5-2.9l1.5-2.9l-1.5,1.5l1.5-2.9v-1.5h2.9l-1.5-4.4l4.4-1.5l-1.5-1.5l1.5-1.5l-1.5-1.5l2.9-4.4l-2.9-1.5h2.9l-1.5-1.5
+        l1.5-1.5v-2.9l26.2-2.9v-4.4L715.3,286.1z" title="Tennessee, Shall Issue (No Discretion)" data-state="Tennessee" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="TX" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M482.3,497.4L482.3,497.4l7.3-5.8l-10.2,8.7l-7.3,14.5
+        v8.7l2.9,13.2l1.5,5.8l-4.4-16v-11.7l4.4-11.7h1.5l2.9-7.3L482.3,497.4z M419.6,350.3L419.6,350.3v4.4l1.5-1.5l4.4,4.4l4.4,1.5
+        l1.5-2.9l2.9,2.9v2.9l11.7,1.5l1.5,1.5l2.9-1.5h2.9l1.5,2.9h2.9v2.9h1.5l2.9-2.9l2.9,1.5h1.5l1.5,2.9l2.9-2.9l2.9,4.4l2.9-5.8
+        l1.5,2.9h2.9v-1.5l5.8,4.4l2.9-1.5l1.5-1.5h7.3l2.9-2.9l5.8,1.5l1.5-1.5l16,7.3h5.8l1.5,34.9l4.4,4.4v4.4l4.4,4.4l1.5,4.4l0,0v7.3
+        l-2.9,7.3l1.5,10.2l-2.9,5.8l1.5,2.9l-5.8,1.5l-11.7,7.3l4.4-4.4H520l1.5-4.4v-1.5l-2.9,2.9h-1.5l-1.5,2.9l2.9,1.5v2.9h1.5h1.5
+        l-11.7,11.7L491,489.9l7.3-5.8l-4.4,1.5v-2.9l-5.8,4.4l-1.5-4.4l-1.5,1.5l4.4,4.4l-4.4,2.9l-2.9-1.5v4.4l-4.4,2.9l-2.9,5.8l-1.5-1.5
+        l-2.9,1.5l1.5,2.9h1.5l-2.9,8.7l-2.9,1.5l1.5-2.9l-2.9,2.9h4.4l-2.9,8.7l1.5,2.9l1.5,5.8l1.5,2.9h1.5v4.4l1.5,1.5v1.5l1.5-1.5v1.5
+        l-4.4,2.9l-5.8-2.9l-11.7-1.5l-11.7-5.8l-5.8-1.5l-2.9-8.7l-4.4-4.4v-5.8l-1.5-1.5V510l-5.8-5.8l-4.4-7.3l-4.4-2.9l-1.5-5.8
+        l-2.9-2.9l-2.9-10.2l-7.3-7.3l-4.4-1.5l-2.9-5.8l-13.2-1.5l-4.4-1.5l-1.5,2.9h-5.8l-4.4,8.7l1.5,2.9l-5.8,4.4h-4.4l-8.7-5.8
+        l-4.4-1.5l-8.7-7.3l-2.9-7.3v-5.8l-4.4-8.7l-8.7-5.8l-10.2-13.2l-4.4-1.5l-2.9-5.8l-4.4-4.4v-2.9l67,2.9l4.4-99h53.9v40.2H419.6z" title="Texas, Shall Issue (No Discretion)" data-state="Texas" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="UT" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M233.1,179.8L233.1,179.8l-2.9,21.9
+        l34.9,2.9l-7.3,88.8l-88.8-8.7l13.2-109.2L233.1,179.8z" title="Utah, Shall Issue (Limited Discretion)" data-state="Utah" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="VT" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M877,117.2L877,117.2l-14.5,2.9
+        l-2.9-17.5l-1.5-1.5l-1.5,1.5v-4.4l-2.9-5.8v-8.7l-2.9-2.9V72l29.1-7.3l-1.5,5.8l2.9,4.4l-7.3,7.3l1.5,7.3l-2.9,10.2l2.9,11.7
+        l-1.5,2.9L877,117.2z" title="Vermont, No Permit Required" data-state="Vermont" data-group="No Permit Required" data-color="3"></path><path class="cir-map-state" id="VA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M853.8,227.9L853.8,227.9l-1.5,4.4
+        l-1.5,1.5l-2.9,14.5l-1.5,2.9l-2.9-4.4l1.5-11.7l1.5-1.5l0,0l1.5-2.9L853.8,227.9z M842.1,235.2L842.1,235.2v1.5l0,0V235.2
+        L842.1,235.2z M842.1,232.2L842.1,232.2l-1.5,1.5l0,0l0,0L842.1,232.2z M788.2,225L788.2,225l5.8-8.7V209l10.2,4.4l1.5-4.4l4.4,1.5
+        v2.9l8.7,4.4v4.4h-1.5l-1.5,4.4l1.5,2.9l4.4-2.9l1.5,4.4h7.3l7.3,4.4l-1.5,5.8h1.5h-1.5h-2.9l-1.5-1.5l-4.4-1.5l5.8,4.4h4.4v1.5h1.5
+        v4.4l-2.9-1.5l2.9,1.5l-2.9,1.5l4.4,1.5v2.9l-1.5,1.5l-5.8-4.4l-2.9,1.5h1.5l1.5-1.5v4.4l4.4,2.9l2.9-2.9h5.8l4.4,7.3l-74.3,14.5
+        l-64.1,10.2l8.7-4.4L727,273l11.7-11.7l1.5,4.4l5.8,2.9l4.4-4.4l2.9,1.5l5.8-1.5v-2.9h1.5l4.4-2.9l1.5,1.5l2.9-5.8h-1.5l5.8-14.5
+        l1.5-7.3l7.3,2.9l2.9-11.7L788.2,225z" title="Virginia, Shall Issue (Limited Discretion)" data-state="Virginia" data-group="Shall Issue (Limited Discretion)" data-color="1"></path><path class="cir-map-state" id="WA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M68.6,26.8L68.6,26.8l-4.4-8.7
+        l2.9-2.9l1.5,2.9l-2.9,1.5l1.5,2.9l0,0l2.9,1.5L68.6,26.8z M67.1,12.3L67.1,12.3h1.5v1.5L67.1,12.3L67.1,12.3z M67.1,10.8L67.1,10.8
+        v1.5l0,0V10.8L67.1,10.8z M67.1,10.8L67.1,10.8L67.1,10.8L67.1,10.8L67.1,10.8L67.1,10.8z M65.6,10.8L65.6,10.8l-1.5,2.9l-4.4-4.4
+        l2.9,1.5l-1.5-1.5L64,7.8l2.9,1.5L65.6,10.8z M59.8,7.9L59.8,7.9L59.8,7.9l1.5,1.5L59.8,7.9L59.8,7.9z M62.8,7.9L62.8,7.9L62.8,7.9
+        L62.8,7.9h-1.5H62.8z M70,24L70,24v1.5V24L70,24z M64.1,2.1L64.1,2.1L64.1,2.1h-1.5l0,0H64.1z M67.1,7.9L67.1,7.9l1.5,1.5v1.5
+        l-1.5-1.5V7.9z M65.6,38.5L65.6,38.5h1.5l1.5-10.2l2.9-2.9L70,19.6l-1.5,1.5L70,24l-1.5-2.9v-1.5l2.9-1.5l-2.9-2.9l-2.9-1.5h2.9
+        l1.5,1.5v-2.9h1.5L70,8l-1.5,1.5V8L67,3.7l1.5-1.5l87.4,16l-10.2,55.4l1.5,8.7l-32.1-5.8l-2.9,1.5l-7.3-1.5l-10.2,2.9l-7.3-1.5
+        L83,79.4l-4.4-1.5L72.8,75H67l-5.8,1.5l-7.3-2.9v-1.5l-1.5-8.7l-2.9-2.9h-4.4v-2.9l-4.4-1.5h-2.9l-1.5-1.5H35l1.5-7.3v4.4h1.5
+        l1.5-4.4h1.5L38,45.9v-4.4v1.5l4.4-1.5L38,38.7l-1.5,2.9V24.1l-2.9-5.8v-4.4l2.9-2.9l-1.5-1.5l10.2,7.3l10.2,2.9l2.9-1.5l2.9,4.4
+        l2.9-1.5h-1.5h2.9L63.9,24l1.5,2.9l-2.9,1.5l2.9-1.5v-1.5l1.5,1.5l-1.5,5.8l-1.5,1.5l2.9,2.9l-2.9,1.5l1.5,1.5v-1.5H65.6z" title="Washington, Shall Issue (No Discretion)" data-state="Washington" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="WV" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M792.5,219.2L792.5,219.2l-4.4,5.8
+        l-2.9-1.5l-2.9,11.7l-7.3-2.9l-1.5,7.3l-5.8,13.2l1.5,1.5l-1.5,4.4l-7.3,2.9H759v1.5l-1.5,1.5l-4.4,1.5l-2.9-1.5l-4.4,4.4l-5.8-2.9
+        l-1.5-2.9h1.5l-7.3-2.9l-7.3-8.7v-7.3l4.4-1.5v-2.9h1.5l-1.5-4.4l2.9-5.8l2.9,2.9l1.5-1.5l-1.5-2.9l1.5-4.4l4.4-4.4l1.5,1.5l2.9-1.5
+        l4.4-5.8l1.5-16l-1.5-5.8l1.5-1.5l4.4,20.4l17.5-2.9l1.5,10.2l5.8-7.3l2.9,1.5l1.5-5.8l4.4,1.5l5.8-4.4l5.8,1.5l4.4,4.4l-1.5,4.4
+        l-10.2-4.4v7.3L792.5,219.2z" title="West Virginia, Shall Issue (No Discretion)" data-state="West Virginia" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="WI" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M571.1,74.9L571.1,74.9v-1.5h1.5v1.5H571.1z M568.2,77.8
+        L568.2,77.8h1.5l-2.9,2.9v-1.5L568.2,77.8z M569.7,76.4L569.7,76.4h-1.5h2.9H569.7L569.7,76.4z M622.1,111.3L622.1,111.3h1.5l0,0
+        H622.1L622.1,111.3z M630.9,102.6L630.9,102.6h2.9l-1.5,2.9l-1.5-1.5L630.9,102.6L630.9,102.6z M619.2,114.3L619.2,114.3l-2.9,5.8
+        v2.9l2.9-1.5l2.9-4.4l2.9-1.5l1.5-7.3l4.4-2.9l-5.8,17.5v7.3l-2.9,1.5v5.8l1.5,4.4l-2.9,8.7l2.9,10.2v7.3l-46.6,4.4l-1.5-2.9
+        l-5.8-1.5l-2.9-4.4v-4.4l1.5-2.9l-2.9-2.9l-1.5-10.2l-2.9-2.9l-7.3-4.4l-2.9-2.9l-5.8-2.9l-2.9-1.5l-4.4-2.9v-11.7l1.5-2.9l-4.4-4.4
+        l2.9-5.8l5.8-4.4L542.1,84l2.9-1.5l5.8,1.5l14.5-7.3l1.5,1.5L564,84l2.9-1.5l10.2,2.9l1.5,2.9l32.1,5.8V97l5.8,1.5v7.3h2.9v2.9
+        l1.5,2.9v2.9L619.2,114.3L619.2,114.3z" title="Wisconsin, Shall Issue (No Discretion)" data-state="Wisconsin" data-group="Shall Issue (No Discretion)" data-color="0"></path><path class="cir-map-state" id="WY" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M352.6,146.3L352.6,146.3l-2.9,64.1l-119.5-8.7l8.7-86
+        l113.6,7.3L352.6,146.3L352.6,146.3z" title="Wyoming, No Permit Required" data-state="Wyoming" data-group="No Permit Required" data-color="3"></path>
 
 
-    <path class="cir-map-state" id="CA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M46.7,332.7L46.7,332.7h4.4v1.5
-      l-2.9,1.5L46.7,332.7z M55.4,332.7L55.4,332.7l2.9,1.5h1.5l-4.4,1.5l-2.9-2.9L55.4,332.7L55.4,332.7z M42.4,331.3L42.4,331.3
-      l2.9-1.5v1.5l0,0H42.4z M56.9,350.3L56.9,350.3l1.5,1.5l0,0h-1.5V350.3z M61.3,335.7L61.3,335.7v-1.5l1.5,1.5l0,0H61.3z M74.3,361.9
-      L74.3,361.9l-1.5-2.9l4.4,5.8h-1.5L74.3,361.9z M75.8,350.3L75.8,350.3l2.9,1.5l1.5,1.5h-2.9l-2.9-4.4L75.8,350.3z M24.9,241
-      L24.9,241h-1.5l0,0H24.9L24.9,241z M13.2,242.4L13.2,242.4L13.2,242.4L13.2,242.4L13.2,242.4L13.2,242.4z M24.9,241L24.9,241
-      L24.9,241v1.5l0,0V241z M13.2,156.5L13.2,156.5v-5.8l-1.5-1.5l1.5-4.4l69.9,14.5l-11.7,64.1l80.1,103.4v2.9l7.3,14.5l-5.8,2.9
-      l-2.9,11.7l-4.4,2.9v7.3l2.9,2.9v2.9l-2.9,1.5l-46.6-1.5l-1.5-4.4h-1.5l1.5-8.7l-2.9-5.8l-10.2-11.7h-5.8v-7.3H73l-5.8-2.9l-5.8-8.7
-      l-17.5-2.9l-1.5-4.4l1.5-11.7l-2.9-2.9v-4.4l-5.8-7.3l-2.9-7.3l-5.8-8.7V270l2.9-1.5l1.5-5.8l-4.4-1.5l-4.4-5.8v-13.2H25l-1.5,4.4
-      l4.4,2.9v-4.4l-1.5-2.9v-1.5l-1.5-2.9l2.9-1.5l-1.5-1.5h-1.5v4.4l-1.5,1.5l-5.8-5.8h-2.9l1.5-5.8l-8.7-16l1.5-20.4L3,181v-2.9
-      l5.8-10.2L13.2,156.5z" data-state="California" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path>
-
-    <path class="cir-map-state" id="CO" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M294.4,207.5L294.4,207.5l90.3,4.4
-      l-1.5,87.4l-53.9-1.5l-71.3-4.4l7.3-88.8L294.4,207.5z" data-state="Colorado" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="FL" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M817.4,523.6L817.4,523.6l-1.5,5.8
-      l-2.9,4.4l-1.5,1.5l2.9-7.3l4.4-8.7L817.4,523.6z M792.5,544L792.5,544l2.9-2.9l2.9,1.5h-2.8l-2.9,2.9l-2.9,1.5L792.5,544z
-       M782.3,546.9L782.3,546.9L782.3,546.9h1.5H782.3L782.3,546.9z M799.8,542.5L799.8,542.5L799.8,542.5L799.8,542.5L799.8,542.5
-      L799.8,542.5z M805.7,538.1L805.7,538.1l-2.9,2.9l0,0l1.5-1.5L805.7,538.1z M798.4,539.6L798.4,539.6L798.4,539.6v1.5h-1.5
-      L798.4,539.6z M807.2,538.1L807.2,538.1L807.2,538.1h-1.5H807.2z M808.5,536.7L808.5,536.7L808.5,536.7l-1.5,1.5L808.5,536.7
-      L808.5,536.7z M810,535.3L810,535.3L810,535.3l-1.5,1.5l0,0L810,535.3z M772.1,500.2L772.1,500.2l2.9,4.4l2.9,1.5H775L772.1,500.2z
-       M713.9,442L713.9,442l1.5-1.5L713.9,442l-4.4,2.9H708l0,0h1.5L713.9,442z M706.6,443.5L706.6,443.5h1.5v1.5l-2.9-1.5H706.6z
-       M757.6,475.5L757.6,475.5h-1.5v-2.9l0,0L757.6,475.5z M738.7,417.2L738.7,417.2l20.4-1.5l1.5,4.4h2.9l-1.5-10.2l2.9-1.5l8.7,1.5
-      v4.4l7.3,16l7.3,13.2l10.2,10.2l1.5,11.7l16,26.2l1.5,24.7v-1.5h-1.5l-1.5,5.8l1.5,2.9l-2.9,4.4l-1.5-1.5l-2.9,2.9l-7.3,1.5
-      l-1.5-1.5v-2.9l-5.8-8.7l-4.4-1.5l-2.9,1.5l-1.5-1.5l-4.4-10.2l-2.9-1.5h-1.5l-2.9-2.9h1.5v-7.3l-1.5,1.5v2.9l-1.5,1.5l-11.7-16h1.5
-      l2.9-8.7h-1.5v1.5l-1.5-2.9h-2.9l2.9,2.9l-1.5,5.8l-4.4-5.8l1.5-14.5v-8.7l-4.4-4.4h-4.4l0,0l-1.5-1.5l-7.3-5.8v-2.9l-5.8-4.4
-      l-7.3-2.9h-4.4l-2.9,1.5l1.5,2.9h-2.9l-7.3,5.8v-1.5l-8.7,4.4l-1.5-1.5v-2.9l0,0l1.5,2.9l1.5-2.9l-2.9-1.5l-17.5-7.3h-10.2
-      l-13.2,4.4v-1.5l1.5-7.3l-5.8-4.4v-2.9l49.6-5.8l2.9,5.8L738.7,417.2z" data-state="Florida" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-
-
-    <path class="cir-map-state" id="MD" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M839.2,229.4L839.2,229.4L839.2,229.4
-      v-1.5l1.5,2.9L839.2,229.4z M842.1,232.2L842.1,232.2l-1.5,1.5v-2.9h1.5V232.2z M828.9,210.4L828.9,210.4v1.5l-1.5,5.8l7.3,14.5
-      l-4.4-2.9h-7.2l-1.5-2.9l-4.4,1.5v-2.9l4.4-8.7l-2.9-1.5l-1.5,1.5l-5.8-2.9H810v-2.9l-5.8-1.5l-2.9-4.4l-5.8-1.5l-5.8,4.4l-4.4-1.5
-      l-1.5,5.8l-2.9-1.5l-5.8,7.3l-1.5-10.2l62.6-13.2l7.3,26.2l11.7-1.5l-1.5,8.7l-10.2,5.8v-4.4h-1.5l1.5-1.5l-2.9,1.5l1.5-2.9h-1.5
-      l-1.5-2.9v4.4l-4.4-1.5l-1.5-4.4h1.5l-1.5-2.9h2.9l-2.9-2.9l-1.5,2.9V215h1.5v-2.9l-2.9,2.9v-1.5v-2.9l1.5,1.5l1.5-1.5v-1.5
-      l-1.5,1.5l-1.5-2.9l1.5-4.4l2.9-1.5v-2.9H832l1.5,1.5l-2.9,4.4h-1.5l-1.5,2.9h-1.5L828.9,210.4z" data-state="Maryland" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path>
-    <path class="cir-map-state" id="CT" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M881.5,131.7L881.5,131.7l10.2-2.9
-      l2.9,14.5l-11.7,4.4l-5.8,1.5l-2.9,2.9l-8.7,5.8l-1.5-1.5l4.4-2.9l-1.5-1.5l-2.9-17.5L881.5,131.7z" data-state="Connecticut" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path>
-
-    <path class="cir-map-state" id="GA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M696.4,325.5L696.4,325.5l30.6-4.4
-      l-2.9,7.3l5.8,2.9h2.9l8.7,11.7l10.2,5.8l4.4,7.3l7.3,4.4l2.9,7.3l5.8,2.9l2.9,7.3l4.4,1.5l-1.5,4.4h-1.5v1.5l-2.9,1.5l2.9,2.9
-      l-2.9,1.5h1.5v7.3l-2.9,5.8h1.5v5.8l-8.7-1.5l-2.9,1.5l1.5,10.2h-2.9l-1.5-4.4l-51,2.9l-5.8-8.7v-7.3l-1.5-5.8v-7.3l2.9-2.9
-      l-2.9-1.5V381l-4.4-7.3L682,327.1L696.4,325.5z" data-state="Georgia" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="IL" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M597.3,169.6L597.3,169.6l26.2-1.5
-      v4.4l7.3,11.7l5.8,51l-1.5,5.8l2.9,2.9v5.8l-7.3,16v4.4l-1.5,4.4l2.9,2.9l-7.3,2.9v7.3l-8.7-2.9l-2.9,4.4v1.5h-4.4l-2.9-5.8l1.5-2.9
-      l-1.5-5.8l-7.3-4.4l-1.5,1.5l-7.3-7.3l-1.5-2.9l4.4-11.7l-5.8-1.5l-2.9,1.5l-2.9-7.3l-11.7-10.2l-4.4-8.7l2.9-5.8l-1.5-2.9l4.4-2.9
-      l2.9-7.3v-2.9l-2.9-2.9v-4.4l10.2-2.9l4.4-5.8v-7.3l-4.4-1.5l-4.4-5.8L597.3,169.6z" data-state="Illinois" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="IN" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M680.4,207.5L680.4,207.5l2.9,27.7
-      v1.5l1.5,5.8l-5.8,2.9h-4.4v4.4l-2.9,1.5v4.4h-2.9l-1.5,5.8l-4.4,1.5l-1.5-2.9l-4.4,2.9l-1.5,4.4l-2.9-2.9l-4.4,1.5v2.9l-10.2-2.9
-      v2.9v-1.5h-4.4v2.9h-2.9v-1.5l0,0v-4.4l1.5-1.5v-1.5l5.8-13.2v-4.4l-2.9-2.9l1.5-5.8l-5.8-51l4.4,1.5l7.3-4.4l33.5-4.4L680.4,207.5z
-      " data-state="Indiana" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="LA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M635.2,450.8L635.2,450.8l-1.5,1.5
-      l1.5-4.4l-1.5-4.4l1.5,2.9v1.5V450.8z M531.8,392.5L531.8,392.5l-1.5-7.3l53.9-2.9v2.9l1.5-2.9l1.5,1.5l-2.9,2.9l2.9,1.5l-1.5,1.5
-      v4.4l4.4,2.9l-1.5,2.9h-2.9v1.5h2.9l-5.8,7.3v4.4h-1.5l1.5,1.5l-2.9,1.5V426l-1.5,1.5l36.4-2.9l-1.5,7.3l7.3,10.2l-2.9,4.4h-1.5
-      l-1.5,1.5l5.8,1.5l1.5-4.4h1.5v1.5l1.5,1.5l2.9-1.5l-2.9,1.5h2.9l-2.9,1.5l1.5,1.5h-1.5l-1.5,1.5h-4.4l4.4,2.9l-4.4-1.5v2.9l4.4,2.9
-      l5.8,1.5l4.4,2.9l-1.5,1.5l-1.5,2.9l-2.9-1.5l-1.5,2.9v-2.9l-2.9-2.9l-7.3-1.5v-4.4l-2.9,1.5v2.9L612,464h2.9l-4.4,2.9l-2.9,1.5
-      l1.5-1.5v-1.5l-1.5-1.5l-2.9,1.5l-1.5-1.5l-4.4,5.8l2.9-1.5l-4.4,1.5l-1.5-2.9l-7.3-1.5l1.5-4.4l-5.8-1.5l-1.5-1.5h-1.5v-2.9
-      l-4.4,1.5l-1.5-2.9l-4.4,2.9l1.5,2.9l4.4-1.5l2.9,1.5l-1.5,1.5l-4.4-1.5l-5.8,1.5h-5.8l-11.7-4.4l-11.7,2.9l-1.5-2.9l2.9-5.8
-      l-1.5-10.2l2.9-7.3V426l0,0l-1.5-4.4l-4.4-4.4V413l-4.4-4.4v-16.1H531.8z" data-state="Louisiana" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-
-    <path class="cir-map-state" id="MS" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M629.4,440.6L629.4,440.6L629.4,440.6
-      h-1.5H629.4z M632.3,440.6L632.3,440.6L632.3,440.6h-1.5l2.9-1.5L632.3,440.6z M641,439.1L641,439.1L641,439.1h1.5H641L641,439.1z
-       M636.7,439.1L636.7,439.1h1.5h1.5l0,0h-4.5H636.7z M616.3,334.2L616.3,334.2l18.9-1.5l1.5,2.9v65.6l5.8,34.9l-5.8,1.5l-2.9-1.5
-      l-8.7,2.9l-1.5-1.5l-1.5,4.4h-2.9l-5.8-10.2l1.5-7.3l-36.4,2.9l1.5-1.5v-10.2l2.9-1.5l-1.5-1.5h1.5v-4.4l5.8-7.3h-3v-1.5h2.9
-      l1.5-2.9l-4.4-2.9v-4.4l1.5-1.5l-2.9-1.5l1.5-4.4l-1.5,2.9v-1.5l1.5-4.4l-2.9-5.8l1.5-1.5l-1.5-1.5l1.5-1.5l-1.5-1.5l2.9-5.8
-      l-1.5-1.5l2.9-1.5v-4.4l2.9-2.9l2.9-1.5v-7.3l1.5-2.9h2.9v-1.5l-1.5-1.5L616.3,334.2z" data-state="Mississippi" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-
-
-    <path class="cir-map-state" id="VT" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M877,117.2L877,117.2l-14.5,2.9
-      l-2.9-17.5l-1.5-1.5l-1.5,1.5v-4.4l-2.9-5.8v-8.7l-2.9-2.9V72l29.1-7.3l-1.5,5.8l2.9,4.4l-7.3,7.3l1.5,7.3l-2.9,10.2l2.9,11.7
-      l-1.5,2.9L877,117.2z" data-state="Vermont" data-group="No Permit Required" data-color="3" data-selected="false"></path>
-    <path class="cir-map-state" id="ND" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M410.9,104L410.9,104l-56.8-1.5l2.9-64.1h104.9l2.9,7.3
-      v10.2l4.4,11.7l1.5,20.4l2.9,7.3l1.5,8.7L410.9,104L410.9,104z" data-state="North Dakota" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="OK" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M419.6,350.3L419.6,350.3v-39.4h-53.9
-      v-11.7h83l67-1.5v10.2l4.4,24.7l1.5,39.4l-7.3-1.5l-5.8-4.4l-1.5,1.5l-5.8-1.5l-2.9,2.9h-7.3l-1.5,1.5l-2.9,1.5l-5.8-4.4v1.5h-2.8
-      l-1.5-2.9l-2.9,5.8l-2.9-4.4l-2.9,2.9l-1.5-2.9h-1.5l-2.9-1.5l-2.9,2.9h-1.5v-2.9h-2.9l-1.5-2.9h-3.1l-2.9,1.5l-1.5-1.5l-11.7-1.5
-      v-2.9l-2.9-2.9l-1.5,2.9l-4.4-1.5l-4.4-4.4l-1.5,1.5L419.6,350.3L419.6,350.3z" data-state="Oklahoma" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-    <path class="cir-map-state" id="PA" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M773.6,207.5L773.6,207.5l-17.5,2.9l-8.7-49.6l5.8-4.4
-      l5.8-4.4l1.5,5.8l72.8-14.5l4.4,2.9l2.9,5.8l5.8,2.9l-4.4,8.7l1.5,2.9l-1.5,4.4l2.9,5.8l7.3,2.9l-7.3,8.7l-5.8,2.9l-2.9,2.9
-      L773.6,207.5z" data-state="Pennsylvania" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="TN" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M715.3,286.1L715.3,286.1l32.1-4.4
-      v5.8l-2.9,1.5l-1.5,4.4l-5.8,1.5l-2.9,2.9l-1.5-1.5l-4.4,2.9l-1.5,4.4h-2.9l-5.8,5.8l-5.8,1.5l-2.9,7.3l-4.4,1.5v4.4L596,337.2
-      l4.4-4.4l-1.5-2.9l1.5-2.9l-1.5,1.5l1.5-2.9v-1.5h2.9l-1.5-4.4l4.4-1.5l-1.5-1.5l1.5-1.5l-1.5-1.5l2.9-4.4l-2.9-1.5h2.9l-1.5-1.5
-      l1.5-1.5v-2.9l26.2-2.9v-4.4L715.3,286.1z" data-state="Tennessee" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-    <path class="cir-map-state" id="VA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M853.8,227.9L853.8,227.9l-1.5,4.4
-      l-1.5,1.5l-2.9,14.5l-1.5,2.9l-2.9-4.4l1.5-11.7l1.5-1.5l0,0l1.5-2.9L853.8,227.9z M842.1,235.2L842.1,235.2v1.5l0,0V235.2
-      L842.1,235.2z M842.1,232.2L842.1,232.2l-1.5,1.5l0,0l0,0L842.1,232.2z M788.2,225L788.2,225l5.8-8.7V209l10.2,4.4l1.5-4.4l4.4,1.5
-      v2.9l8.7,4.4v4.4h-1.5l-1.5,4.4l1.5,2.9l4.4-2.9l1.5,4.4h7.3l7.3,4.4l-1.5,5.8h1.5h-1.5h-2.9l-1.5-1.5l-4.4-1.5l5.8,4.4h4.4v1.5h1.5
-      v4.4l-2.9-1.5l2.9,1.5l-2.9,1.5l4.4,1.5v2.9l-1.5,1.5l-5.8-4.4l-2.9,1.5h1.5l1.5-1.5v4.4l4.4,2.9l2.9-2.9h5.8l4.4,7.3l-74.3,14.5
-      l-64.1,10.2l8.7-4.4L727,273l11.7-11.7l1.5,4.4l5.8,2.9l4.4-4.4l2.9,1.5l5.8-1.5v-2.9h1.5l4.4-2.9l1.5,1.5l2.9-5.8h-1.5l5.8-14.5
-      l1.5-7.3l7.3,2.9l2.9-11.7L788.2,225z" data-state="Virginia" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-
-    <path class="cir-map-state" id="WV" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M792.5,219.2L792.5,219.2l-4.4,5.8
-      l-2.9-1.5l-2.9,11.7l-7.3-2.9l-1.5,7.3l-5.8,13.2l1.5,1.5l-1.5,4.4l-7.3,2.9H759v1.5l-1.5,1.5l-4.4,1.5l-2.9-1.5l-4.4,4.4l-5.8-2.9
-      l-1.5-2.9h1.5l-7.3-2.9l-7.3-8.7v-7.3l4.4-1.5v-2.9h1.5l-1.5-4.4l2.9-5.8l2.9,2.9l1.5-1.5l-1.5-2.9l1.5-4.4l4.4-4.4l1.5,1.5l2.9-1.5
-      l4.4-5.8l1.5-16l-1.5-5.8l1.5-1.5l4.4,20.4l17.5-2.9l1.5,10.2l5.8-7.3l2.9,1.5l1.5-5.8l4.4,1.5l5.8-4.4l5.8,1.5l4.4,4.4l-1.5,4.4
-      l-10.2-4.4v7.3L792.5,219.2z" data-state="West Virginia" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-    <path class="cir-map-state" id="WI" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M571.1,74.9L571.1,74.9v-1.5h1.5v1.5H571.1z M568.2,77.8
-      L568.2,77.8h1.5l-2.9,2.9v-1.5L568.2,77.8z M569.7,76.4L569.7,76.4h-1.5h2.9H569.7L569.7,76.4z M622.1,111.3L622.1,111.3h1.5l0,0
-      H622.1L622.1,111.3z M630.9,102.6L630.9,102.6h2.9l-1.5,2.9l-1.5-1.5L630.9,102.6L630.9,102.6z M619.2,114.3L619.2,114.3l-2.9,5.8
-      v2.9l2.9-1.5l2.9-4.4l2.9-1.5l1.5-7.3l4.4-2.9l-5.8,17.5v7.3l-2.9,1.5v5.8l1.5,4.4l-2.9,8.7l2.9,10.2v7.3l-46.6,4.4l-1.5-2.9
-      l-5.8-1.5l-2.9-4.4v-4.4l1.5-2.9l-2.9-2.9l-1.5-10.2l-2.9-2.9l-7.3-4.4l-2.9-2.9l-5.8-2.9l-2.9-1.5l-4.4-2.9v-11.7l1.5-2.9l-4.4-4.4
-      l2.9-5.8l5.8-4.4L542.1,84l2.9-1.5l5.8,1.5l14.5-7.3l1.5,1.5L564,84l2.9-1.5l10.2,2.9l1.5,2.9l32.1,5.8V97l5.8,1.5v7.3h2.9v2.9
-      l1.5,2.9v2.9L619.2,114.3L619.2,114.3z" data-state="Wisconsin" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-    <path class="cir-map-state" id="UT" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M233.1,179.8L233.1,179.8l-2.9,21.9
-      l34.9,2.9l-7.3,88.8l-88.8-8.7l13.2-109.2L233.1,179.8z" data-state="Utah" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-
-
-    <path class="cir-map-state" id="ME" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M920.7,80.8L920.7,80.8L920.7,80.8
-      L920.7,80.8L920.7,80.8L920.7,80.8z M917.9,77.8L917.9,77.8h1.5l-1.5,1.5V77.8L917.9,77.8z M944.1,57.4L944.1,57.4L944.1,57.4v1.5
-      l0,0V57.4z M909.1,85.1L909.1,85.1L909.1,85.1v1.5l-1.5-1.5H909.1z M907.7,86.6L907.7,86.6v1.5l0,0V86.6L907.7,86.6z M907.7,86.6
-      L907.7,86.6L907.7,86.6L907.7,86.6L907.7,86.6L907.7,86.6z M907.7,86.6L907.7,86.6L907.7,86.6h1.5H907.7L907.7,86.6z M909.1,86.6
-      L909.1,86.6L909.1,86.6L909.1,86.6v-1.5V86.6z M928.1,76.4L928.1,76.4v1.5l0,0l-1.5-1.5H928.1z M923.7,74.9L923.7,74.9v1.5V74.9
-      L923.7,74.9L923.7,74.9z M930.9,73.4L930.9,73.4l-1.5-1.5l1.5-1.5v1.5V73.4z M928.1,72L928.1,72l-1.5,1.5l-1.5-1.5l1.5-1.5L928.1,72
-      z M923.7,69.1L923.7,69.1v-2.9h1.5l0,0l-1.5,4.4V69.1z M932.4,70.6L932.4,70.6L932.4,70.6L932.4,70.6L932.4,70.6L932.4,70.6z
-       M933.9,69.1L933.9,69.1h1.5l0,0H933.9L933.9,69.1z M932.4,67.6L932.4,67.6l1.5,1.5h-1.5l0,0V67.6z M928.1,67.6L928.1,67.6h1.5v2.9
-      l-1.5-1.5V67.6z M933.9,67.6L933.9,67.6L933.9,67.6L933.9,67.6L933.9,67.6L933.9,67.6z M932.4,67.6L932.4,67.6L932.4,67.6
-      L932.4,67.6L932.4,67.6L932.4,67.6z M926.6,69.1L926.6,69.1L926.6,69.1L926.6,69.1L926.6,69.1L926.6,69.1z M935.3,66.2L935.3,66.2
-      L935.3,66.2L935.3,66.2L935.3,66.2L935.3,66.2z M930.9,64.7L930.9,64.7v1.5l0,0l0,0V64.7z M922.2,69.1L922.2,69.1v4.4h1.5l-1.5,2.9
-      l-4.4,1.5l0,0v2.9l-1.5-1.5l-1.5,2.9l-1.5,2.9l-1.5-1.5l-2.9,1.5V82l-1.5,2.9l-1.5,1.5l1.5,2.9l-1.5,1.5v1.5l-2.9,2.9v5.8h-2.9v-2.9
-      l-4.4-1.5l-11.7-40.8h1.5l2.9,1.5V53h2.9l-2.9-2.9l5.8-8.7l-2.9-5.8l2.9-5.8l-1.5-5.8l7.3-20.4h2.9l1.5,4.4h2.9l8.7-5.8l8.7,4.4
-      l7.3,27.7h7.3l1.5,7.3l2.9,2.9v-2.9h2.9l5.8,7.3l-4.4,5.8l-1.5-2.9v2.9H944v2.9l-2.9,1.5l-1.5-1.5v2.9l-1.5,1.5v1.5l-2.9-2.9
-      l-1.5,1.5l1.5,2.9l-1.5,1.5v1.5l-1.5-1.5v-2.9h-1.5v1.5v-1.5l-1.5,1.5l1.5,2.9l-4.4-1.5l-1.5,1.5v-4.4l-2.9,2.9L922.2,69.1
-      L922.2,69.1z" data-state="Maine" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="MA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M909.1,133.2L909.1,133.2L909.1,133.2
-      L909.1,133.2L909.1,133.2L909.1,133.2z M913.4,134.7L913.4,134.7l2.9,1.5l0,0v1.5l-4.4,1.5h-1.5L913.4,134.7z M923.7,136.1
-      L923.7,136.1v-1.5l1.5,2.9h-1.5h-2.9l0,0L923.7,136.1z M884.3,130.3L884.3,130.3l-21.9,4.4l1.5-14.5l32.1-7.3l1.5-2.9l4.4-2.9
-      l1.5,2.9h4.4l-4.4,4.4v5.8l1.5-1.5l2.9,1.5l1.5,2.9v1.5l5.8,4.4h2.9l4.4-2.9l-2.9-4.4h-2.9l2.9-1.5l4.4,7.3v2.9l-1.5-1.5l-5.8,1.5
-      l-1.5,2.9l-5.8,4.4l2.9-4.4v-2.9h-1.5l-2.9,4.4l-2.9,2.9v-4.4l-4.4-1.5l-2.9-4.4L884.3,130.3z" data-state="Massachusetts" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path>
-    <path class="cir-map-state" id="MI" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M652.7,92.4L652.7,92.4l1.5,2.9l-1.5,1.5h-1.5L652.7,92.4
-      z M597.3,48.7L597.3,48.7l2.9-1.5l-2.9,2.9L593,53h1.5l-4.4,2.9l-1.5-1.5L597.3,48.7z M667.3,89.5L667.3,89.5V88l4.4,1.5l-1.5,1.5
-      L667.3,89.5z M645.4,109.8L645.4,109.8L645.4,109.8L645.4,109.8L645.4,109.8L645.4,109.8z M646.9,107L646.9,107L646.9,107v1.5h-1.5
-      L646.9,107z M699.3,171.1L699.3,171.1v2.9l-16,2.9l-40.8,4.4l2.9-2.9l2.9-8.7l1.5-7.3l-1.5-8.7l-5.8-13.2l1.5-4.4l-2.9-4.4l4.4-7.3
-      l-1.5-7.3l2.9-1.5v-2.9l4.4-1.5l2.9-7.3l-1.5,8.7l1.5,1.5l1.5-5.8v5.8l1.5-4.4v-7.3l7.3-2.9l-4.4-2.9l2.9-4.4l-1.5-1.5h4.4l4.4,1.5
-      h4.4l1.5,2.9l10.2,1.5l4.4,4.4l1.5,1.5l-4.4,1.5l4.4,5.8v8.7L689,120v4.4l-4.4,2.9v5.8l4.4,1.5l5.8-8.7l4.4-2.9l4.4,1.5l1.5,2.9
-      l7.3,17.5v8.7l-2.9,1.5v-2.9l-2.9,1.5v5.8l-2.9,1.5l-1.5,7.3L699.3,171.1z M597.3,92.4L597.3,92.4l-18.9-4.4l-1.5-2.9l-4.4-1.5
-      l10.2-5.8l5.8-1.5l5.8-4.4l8.7-8.7l5.8-2.9l4.4,1.5l-2.9,1.5l-4.4,4.4l-2.9,4.4v4.4l4.4-4.4v1.5h8.7l5.8,7.3l4.4-1.5l2.9,1.5h2.9
-      v-2.9l1.5,1.5l5.8-4.4l11.7-1.5l7.3-2.9v5.8l5.8-1.5l1.5,1.5l7.3-2.9l1.5,5.8l-2.9,1.5l4.4,1.5h-1.5l2.9,1.5h2.9l-1.5-1.5l2.9-1.5
-      l2.9,2.9l-1.5,1.5h-8.7l-4.4,1.5l-4.4-1.5v4.4l-5.8-2.9l-7.3-1.5l-2.9,4.4l-10.2,1.5l-4.4,7.3l-1.5-1.5l2.9-4.4h-4.4v4.4h-2.9
-      l-1.5-2.9l-7.3,17.5l-1.5-2.9v-2.9h-2.9v-7.3l-4.4-1.5l-1.5-2.9L597.3,92.4z" data-state="Michigan" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-
-
-    <path class="cir-map-state" id="AL" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M648.4,437.6L648.4,437.6L648.4,437.6
-      l-4.4,1.5l2.9-1.5H648.4z M661.4,329.9L661.4,329.9l20.4-2.9l14.5,46.6l4.4,7.3v4.4l2.9,1.5l-2.9,2.9v5.8l1.5,7.3v7.3l2.9,4.4
-      l-49.6,5.8v2.9l5.8,4.4l-1.5,7.3l-5.8,2.9l-4.4,1.5l4.4-2.9l-2.9-2.9l-1.5-4.4h-1.5l-1.5,7.3h-4.4l-5.8-33.5v-67L635,333
-      L661.4,329.9z" data-state="Alabama" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="NJ" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M849.4,182.8L849.4,182.8l2.9-2.9
-      L845,177l-2.9-7.3l1.5-2.9l-1.5-2.9l4.4-8.7l16,4.4l-1.5,5.8l-1.5,2.9l-1.5,2.9h5.8l1.5,16l-2.9,7.3l-7.3,13.2v-4.4h-4.4l-8.7-4.4
-      l-1.5-4.4l1.5-2.9L849.4,182.8z" data-state="New Jersey" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path>
-
-    <path class="cir-map-state" id="SC" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M743,313.8L743,313.8l21.9-2.9v2.9
-      l1.5-1.5l2.9,2.9l1.5,2.9l18.9-2.9l24.7,16l-5.8,5.8l-5.8,16h-2.9v2.9l-7.3,7.3l-4.4,4.4h-2.9v4.4l-2.9,1.5l-2.9,5.8l-4.4-1.5
-      l-2.9-7.3l-5.8-2.9l-2.9-7.3l-7.3-4.4l-4.4-7.3l-10.2-5.8l-8.7-11.7h-2.9l-5.8-2.9l2.9-7.3l13.2-7.3h2.7V313.8z" data-state="South Carolina" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-    <path class="cir-map-state" id="WA" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M68.6,26.8L68.6,26.8l-4.4-8.7
-      l2.9-2.9l1.5,2.9l-2.9,1.5l1.5,2.9l0,0l2.9,1.5L68.6,26.8z M67.1,12.3L67.1,12.3h1.5v1.5L67.1,12.3L67.1,12.3z M67.1,10.8L67.1,10.8
-      v1.5l0,0V10.8L67.1,10.8z M67.1,10.8L67.1,10.8L67.1,10.8L67.1,10.8L67.1,10.8L67.1,10.8z M65.6,10.8L65.6,10.8l-1.5,2.9l-4.4-4.4
-      l2.9,1.5l-1.5-1.5L64,7.8l2.9,1.5L65.6,10.8z M59.8,7.9L59.8,7.9L59.8,7.9l1.5,1.5L59.8,7.9L59.8,7.9z M62.8,7.9L62.8,7.9L62.8,7.9
-      L62.8,7.9h-1.5H62.8z M70,24L70,24v1.5V24L70,24z M64.1,2.1L64.1,2.1L64.1,2.1h-1.5l0,0H64.1z M67.1,7.9L67.1,7.9l1.5,1.5v1.5
-      l-1.5-1.5V7.9z M65.6,38.5L65.6,38.5h1.5l1.5-10.2l2.9-2.9L70,19.6l-1.5,1.5L70,24l-1.5-2.9v-1.5l2.9-1.5l-2.9-2.9l-2.9-1.5h2.9
-      l1.5,1.5v-2.9h1.5L70,8l-1.5,1.5V8L67,3.7l1.5-1.5l87.4,16l-10.2,55.4l1.5,8.7l-32.1-5.8l-2.9,1.5l-7.3-1.5l-10.2,2.9l-7.3-1.5
-      L83,79.4l-4.4-1.5L72.8,75H67l-5.8,1.5l-7.3-2.9v-1.5l-1.5-8.7l-2.9-2.9h-4.4v-2.9l-4.4-1.5h-2.9l-1.5-1.5H35l1.5-7.3v4.4h1.5
-      l1.5-4.4h1.5L38,45.9v-4.4v1.5l4.4-1.5L38,38.7l-1.5,2.9V24.1l-2.9-5.8v-4.4l2.9-2.9l-1.5-1.5l10.2,7.3l10.2,2.9l2.9-1.5l2.9,4.4
-      l2.9-1.5h-1.5h2.9L63.9,24l1.5,2.9l-2.9,1.5l2.9-1.5v-1.5l1.5,1.5l-1.5,5.8l-1.5,1.5l2.9,2.9l-2.9,1.5l1.5,1.5v-1.5H65.6z" data-state="Washington" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-    <path class="cir-map-state" id="NV" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M177.8,216.2L177.8,216.2l-11.7,86
-      l-2.9,2.9h-1.5l-1.5-2.9H153l1.5,20.4l-2.9,4.4L71.5,223.5l11.7-64.1l99,16L177.8,216.2z" data-state="Nevada" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-    <path class="cir-map-state" id="NH" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M900.4,101.1L900.4,101.1l2.9,1.5
-      l-1.5,4.4l-4.4,2.9l-1.5,2.9l-18.9,4.4l-2.9-1.5l-1.5-16l2.9-10.2L874,82l7.3-7.3l-2.9-4.4L880,66l-1.5-1.5h1.5l-1.5-4.4l2.9-2.9
-      l2.9,1.5v-2.9l11.7,40.8l4.4,1.5L900.4,101.1L900.4,101.1z" data-state="New Hampshire" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-
-    <path class="cir-map-state" id="OH" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M712.5,175.4L712.5,175.4L712.5,175.4
-      H711H712.5L712.5,175.4z M709.5,174L709.5,174h1.5l-1.5,1.5l0,0V174z M709.5,174L709.5,174h1.5H709.5L709.5,174L709.5,174z
-       M709.5,172.6L709.5,172.6v1.5l0,0V172.6L709.5,172.6z M737.2,225L737.2,225l-1.5,2.9l1.5,2.9l-1.5,1.5l-2.9-2.9l-2.9,5.8l1.5,4.4
-      H730v2.9l-4.4,2.9l-5.8-4.4l-1.5-2.9l-4.4,2.9h-5.8l-2.9,1.5l-2.9-1.5l-7.3-1.5l-4.4-4.4h-7.3l-7.3-56.8l23.3-4.4l8.7,4.4l1.5-2.9
-      l7.3,4.4l7.3-4.4h4.4l7.3-7.3l11.7-7.3l4.4,29.1l-1.5,1.5l1.5,5.8l-1.5,14.5l-4.4,7.3l-2.9,1.5l-1.5-1.5L737.2,225z" data-state="Ohio" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-    <path class="cir-map-state" id="OR" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M67.1,74.9L67.1,74.9h5.8l5.8,2.9h8.7
-      l2.9,1.5l24.7-2.9l32.1,5.8l1.5,2.9L153,88v2.9l-8.7,14.5l-7.3,8.7v4.4l4.4,2.9l-2.9,7.3l-5.8,39.4l-67-11.7l-51-11.7l-2.9-1.5v-5.8
-      l1.5-7.3l-1.5-4.4l8.7-14.5l5.8-17.5l10.2-33.5v-4.4l1.5,2.9l7.3-1.5V60h4.4l2.9,2.9l1.5,8.7V73l7.3,2.9L67.1,74.9z" data-state="Oregon" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path>
-    <path class="cir-map-state" id="RI" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M900.4,139L900.4,139L900.4,139v-2.9
-      l1.5,1.5L900.4,139z M901.8,137.5L901.8,137.5L901.8,137.5L901.8,137.5L901.8,137.5L901.8,137.5z M901.8,136.1L901.8,136.1l-1.5-1.5
-      l0,0l0,0L901.8,136.1z M901.8,134.7L901.8,134.7L901.8,134.7L901.8,134.7L901.8,134.7L901.8,134.7z M898.9,144.9L898.9,144.9
-      L898.9,144.9l1.5,1.5h-1.5V144.9z M898.9,134.7L898.9,134.7l1.5,5.8l-5.8,4.4l-2.9-16l5.8-1.5l2.9,4.4l1.5,1.5v1.5l-1.5-1.5
-      L898.9,134.7z M904.7,137.5L904.7,137.5L904.7,137.5l-1.5-2.9v2.9l-1.5,1.5v-4.4l1.5-1.5L904.7,137.5z" data-state="Rhode Island" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path>
-
-
-    <path class="cir-map-state" id="AK" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.9985" stroke-linejoin="bevel" d="M109.4,567.3L109.4,567.3
-      L109.4,567.3l-1.5,1.5v-1.5H109.4z M121,568.7L121,568.7L121,568.7L121,568.7L121,568.7L121,568.7z M118.1,567.3L118.1,567.3v-1.5
-      V567.3l-1.5,1.5L118.1,567.3h-1.5H118.1z M121,567.3L121,567.3v1.5l0,0h-1.5L121,567.3z M119.5,567.3L119.5,567.3L119.5,567.3v1.5
-      v-2.9V567.3z M110.8,565.8L110.8,565.8l1.5,1.5l0,0h-1.5V565.8L110.8,565.8z M116.6,565.8L116.6,565.8h-1.5l1.5,1.5l-1.5-1.5v1.5
-      v-2.9L116.6,565.8L116.6,565.8L116.6,565.8z M118.1,564.4L118.1,564.4v1.5h-1.5v-1.5H118.1z M93.3,570.2L93.3,570.2v1.5h-1.5v-1.5
-      l0,0H93.3z M94.8,571.7L94.8,571.7L94.8,571.7L94.8,571.7L94.8,571.7L94.8,571.7z M96.2,571.7L96.2,571.7L96.2,571.7h-1.5H96.2
-      L96.2,571.7z M94.8,570.2L94.8,570.2L94.8,570.2v1.5h-1.5L94.8,570.2h-1.5H94.8z M106.4,570.2L106.4,570.2L106.4,570.2v1.5l0,0
-      V570.2z M75.8,519.2L75.8,519.2L75.8,519.2l1.5,1.5l1.5,1.5h-1.5L75.8,519.2z M100.7,527.9L100.7,527.9l1.5,1.5l-2.9,1.5l0,0
-      l-2.9-2.9l-1.5-1.5h2.9l0,0h1.5h1.5l0,0L100.7,527.9L100.7,527.9z M215.7,535.3L215.7,535.3L215.7,535.3h1.5l2.9,2.9l-2.9-1.5
-      l2.9,4.4h-1.5l1.5,1.5l-1.5,1.5l-1.5-1.5V541l0,0l0,0l-1.5-1.5l-1.5-5.8L215.7,535.3z M236.1,552.7L236.1,552.7v1.5h-1.5l0,0
-      L236.1,552.7z M233.1,551.3L233.1,551.3L233.1,551.3v1.5l-1.5-1.5H233.1z M131.2,557.1L131.2,557.1v1.5h-1.5v-1.5H131.2z
-       M93.3,503.2L93.3,503.2h2.9l-1.5,1.5h-1.5l-1.5,1.5l0,0v-1.5l-1.5-1.5v-1.5h-1.5h-1.5h-1.5v-1.5l1.5-1.5l0,0l1.5,1.5h2.9v1.5
-      L93.3,503.2z M115.2,504.7L115.2,504.7h1.5v1.5h-1.5V504.7z M99.2,491.5L99.2,491.5h1.5v1.5l0,0L99.2,491.5z M99.2,485.7L99.2,485.7
-      L99.2,485.7v1.5l0,0V485.7z M107.9,484.2L107.9,484.2L107.9,484.2L107.9,484.2L107.9,484.2L107.9,484.2z M221.6,551.3L221.6,551.3
-      h1.5H221.6L221.6,551.3L221.6,551.3z M221.6,549.8L221.6,549.8L221.6,549.8l-1.5-1.5v-1.5h1.5l-1.5-1.5l-1.5-1.5h1.5l0,0l0,0l0,0
-      l1.5,1.5v-1.5l0,0l1.5,1.5l-1.5,1.5h1.5v2.9l-1.5-1.5V549.8L221.6,549.8z M227.3,544L227.3,544l-1.5,1.5h-1.5V544h-1.5l0,0l1.5,1.5
-      l0,0l0,0l-1.5,1.5l-1.5-2.9l0,0l-1.5-1.5h4.4L227.3,544z M233.1,551.3L233.1,551.3l1.5,1.5l0,0v1.5L233.1,551.3z M225.9,552.7
-      L225.9,552.7L225.9,552.7L225.9,552.7v1.5l0,0l-1.5-1.5l0,0H225.9L225.9,552.7z M222.9,546.9L222.9,546.9h1.5l1.5,1.5h1.5l1.5,1.5
-      l1.5,1.5l0,0l0,0v1.5h1.5l0,0l0,0l0,0v1.5l0,0h1.5v2.9h-1.5v-1.5h-1.5v-1.5h-1.5l1.5,1.5h-1.5v-1.5h-1.5l1.5,1.5h1.5v1.5l0,0l0,0
-      l0,0l-1.5-1.5l-1.5-1.5h-1.5l0,0h1.5l0,0v-1.5v-1.5h-1.5l0,0h-1.5l0,0l1.5-1.5h-1.5l0,0h-1.5l1.5-1.5L222.9,546.9z M222.9,549.8
-      L222.9,549.8v1.5l0,0V549.8L222.9,549.8z M212.7,538.1L212.7,538.1l1.5,1.5l1.5-1.5v2.9l0,0l-2.9-1.5v1.5l0,0h1.5l-1.5,1.5l0,0
-      l-4.4-2.9v-2.9l1.5,1.5l1.5-1.5l0,0h1.3V538.1v-1.5h1.5v1.5l0,0h1.5h-1.5H212.7z M220.1,549.8L220.1,549.8l-2.9-2.9l0,0l0,0h-1.5
-      l-1.5-4.4l0,0h-1.5h1.5v-1.5l0,0h2.9l-1.5,1.5l2.9,2.9L220.1,549.8z M212.7,542.5L212.7,542.5l1.5,1.5v1.5V544L212.7,542.5
-      L212.7,542.5z M166.1,527.9L166.1,527.9v1.5l-1.5,1.5l0,0V528v1.5L166.1,527.9z M166.1,526.5L166.1,526.5L166.1,526.5v1.5l0,0V526.5
-      z M164.7,526.5L164.7,526.5L164.7,526.5v1.5l-1.5-1.5H164.7z M167.6,525.1L167.6,525.1L167.6,525.1h-1.5l0,0H167.6z M167.6,529.4
-      L167.6,529.4L167.6,529.4L167.6,529.4L167.6,529.4L167.6,529.4l-1.5,2.9l0,0l-1.5,1.5L167.6,529.4z M30.7,574.5L30.7,574.5
-      L30.7,574.5L30.7,574.5L30.7,574.5L30.7,574.5z M32.1,574.5L32.1,574.5L32.1,574.5L32.1,574.5L32.1,574.5L32.1,574.5z M23.4,568.7
-      L23.4,568.7l1.5,2.9l0,0l0,0L23.4,568.7L23.4,568.7z M42.4,574.5L42.4,574.5L42.4,574.5h1.5l0,0h1.5l-1.5,1.5l0,0h-1.5l0,0h-1.5
-      L42.4,574.5L42.4,574.5z M37.9,573.2L37.9,573.2l-1.5,1.5v-1.5H37.9l-1.5-1.5h1.5V573.2h1.5H37.9z M39.4,574.5L39.4,574.5h-1.5l0,0
-      h2.9v-1.5l0,0v1.5H39.4z M33.6,571.7L33.6,571.7L33.6,571.7L33.6,571.7L33.6,571.7L33.6,571.7z M21.9,567.3L21.9,567.3L21.9,567.3
-      v-1.5V567.3L21.9,567.3z M46.7,576L46.7,576h-1.5l0,0v-1.5L46.7,576z M19,564.4L19,564.4L19,564.4L19,564.4h-1.5l0,0H19l1.5-1.5v1.5
-      H19z M27.7,568.7L27.7,568.7L27.7,568.7v-1.5l0,0V568.7z M23.4,565.8L23.4,565.8L23.4,565.8L23.4,565.8L23.4,565.8L23.4,565.8z
-       M48.1,576L48.1,576h-1.5l0,0v-1.5L48.1,576z M46.7,574.5L46.7,574.5h-1.5l0,0H46.7L46.7,574.5z M21.9,564.4L21.9,564.4L21.9,564.4
-      v1.5V564.4L21.9,564.4z M54,574.5L54,574.5L54,574.5h1.5l0,0v1.5H54l0,0l0,0h-2.9h-1.5h2.9H54h-1.5H54V574.5z M56.9,577.5
-      L56.9,577.5L56.9,577.5h2.9H56.9h-1.5V576L56.9,577.5z M19,563L19,563L19,563L19,563L19,563L19,563z M61.3,577.5L61.3,577.5h1.5l0,0
-      l0,0H61.3z M13.2,558.5L13.2,558.5L13.2,558.5L13.2,558.5h1.5H13.2z M4.5,552.7L4.5,552.7H6v1.5L4.5,552.7L4.5,552.7z M67.1,577.5
-      L67.1,577.5L67.1,577.5L67.1,577.5L67.1,577.5L67.1,577.5z M70,577.5L70,577.5L70,577.5L70,577.5L70,577.5L70,577.5z M7.4,552.7
-      L7.4,552.7L7.4,552.7L7.4,552.7L7.4,552.7L7.4,552.7z M72.9,576L72.9,576v1.5l0,0l0,0V576z M7.4,552.7L7.4,552.7L7.4,552.7
-      L7.4,552.7L7.4,552.7L7.4,552.7z M7.4,552.7L7.4,552.7L7.4,552.7v-1.5l0,0V552.7z M3,549.8L3,549.8v-1.5l0,0l0,0h1.5l1.5,2.9
-      l-1.5-1.5L3,549.8L3,549.8z M74.3,576L74.3,576L74.3,576L74.3,576v1.5h-1.5L74.3,576z M81.7,574.5L81.7,574.5l-1.5,1.5l-2.9,1.5
-      l1.5-1.5v-1.5h1.5H81.7v-1.5h1.5h1.5l-1.5,1.5H81.7z M72.9,576L72.9,576L72.9,576L72.9,576L72.9,576L72.9,576z M74.3,576L74.3,576
-      L74.3,576L74.3,576L74.3,576L74.3,576z M89,571.7L89,571.7L89,571.7L89,571.7h1.5l0,0l-1.5,1.5h2.9l0,0l-2.9,1.5l0,0h-2.9l-1.5,1.5
-      l-1.5-1.5H86l1.5-1.5l0,0H89h-1.5v-1.5H89z M81.7,549.8L81.7,549.8v1.5l0,0l-1.5-1.5H81.7z M80.2,545.5L80.2,545.5h-1.5H80.2
-      L80.2,545.5L80.2,545.5z M137.1,563L137.1,563L137.1,563v1.5l-1.5-1.5H137.1z M141.4,558.5L141.4,558.5h-1.5l0,0l1.5-1.5V558.5z
-       M142.8,558.5L142.8,558.5L142.8,558.5h-1.5V557L142.8,558.5z M148.6,548.3L148.6,548.3L148.6,548.3v1.5l0,0l0,0h1.5l-1.5,1.5h-1.5
-      h1.5v1.5h-1.5l0,0h-1.5h1.5h-1.5l1.5,1.5h-1.5l0,0v-1.5l-1.5,1.5l0,0l0,0v1.5l-1.5,1.5v-1.5v-1.5h1.5l-2.9,1.5v-1.5l-1.5-1.5l0,0
-      v-1.5l1.5-1.5h1.5v1.5l1.5,1.5l-1.5-2.9h1.5h-1.5v-1.5h1.5v1.5v-1.5h1.5h-1.5l0,0h1.5v-1.5l1.5,1.5v-1.5v1.5v1.5v-1.5L148.6,548.3
-      L148.6,548.3L148.6,548.3L148.6,548.3z M150.1,545.5L150.1,545.5v1.5h-1.5v-1.5l-1.5,1.5l0,0h-1.5l1.5,1.5l-1.5-1.5l0,0l0,0v-1.5
-      h1.5l0,0l0,0l0,0l0,0V544h1.5v-1.5l0,0v2.9v-1.5L150.1,545.5V544V545.5L150.1,545.5v1.5V545.5z M225.9,545.5L225.9,545.5h1.5v1.5
-      h-1.5l0,0V545.5z M212.7,535.3L212.7,535.3h-2.9v-1.5l-1.5-1.5v1.5l-1.5-1.5l0,0l0,0h-1.5l2.9,1.5l0,0l0,0l0,0l1.5,1.5v1.5h-1.5l0,0
-      l0,0l0,0l-4.4-1.5l-2.9-1.5l-7.3-2.9l1.5-1.5l-1.5-1.5l1.5-1.5l-1.5,2.9h-1.5l-1.5,1.5l-2.9-1.5l0,0h-1.5h-2.9l-4.4,1.5l-1.5-1.5
-      h-1.5h-1.5v-1.5l0,0v1.5l-2.9-1.5l0,0v-1.5l-1.5,1.5l0,0l-1.5,1.5l0,0l0,0v-1.5l2.9-1.5l0,0h-1.5h1.5h-1.5l0,0v-1.5l-1.5,1.5l0,0
-      l1.5-1.5l0,0h-1.5l0,0l-1.5,1.5l1.5-2.9l-1.5,1.5l0,0h-1.5l0,0l0,0l0,0l0,0l-1.5-1.5v2.9v-1.5v1.5h-1.1l1.5-1.5h-1.5l0,0l-1.5,1.5
-      l1.5,1.5v-1.5l0,0v2.9v-1.5l1.5,1.5l0,0h-1.5v1.5l0,0l0,0h1.5v1.5v-1.5v1.5v-1.5v1.5h-1.5h1.5h-1.5v-1.5v1.5h-3l0,0v1.5l-1.5-1.5
-      v1.5l0,0l0,0v1.5l-1.5-1.5v1.5l0,0l-1.5,1.5v-1.5v1.5v-1.5v1.5h-1.4v1.5H153l0,0l0,0l0,0l-1.5,1.5l-1.5-1.5v-1.5h1.5l1.5-1.5v1.5
-      v-1.5l1.5-1.5l-2.9,1.5h-1.5l2.9-5.8l-1.5-1.5l4.4-2.9l1.5,1.5V525l-1.5-1.5h1.5h-2.9L153,525l-1.5,1.5v1.5H150l0,0l-1.5,1.5l0,0
-      v1.5h-1.5l1.5,1.5l-1.5,1.5h-1.5l0,0v1.5l0,0h-1.5v1.5l0,0l0,0l-1.5,1.5l0,0l-1.5,1.5h1.5l0,0h1.5l1.5,1.5l-1.5,1.5h-1.5v1.5l0,0
-      v1.5l0,0l-1.5,1.5l0,0l0,0l0,0h-1.5h-1.5v1.5h-1.5l1.5,1.5l-1.5-1.5l-1.5,2.9l0,0l0,0h-1.5l-1.5,1.5h1.5l-1.5,1.5l0,0l-1.5,1.5v-1.5
-      l-1.5,1.5l0,0l0,0l-1.5,1.5h1.5h-1.5l0,0h-1.5h1.5l-1.5,1.5v-1.5v1.5h-1.5l0,0v1.5l0,0h1.5l-1.5,1.5v-1.5v1.5h-1.5v-1.5v1.5l0,0
-      h-1.5h-1.5v1.5V562l-1.5,2.9l0,0l0,0v-1.5v-1.5l-1.5,1.5h-1.5v1.5h-1.5l0,0l0,0l0,0h-1.5h-1.5v-1.5l0,0l-1.5,2.9h-1.5h1.5l-1.5,1.5
-      v-1.5v1.5h-0.6v-1.5l0,0v-1.5l-1.5,1.5h1.5v1.5h-1.5v-1.5h-1.5l0,0v1.5l-1.5,1.5h1.5l0,0h-1.5l0,0h-2.9l-1.5,1.5h-1.5v-1.5l0,0
-      l1.5-2.9l1.5,1.5l1.5-1.5h1.5v1.5l0,0l0,0h1.5v-1.5h1.5v-1.5l4.4-2.9l4.4-1.5v1.5l0,0v1.5l0,0V562h1.5l1.5,1.5V562h-1.5l1.5-2.9
-      l5.8-2.9l0,0v-1.5l1.5-1.5l2.9-2.9v1.5v-1.5l1.5-2.9v-1.5l0,0v-1.5l1.5-1.5v-1.5l0,0l0,0l-4.4,1.5l-1.5-1.5l0,0v2.9H124l0,0
-      l-1.5-2.9l0,0v-1.5l-1.5,1.5v-1.5h-1.5v-1.5l-1.5,1.5l0,0h-1.5l-2.9,2.9v-1.5h-1.5h1.5V540v-1.5v-1.5l1.5-1.5l-1.5-4.4v-1.5v1.5
-      l-1.5-1.5v1.5l-2.9,1.5h-2.9v-1.5l0,0l-1.5-2.9l-1.5-1.5l0,0l-1.5-1.5h2.9v-1.5l0,0h-1.5l0,0l1.5-1.5l0,0l-1.5-1.5v1.5h-1.5l1.5-1.5
-      l-1.5-1.5l0,0V518l0,0v-1.5v1.5l0,0v-1.5h1.5V515v-1.5l2.9-1.5h1.5l-1.5-1.5l0,0h1.5v-2.9h2.9l1.5,1.5h1.5l1.5-1.5l1.5-1.5l0,0h2.9
-      l1.5-1.5v-2.9l-1.5-1.5l0,0v-1.5h1.5h1.5v-1.5l-1.5-1.5l-1.5,1.5l0,0H118l-2.9,2.9v-1.5h-1.5l0,0l-1.5-1.5h-2.9l-4.4-1.5v-1.5
-      l-1.5-2.9h1.5l0,0L102,490l-1.5-1.5V487l5.8-2.9l1.5,1.5h1.5l-1.5-1.5l4.4-1.5l2.9,1.5l-1.5,1.5l0,0l0,0v1.5h2.9h1.5h1.5v1.5
-      l1.5-1.5h1.5v-1.5h-1.5h-1.5v-1.5l-1.5-2.9h1.5v1.5v1.5l1.5,1.5l1.5-1.5h-1.5v-1.5v-1.5l0,0h-2.9l-2.9-1.5v-4.4l-2.9-2.9l-4.4-2.9
-      h1.5l1.5-4.4l2.9,1.5h2.9l1.5-1.5l1.5-1.5V461l4.4-2.9l0,0h1.5l4.4-2.9v-1.5v1.5h4.4l2.9-4.4l1.5,1.5l0,0v1.5l0,0v1.5h1.5v-2.9
-      l1.5,1.5v1.5h1.5l0,0l1.5-1.5l2.9,1.5v1.5h1.5v1.5h1.5l1.5-1.5l1.5,1.5l1.5-1.5l1.5,1.5h1.5l0,0h1.5h4.1l2.9,1.5l2.9-1.5l0,0h1.5
-      l4.4,2.9l1.5-1.5l13.2,67h1.5l0,0h1.5l1.5-1.5h1.5v1.5l2.9,1.5l0,0l4.4,2.9l1.5,2.9l1.5-2.9h1.5v-1.5v-1.5v-1.5l2.9-1.5l0,0l1.5,1.5
-      l1.5,1.5l1.5,1.5l1.5,1.5h1.5l1.5,1.5l10.2,10.2l5.8,1.5h1.5l0,0h1.5l0,0v2.9l2.9,2.9l-1.5,4.4h-1.5l0,0l0,0l-1.5-2.9l0,0v-2.9h-1.5
-      l-1.5-1.5l1.5,1.5l1.5,2.9V550v1.5h-1.5l0,0V550v1.5h-2.9l1.5-1.5l-1.5-1.5l0,0l0,0v2.9l-1.5-1.5l0,0v-1.5v-2.9l-1.5,2.9l0,0h-1.5
-      v-1.5v-1.5h1.5l-1.5-1.5l1.5,1.5l-1.5-1.5l0,0H226l1.5-1.5H226h-1.5V541l0,0h-2.9l0,0l1.5-1.5h-1.5V538h-1.5l0,0h1.5l-1.5-1.5l0,0
-      l0,0h-1.5l-1.5-1.5h-1.5l-2.9-1.5l-1.5-4.4l-1.5-1.5l4.4,8.7L212.7,535.3L212.7,535.3z" data-state="Alaska" data-group="No Permit Required" data-color="3" data-selected="false"></path>
-    <path class="cir-map-state" id="HI" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.998" stroke-linejoin="bevel" d="M361.4,555L361.4,555l13.2,7.3
-      l4.4,2.9v2.9h1.5v1.5l4.4,4.4l-4.4,4.4l-13.2,5.8l-2.9,4.4l-5.8-2.9v-7.3l-4.4-10.2l5.8-7.3l-1.5-5.8L361.4,555L361.4,555z
-       M243.3,517.1L243.3,517.1L243.3,517.1L243.3,517.1L243.3,517.1L243.3,517.1z M253.6,509.7L253.6,509.7l1.5-1.5l-4.4,5.8v-2.9
-      L253.6,509.7z M271,502.4L271,502.4l2.9,2.9l-1.5,4.4l-2.9,1.5l-7.3-2.9l1.5-4.4L271,502.4z M330.8,530.1L330.8,530.1h7.3l-4.4,2.9
-      l-11.7-1.5l1.5-2.9L330.8,530.1z M342.5,547.6L342.5,547.6h-4.4l0,0l2.9-2.9L342.5,547.6z M339.5,534.5L339.5,534.5l4.4,2.9l5.8-1.5
-      l5.8,4.4v1.5l-10.2,4.4l-1.5-5.8l-5.8-2.9L339.5,534.5z M330.8,536L330.8,536l4.4,2.9v1.5l-4.4,1.5l-1.5-4.4L330.8,536z
-       M304.6,527.3L304.6,527.3h-1.5l-4.4-7.3h4.4l2.9-4.4l4.4,7.3h1.5l2.9,4.4l-4.4,1.5l-2.9-2.9L304.6,527.3z" data-state="Hawaii" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path>
-    <path class="cir-map-state" id="NM" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M306,408.5L306,408.5l-11.7-1.5v2.9l1.5,2.9l-32.1-2.9
-      v10.2l-16-1.5L258,293.4l107.8,5.8l-4.4,110.7L306,408.5z" data-state="New Mexico" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path><path class="cir-map-state" id="MT" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M239,115.7L239,115.7l-1.5,11.7l-4.4-7.3l-4.4,4.4
-      l-10.2-1.5l-2.9,1.6l-4.4-1.5l-2.9,2.9l-2.9-1.5v-7.3l-5.8-2.9l1.5-4.4l-4.4-5.8v-7.3l-2.9-1.5l-5.8,4.4l-4.4-2.9l1.5-2.9v-1.5
-      l2.9-2.9l-1.5-2.9l4.4-11.7l-4.4-1.5l-4.4-4.4l-5.8-10.2l-5.8-4.4l1.5-5.8l-4.4-5.8l2.9-21.9L261,31.2l96.2,7.3l-2.9,84.5L239,115.7
-      z" data-state="Montana" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path><path class="cir-map-state" id="MO" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M607.5,305L607.5,305l-1.5,1.5
-      l1.5,1.5h-2.9l2.9,1.5l-1.5,4.4l-13.2,1.5l5.8-7.3l-2.9-4.4l-80.1,4.4l-1.5-58.3l-4.4-1.5l-5.8-5.8l4.4-5.8l-1.5-2.9l-2.9,1.5
-      l-2.9-2.9l-8.7-13.2l68.5-4.4l2.9,1.5l2.9,2.9l-1.5,5.8l4.4,8.7l11.7,10.2l1.5,7.3h1.5l2.9-1.5l5.8,1.5l-4.4,11.7l1.5,2.9l7.3,7.3
-      l1.5-1.5l7.3,4.4l1.5,5.8l-1.5,2.9l2.9,5.8l5.8,1.5l-1.5,7.3h-2.9l-1.5,4.4v-2.9h-1.5V305z" data-state="Missouri" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path><path class="cir-map-state" id="NC" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M859.6,292L859.6,292l2.9-2.9
-      l-2.9-10.2l2.9,2.9v8.7l-7.3,5.8L859.6,292z M856.6,276L856.6,276h1.5v1.5l-2.9-1.5H856.6z M839.2,265.8L839.2,265.8l11.7-2.9
-      l8.7,16l-4.4-4.4l-4.4-8.7l-2.9-1.5l5.8,8.7l-4.4-1.5l-7.3,5.8h-2.9l-1.5,1.5l11.7-2.9l1.5,1.5l1.5-1.5h2.9l1.5,5.8l-1.5,2.9
-      l-2.9,4.4l-10.2,2.9l4.4,1.5l-2.9,5.8l2.9-1.5l1.5,1.5h1.5v-1.5h1.5l-1.5,4.4l5.8-5.8l-7.3,11.7l-2.9-1.5l-5.8,1.5l-8.7,7.3
-      l-4.4,7.3l-1.5,7.3l-2.9-1.5l-7.3,2.9l-24.7-16l-18.9,2.9l-1.5-2.9l-2.9-2.9l-1.5,1.5v-2.9l-24.7,2.9l-13.2,7.3l-21.9,2.9v-4.4
-      l4.4-1.5l2.9-7.3l5.8-1.5l5.8-5.8h2.9l1.5-4.4l4.4-2.9l1.5,1.5l2.9-2.9l5.8-1.5l1.5-4.4l2.9-1.5v-5.8l39.4-5.8L839.2,265.8z" data-state="North Carolina" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path><path class="cir-map-state" id="AZ" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M195.3,287.6L195.3,287.6l62.6,5.8
-      l-10.2,125.3l-39.4-2.9l-67-33.5v-2.9l7.3-5.8v-2.9l-2.9-1.5v-7.3l4.4-2.9l2.9-11.7l5.8-2.9l-7.3-14.5l2.9-7.3l-1.5-20.4h7.3
-      l1.5,2.9h1.5l2.9-2.9l2.9-17.5L195.3,287.6z" data-state="Arizona" data-group="No Permit Required" data-color="3" data-selected="false"></path><path class="cir-map-state" id="NY" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M865.4,162.3L865.4,162.3L865.4,162.3
-      L865.4,162.3L865.4,162.3L865.4,162.3z M861,166.7L861,166.7L861,166.7L861,166.7L861,166.7L861,166.7z M859.6,169.6L859.6,169.6
-      l-1.5,1.5l1.5-2.9l1.5-1.5L859.6,169.6z M890.2,149.2L890.2,149.2h1.5v1.5L890.2,149.2L890.2,149.2z M893,144.9L893,144.9L893,144.9
-      l-1.5,1.5v-1.5H893z M865.4,160.9L865.4,160.9L865.4,160.9H864l0,0H865.4z M853.8,90.9L853.8,90.9l2.9,7.3v4.4l1.5-1.5l1.5,1.5
-      l4.4,17.5l-1.5,14.5l4.4,17.5l1.5,1.5l-4.4,2.9l1.5,1.5l-1.5,4.4h1.5l4.4-4.4h4.4l1.5-1.5l8.7-2.9l2.9-4.4v1.5l4.4,1.5l4.4-2.9
-      l-10.2,7.3l-11.7,7.3l-11.7,4.4v-8.7l-21.9-7.3l-2.9-5.8l-4.4-2.9l-72.8,14.5l-1.5-5.8l8.7-7.3l4.4-5.8l-5.8-5.8V129l10.2-4.4
-      l10.2-1.5l4.4,1.5l8.7-2.9l8.7-7.3h2.9l-2.9-7.3l2.9-1.5l-4.4-2.9v-2.9l5.8-4.4l7.3-11.7l4.4-4.4l26.2-7.3V81l2.9,2.9v7.1H853.8z" data-state="New York" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path><path class="cir-map-state" id="DC" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M818.7,217.7L818.7,217.7l-1.5-1.5
-      l1.5-1.5l2.9,1.5l-1.5,2.9L818.7,217.7z M877,263.6L877,263.6L877,263.6v-1.5l0,0v-1.5l0,0l-1.5-1.5l0,0l0,0l0,0l0,0l0,0l0,0l0,0
-      l0,0h1.5v-1.5l-1.5-1.5h1.5v-1.5h-1.4l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0l0,0v-1.5h-1.5l0,0v-1.5l0,0l0,0h-1.5h-1.5v-1.5l0,0l0,0
-      l-1.5-1.5l0,0l0,0v-1.5l0,0l0,0v-1.5h1.5v-1.5l4.4-2.9v-1.5l1.5,1.5l1.5,1.5l0,0l0,0l1.5,1.5l0,0l5.8,4.4v1.5l2.9,1.5l-1.5,1.5l0,0
-      l0,0l-2.9,2.9l0,0l-2.9,2.9l-1.5,1.5l0,0l0,0L877,263.6L877,263.6z" data-state="District of Columbia" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path><path class="cir-map-state" id="WY" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M352.6,146.3L352.6,146.3l-2.9,64.1l-119.5-8.7l8.7-86
-      l113.6,7.3L352.6,146.3L352.6,146.3z" data-state="Wyoming" data-group="No Permit Required" data-color="3" data-selected="false"></path><path class="cir-map-state" id="TX" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M482.3,497.4L482.3,497.4l7.3-5.8l-10.2,8.7l-7.3,14.5
-      v8.7l2.9,13.2l1.5,5.8l-4.4-16v-11.7l4.4-11.7h1.5l2.9-7.3L482.3,497.4z M419.6,350.3L419.6,350.3v4.4l1.5-1.5l4.4,4.4l4.4,1.5
-      l1.5-2.9l2.9,2.9v2.9l11.7,1.5l1.5,1.5l2.9-1.5h2.9l1.5,2.9h2.9v2.9h1.5l2.9-2.9l2.9,1.5h1.5l1.5,2.9l2.9-2.9l2.9,4.4l2.9-5.8
-      l1.5,2.9h2.9v-1.5l5.8,4.4l2.9-1.5l1.5-1.5h7.3l2.9-2.9l5.8,1.5l1.5-1.5l16,7.3h5.8l1.5,34.9l4.4,4.4v4.4l4.4,4.4l1.5,4.4l0,0v7.3
-      l-2.9,7.3l1.5,10.2l-2.9,5.8l1.5,2.9l-5.8,1.5l-11.7,7.3l4.4-4.4H520l1.5-4.4v-1.5l-2.9,2.9h-1.5l-1.5,2.9l2.9,1.5v2.9h1.5h1.5
-      l-11.7,11.7L491,489.9l7.3-5.8l-4.4,1.5v-2.9l-5.8,4.4l-1.5-4.4l-1.5,1.5l4.4,4.4l-4.4,2.9l-2.9-1.5v4.4l-4.4,2.9l-2.9,5.8l-1.5-1.5
-      l-2.9,1.5l1.5,2.9h1.5l-2.9,8.7l-2.9,1.5l1.5-2.9l-2.9,2.9h4.4l-2.9,8.7l1.5,2.9l1.5,5.8l1.5,2.9h1.5v4.4l1.5,1.5v1.5l1.5-1.5v1.5
-      l-4.4,2.9l-5.8-2.9l-11.7-1.5l-11.7-5.8l-5.8-1.5l-2.9-8.7l-4.4-4.4v-5.8l-1.5-1.5V510l-5.8-5.8l-4.4-7.3l-4.4-2.9l-1.5-5.8
-      l-2.9-2.9l-2.9-10.2l-7.3-7.3l-4.4-1.5l-2.9-5.8l-13.2-1.5l-4.4-1.5l-1.5,2.9h-5.8l-4.4,8.7l1.5,2.9l-5.8,4.4h-4.4l-8.7-5.8
-      l-4.4-1.5l-8.7-7.3l-2.9-7.3v-5.8l-4.4-8.7l-8.7-5.8l-10.2-13.2l-4.4-1.5l-2.9-5.8l-4.4-4.4v-2.9l67,2.9l4.4-99h53.9v40.2H419.6z" data-state="Texas" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path><path class="cir-map-state" id="KS" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M426.9,299.2L426.9,299.2h-43.7v-65.6
-      l118-1.5l2.9,2.9l2.9-1.5l1.5,2.9l-4.4,5.8l5.8,5.8l4.4,1.5l1.5,48.1L426.9,299.2z" data-state="Kansas" data-group="No Permit Required" data-color="3" data-selected="false"></path><path class="cir-map-state" id="IA" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M566.7,162.3L566.7,162.3l2.9,5.8l5.8,1.5l1.5,2.9
-      l8.7,7.3v2.9v4.4l-4.4,5.8l-10.2,2.9v4.4l2.9,2.9v2.9l-2.9,7.3l-4.4,2.9l1.5,2.9h-2.9l-4.4-4.4l-64.1,4.4h-4.4l-2.9-2.9v-10.2l0,0
-      l-1.5-5.8l-2.9-1.5v-10.2l-2.9-1.5l-2.9-5.8l1.5-2.9l-5.8-5.8l4.4-8.7l-2.9-2.9l1.5-2.9l-1.5-1.5l88.8-5.8v2.9l2.9,2.9l-1.5,2.9v3.2
-      H566.7z" data-state="Iowa" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path><path class="cir-map-state" id="MN" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M544.9,83.6L544.9,83.6H542l1.5,13.2l-5.8,4.4l-2.9,4.4
-      v2.9h2.9l1.5,2.9l-1.5,2.9v11.7l4.4,2.9l2.9,1.5l5.8,2.9l2.9,2.9l7.3,4.4l2.9,2.9l1.5,7.3l-87.4,5.8l-1.5-39.4l-5.8-7.3l4.4-4.4
-      v-5.8l-4.4-11.7l-1.5-20.4l-4.4-11.7V45.4l-2.9-7.3l33.5-1.5l-1.5-7.3h2.9l2.9,1.5l2.9,10.2l1.5,1.5l11.7,1.5v1.5l8.7-2.9h4.4
-      l5.8,1.5l-1.5,2.9h4.4l1.5,4.4l1.5-2.9h2.9l1.5,1.5l8.7,2.9h2.9l5.8-4.4l2.9,2.9l8.7-1.5l4.4,2.9l5.8-1.5l-18.9,10.2l-18.9,18.9v2.9
-      l-1.5-1.5v2H544.9z" data-state="Minnesota" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path><path class="cir-map-state" id="NE" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M351.2,194.3L351.2,194.3v-27.7
-      l93.2,1.5l8.7,4.4l2.9-2.9l8.7,1.5l10.2,2.9l1.5,4.4h4.4v5.8l5.8,8.7l-1.5,5.8l2.9,1.5l1.5,5.8l0,0v10.2l11.7,16l-118,1.5l1.5-21.9
-      l-34.9-1.5L351.2,194.3z" data-state="Nebraska" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path><path class="cir-map-state" id="SD" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M352.6,147.7L352.6,147.7l1.5-45.1l120.9,1.5v1.5
-      l-4.4,4.4l5.8,7.3l1.5,39.4h-1.5l1.5,1.5l-1.5,2.9l2.9,2.9l-4.4,8.7l4.4,5.8l-2.9-1.5l-1.5-2.9l-10.2-2.9l-8.7-1.5l-4.4,2.9
-      l-7.3-4.4l-93.2-1.5L352.6,147.7z" data-state="South Dakota" data-group="Shall Issue (Limited Discretion)" data-color="1" data-selected="false"></path><path class="cir-map-state" id="AR" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M530.3,385.2L530.3,385.2v-11.7h-5.8
-      l-2.9-1.5l-1.5-39.4l-4.4-24.7l80.1-4.4l2.9,4.4l-5.8,7.3l11.7-1.5l1.5,1.5l-1.5,1.5h1.5l-4.4,2.9l1.5,4.4h-2.9v1.5l-1.5,1.5h1.5
-      l-1.5,2.9l1.5,2.9l-2.9,2.9v2.9v1.5h-2.9v1.5h-1.5v8.7l-2.9,1.5l-2.9,2.9v4.4l-2.9,1.5l1.5,1.5l-2.9,5.8l1.5,1.5l-1.5,1.5l1.5,1.5
-      l-1.5,1.5l2.9,4.4v2.9L530.3,385.2z" data-state="Arkansas" data-group="No Permit Required" data-color="3" data-selected="false"></path><path class="cir-map-state" id="DE" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M840.6,195.8L840.6,195.8L840.6,195.8
-      L840.6,195.8L840.6,195.8L840.6,195.8z M840.6,195.8L840.6,195.8L840.6,195.8v-1.5V195.8z M839.2,190L839.2,190l2.9,1.5l-1.5,4.4
-      v2.9l4.4,4.4l4.4,5.8l2.9,2.9l2.9,7.3l-11.7,1.5l-7.3-26.2L839.2,190z" data-state="Delaware" data-group="May Issue (Complete Discretion)" data-color="2" data-selected="false"></path><path class="cir-map-state" id="KY" fill="#E4E4E4" stroke="#FFFFFF" stroke-linejoin="bevel" d="M607.5,302.2L607.5,302.2v-1.5h1.5v1.5H607.5z
-       M725.5,248.3L725.5,248.3v2.9l7.3,8.7l5.8,1.5L727,273l-5.8,10.2l-8.7,4.4l-78.7,7.3v4.4l-24.7,2.9l1.5-2.9l2.9,1.5v-2.9l1.5-5.8
-      l-1.5-2.9l1.5-2.9l1.5-1.5l8.7,2.9v-7.3l7.3-2.9l-2.9-2.9l1.5-4.4h2.9v-2.9h4.4v2.9v-4.4l10.2,2.9v-2.9l4.4-1.5l2.9,2.9l1.5-4.4
-      l4.4-2.9l1.5,2.9l4.4-1.5l1.5-5.8h2.9v-4.4l2.9-1.5v-4.4h4.4l5.8-2.9l-1.5-5.8l1.5-2.9l2.9,1.5h2.9l4.4,4.4l7.3,1.5l2.9,1.5l2.9-1.5
-      h5.8l4.4-2.9l1.5,2.9l5.8,2.9L725.5,248.3L725.5,248.3z" data-state="Kentucky" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path><path class="cir-map-state" id="ID" fill="#E4E4E4" stroke="#FFFFFF" stroke-width="0.5" stroke-linejoin="bevel" d="M237.6,127.4L237.6,127.4l-4.4,52.4
-      l-100.6-11.7l5.8-39.4l2.9-7.3l-4.4-2.9v-4.4l7.3-8.7l8.7-14.5v-2.9l-4.4-4.4l-2.9-10.2L156,18.1l14.5,2.9l-2.9,21.9l4.4,5.8
-      l-1.5,5.8l5.8,4.4l5.8,10.2l4.4,4.4l4.4,1.5l-4.4,11.7l1.5,2.9l-2.9,2.9v1.5l-1.5,2.9l4.4,2.9l5.8-4.4l2.9,1.5v7.3l4.4,5.8l-1.5,4.4
-      l5.8,2.9v7.3l2.9,1.5l2.9-2.9l4.4,1.5l2.9-1.5l10.2,1.5l4.4-4.4L237.6,127.4z" data-state="Idaho" data-group="Shall Issue (No Discretion)" data-color="0" data-selected="false"></path>
-
-
-<circle id="San_Francisco" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="22" cy="247" r="5.2" data-lawsuit="Edward Peruta v. County of San Diego" data-court="9th Circuit Court of Appeals" data-location="San Francisco" data-decision="Feb. 13, 2014"></circle>
-<circle id="Chicago" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="624" cy="186" r="5.2" data-lawsuit="Michael Moore v. Illinois Attorney General Lisa Madigan" data-court="7th Circuit Court of Appeals" data-location="Chicago" data-decision="Dec. 11, 2012"></circle>
-<circle id="Philadelphia" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="840" cy="188" r="5.2" data-lawsuit="John M. Drake v. Hon. Rudolph A. Filko" data-court="3rd Circuit Court of Appeals" data-location="Philadelphia" data-decision="July 31, 2013"></circle>
-<circle id="New_York" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="866" cy="160" r="5.2" data-lawsuit="Alan Kachalsky v. County of Westchester" data-court="2nd Circuit Court of Appeals" data-location="New York City" data-decision="Nov. 27, 2012"></circle>
-<circle id="Richmond" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="816" cy="246" r="5.2" data-lawsuit="Raymond Woollard v. Denis Gallagher" data-court="4th Circuit Court of Appeals" data-location="Richmond" data-decision="March 21, 2013"></circle>
+<circle id="San_Francisco" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="22" cy="247" r="5.2" title="Location: San Francisco. Case: Edward Peruta v. County of San Diego, 9th Circuit Court of Appeals. Decided: Feb. 13, 2014" data-lawsuit="Edward Peruta v. County of San Diego" data-court="9th Circuit Court of Appeals" data-location="San Francisco" data-decision="Feb. 13, 2014"></circle>
+<circle id="Chicago" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="624" cy="186" r="5.2" title="Location: Chicago. Case: Michael Moore v. Illinois Attorney General Lisa Madigan, 7th Circuit Court of Appeals. Decided: Dec. 11, 2012" data-lawsuit="Michael Moore v. Illinois Attorney General Lisa Madigan" data-court="7th Circuit Court of Appeals" data-location="Chicago" data-decision="Dec. 11, 2012"></circle>
+<circle id="Philadelphia" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="840" cy="188" r="5.2" title="Location: Philadelphia. Case: John M. Drake v. Hon. Rudolph A. Filko, 3rd Circuit Court of Appeals. Decided: July 31, 2013" data-lawsuit="John M. Drake v. Hon. Rudolph A. Filko" data-court="3rd Circuit Court of Appeals" data-location="Philadelphia" data-decision="July 31, 2013"></circle>
+<circle id="New_York" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="866" cy="160" r="5.2" title="Location: New York City. Case: Alan Kachalsky v. County of Westchester, 2nd Circuit Court of Appeals. Decided: Nov. 27, 2012" data-lawsuit="Alan Kachalsky v. County of Westchester" data-court="2nd Circuit Court of Appeals" data-location="New York City" data-decision="Nov. 27, 2012"></circle>
+<circle id="Richmond" fill="#FFFFFF" stroke="#222222" stroke-width="4" stroke-miterlimit="10" cx="816" cy="246" r="5.2" title="Location: Richmond. Case: Raymond Woollard v. Denis Gallagher, 4th Circuit Court of Appeals. Decided: March 21, 2013" data-lawsuit="Raymond Woollard v. Denis Gallagher" data-court="4th Circuit Court of Appeals" data-location="Richmond" data-decision="March 21, 2013"></circle>
 
       </svg>
 
     </div> <!--map-container-->
 
-
-    <label for="cir-map-select" class="wcag-hide">Select a state: </label><select id="cir-map-select" name="cir-map-select" class="wcag-hide"><option>Select a state</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option><option value="DC">District of Columbia</option></select><div id="cir-map-info"></div>
-
+    <div id="cf-2-wrap">
+      <div class="clear-filter" id="cf-2" tabindex="0" role="button">
+        <svg version="1.1" class="x-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 268 960 946" enable-background="new 0 268 960 946" xml:space="preserve">
+        <path fill="#FF0000" stroke="#FFFFFF" stroke-miterlimit="10" d="M486.1,282.5c-253.6,0-459.2,205.6-459.2,459.2
+          S232.5,1201,486.1,1201s459.2-205.6,459.2-459.2S739.7,282.5,486.1,282.5z M589.4,984.5L485.7,839.1L379.1,984.5H201.2l191.5-243.1
+          L204.2,499h181.6l102,142.5L590.4,499h178.5L579.9,738.1L771,984.5H589.4z"/>
+        </svg>
+        Return to overview map
+      </div>
+    </div>
 
 
     </div> <!--wrapper-inner-->
@@ -530,14 +490,6 @@
 
 
 
-    <script> 
-
-      $(document).ready(function(){
-        initAccordion();
-      });
-
-
-    </script>
 
     <div class="compatibility-error">This interactive feature requires a modern browser with JavaScript enabled.</div>
 

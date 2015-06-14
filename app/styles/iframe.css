@@ -35,7 +35,7 @@
 }
 
 
-@media all and (max-width: 1078px) {
+@media all and (max-width: 990px) {
 	#us_map {
 	  min-height:1200px;
 	}	
