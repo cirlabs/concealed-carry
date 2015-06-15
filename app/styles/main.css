@@ -1,12 +1,12 @@
 /* Start styles borrowed from http://www.revealnews.org/wp-content/themes/reveal2015/static/stylesheets/app.min.css?ver=0.5.2 */
-svg:not(:root) { overflow: hidden; }
+svg:not(:root) { overflow: hidden; max-height:100%;}
 select { font-family: inherit; font-size: 100%; margin: 0px; }
 select { text-transform: none; }
 html { font-family: sans-serif; }
 body,html { height: 100%; }
 *,*::after,*::before { box-sizing: border-box; }
 body, html{ font-size: 22px; }
-body { color: #222; padding: 0px; margin: 0px; font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif; font-weight: 400; font-style: normal; line-height: 1.4; position: relative; cursor: auto; }
+body { color: #222; padding: 0px; margin: 0px; font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif; font-weight: 400; font-style: normal; line-height: 1.4; position: static; cursor: auto; }
 div,h2,h1,h2,h3,h4,h5,h6,p { margin: 0px; padding: 0px; }
 p { font-family: inherit; font-weight: 400; font-size: inherit; line-height: 1.4; margin-bottom: 1.25em; text-rendering: optimizelegibility; }
 h1,h2,h3,h4,h5,h6 { font-family: ff-meta-serif-web-pro,Georgia,Times,"Times New Roman",serif; font-weight: 700; font-style: normal; color: #222; text-rendering: optimizelegibility; margin-top: 0.2rem; margin-bottom: 0.5rem; line-height: 1.3; }
@@ -264,7 +264,7 @@ clip: rect(1px, 1px, 1px, 1px);
 }
 .interactive-wrapper-inner {
   width:100%;
-  display:relative;
+  position:relative;
 }
 #filters-container {
   width:40%;
@@ -607,7 +607,7 @@ circle:hover {
   }
   .map-tooltip.lawsuit {
     max-width:200px;
-  }  
+  } 
   #cir-map-info span.state-group {
     font-size:.7em;
   }
@@ -639,6 +639,15 @@ circle:hover {
 @media all and (min-width: 768px) and (max-width: 1000px) { 
   #filters-container {
     font-size:.9em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #cir-map-select {
+    width:30%;
+  } 
+  #cir-map-info {
+    width:68%;
   }
 }
 
