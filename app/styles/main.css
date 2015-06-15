@@ -644,10 +644,10 @@ circle:hover {
 
 @media screen and (max-width: 480px) {
   #cir-map-select {
-    width:30%;
+    width:35%;
   } 
   #cir-map-info {
-    width:68%;
+    width:63%;
   }
 }
 
